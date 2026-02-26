@@ -33,7 +33,6 @@ def load_data():
     scores_path = data_dir / 'tier1_dimension_scores.json'
     hybrid_path = data_dir / 'tier1_hybrid_temporal.json'
     discretion_path = data_dir / 'tier1_discretion_scores.json'
-    pca_path = data_dir / 'tier1_pca_index.json'
     its_path = data_dir / 'tier1_its_analysis.json'
     discretion_by_type_path = data_dir / 'discretion_scores_by_type.json'
     temporal_by_type_path = data_dir / 'temporal_data_by_type.json'
@@ -54,11 +53,6 @@ def load_data():
     except FileNotFoundError:
         discretion_scores = {}
         
-    try:
-        with open(pca_path) as f:
-            pca_index = json.load(f)
-    except FileNotFoundError:
-        pca_index = {}
         
     try:
         with open(its_path) as f:
@@ -103,7 +97,6 @@ def load_data():
         platform_scores,
         hybrid_temporal,
         discretion_scores,
-        pca_index,
         its_analysis,
         discretion_scores_by_type,
         temporal_data_by_type,
@@ -117,7 +110,6 @@ def load_data():
     platform_scores,
     hybrid_temporal,
     discretion_scores,
-    pca_index,
     its_analysis,
     discretion_scores_by_type,
     temporal_data_by_type,
@@ -180,30 +172,22 @@ tab1, tab6, tab7, tab9, tab2, tab4, tab3, tab8, tab5 = st.tabs([
 with tab1:
     st.subheader("Platform Rankings by Policy Index")
     
-    if pca_index:
-        # NEW: Show methodology badge
-        st.info(f"""
-        📊 **PCA-Weighted Index** (PC1 explains {pca_index['methodology']['explained_variance']:.1%} of variance)
+    if viz_data and 'ranking' in viz_data:
+        # Show methodology badge
+        st.info("""
+        📊 **Combined Policy Index** (Equal-weighted 4 dimensions)
         
-        Dimensions: {', '.join(pca_index['methodology']['dimensions'])}
+        Dimensions: Complexity, Formality, Agency, Discretion (equal weight)
         """)
         
-        # Build ranking from PCA results
-        pca_ranking = []
-        for platform, data in pca_index['platforms'].items():
-            if platform in selected_platforms:
-                pca_ranking.append({
-                    'platform': platform,
-                    'index': data['pca_index'],
-                    'rank': data['rank']
-                })
-        
-        pca_ranking.sort(key=lambda x: x['index'], reverse=True)
+        # Build ranking from viz_data
+        combined_ranking = [item for item in viz_data['ranking'] if item['platform'] in selected_platforms]
+        combined_ranking.sort(key=lambda x: x['index'], reverse=True)
         
         # Create bar chart
         fig = go.Figure()
         
-        for item in pca_ranking:
+        for item in combined_ranking:
             platform = item['platform']
             config = PLATFORM_CONFIG[platform]
             
@@ -221,7 +205,7 @@ with tab1:
             ))
         
         fig.update_layout(
-            xaxis_title="PCA Policy Index (higher = more platform-protective)",
+            xaxis_title="Combined Policy Index (higher = more platform-protective)",
             yaxis_title="",
             height=400,
             yaxis={'categoryorder': 'total ascending'}
@@ -311,34 +295,19 @@ with tab1:
             fig_compare.update_layout(yaxis_title='Power Asymmetry Index', height=420)
             st.plotly_chart(fig_compare, use_container_width=True)
         
-        # NEW: Show PCA loadings
-        with st.expander("📐 How dimensions contribute to the index"):
-            loadings = pca_index['methodology']['loadings']
-            
-            loading_data = []
-            for dim, loading in loadings.items():
-                loading_data.append({
-                    'Dimension': dim,
-                    'Loading': f"{loading:+.3f}",
-                    'Contribution': "Strong" if abs(loading) > 0.4 else "Moderate" if abs(loading) > 0.2 else "Weak"
-                })
-            
-            st.table(loading_data)
-            
-            st.caption("""
-            **Loadings** show how much each dimension contributes to the overall index.
-            Higher absolute values mean stronger contribution.
-            """)
-        
         # Key finding (updated)
-        st.success(f"""
-        **🎯 Key Finding: TikTok Confirmed as Extreme Outlier**
-        
-        With the PCA-weighted index, TikTok scores +{pca_index['platforms']['TikTok']['pca_index']:.2f}, 
-        which is {pca_index['platforms']['TikTok']['pca_index'] / pca_index['platforms']['Meta']['pca_index']:.1f}x 
-        higher than Meta. This reflects not just syntactic complexity but also 
-        aggressive use of discretion language ("sole discretion", "at any time", etc.).
-        """)
+        tiktok_ranking = next((item for item in combined_ranking if item['platform'] == 'TikTok'), None)
+        meta_ranking = next((item for item in combined_ranking if item['platform'] == 'Meta'), None)
+        if tiktok_ranking and meta_ranking:
+            ratio = tiktok_ranking['index'] / meta_ranking['index'] if meta_ranking['index'] != 0 else 0
+            st.success(f"""
+            **🎯 Key Finding: TikTok Confirmed as Extreme Outlier**
+            
+            With the combined index, TikTok scores +{tiktok_ranking['index']:.2f}, 
+            which is {ratio:.1f}x 
+            higher than Meta. This reflects not just syntactic complexity but also 
+            aggressive use of discretion language ("sole discretion", "at any time", etc.).
+            """)
         
         # Quick ITS insight (if data available)
         if its_analysis and 'Meta' in its_analysis:
@@ -349,39 +318,8 @@ with tab1:
                 accelerated by {meta_gdpr.get('slope_change', 0):+.4f}/year. 
                 See the **Time Series** tab for full analysis.
                 """)
-        
-        # Comparison section
-        with st.expander("📊 Compare Old vs New Index"):
-            st.markdown("**Simple Average vs PCA-Weighted**")
-            
-            comparison_data = []
-            for platform in selected_platforms:
-                if platform in platform_scores and platform in pca_index['platforms']:
-                    # Old index (simple average)
-                    dim = platform_scores[platform]
-                    old_index = (dim['complexity_score'] + dim['agency_score'] + dim['formality_score']) / 3
-                    
-                    # New index (PCA)
-                    new_index = pca_index['platforms'][platform]['pca_index']
-                    
-                    comparison_data.append({
-                        'Platform': platform,
-                        'Simple Average': round(old_index, 3),
-                        'PCA-Weighted': round(new_index, 3),
-                        'Difference': round(new_index - old_index, 3)
-                    })
-            
-            df_compare = pd.DataFrame(comparison_data)
-            df_compare = df_compare.sort_values('PCA-Weighted', ascending=False)
-            st.dataframe(df_compare, use_container_width=True)
-            
-            st.caption("""
-            The PCA-weighted index incorporates a 4th dimension (Discretion) and uses
-            data-driven weights instead of equal weighting. This typically amplifies
-            differences between platforms.
-            """)
     else:
-        st.info("PCA Index data not currently loaded.")
+        st.info("Combined Index data not currently loaded.")
 
 # TAB 2: DIMENSIONS
 with tab2:
@@ -820,8 +758,8 @@ with tab5:
         if platform in platform_scores:
             row = {
                 'Platform': platform,
-                'Policy Index (PCA)': pca_index['platforms'].get(platform, {}).get('pca_index', 'N/A') if pca_index else 'N/A',
-                'Rank': pca_index['platforms'].get(platform, {}).get('rank', 'N/A') if pca_index else 'N/A',
+                'Combined Index': next((item['index'] for item in viz_data.get('ranking', []) if item['platform'] == platform), 'N/A'),
+                'Rank': next((item['rank'] for item in viz_data.get('ranking', []) if item['platform'] == platform), 'N/A'),
                 'Complexity Score': platform_scores[platform].get('complexity_score', 'N/A'),
                 'Agency Score': platform_scores[platform].get('agency_score', 'N/A'),
                 'Formality Score': platform_scores[platform].get('formality_score', 'N/A'),
@@ -896,7 +834,7 @@ with tab6:
         Policy Index = (Complexity + Agency + Formality) / 3
         ```
 
-        **Components (4 Dimensions, PCA-weighted):**
+        **Components (4 Dimensions, equal-weighted):**
         - **Complexity**: Syntactic complexity (avg sentence length, tree depth)
         - **Agency Asymmetry**: Platform vs user pronoun ratio (we/our vs you/your)
         - **Formality**: Formal legal terms density (hereby, pursuant to, notwithstanding, etc.)
@@ -1586,23 +1524,18 @@ st.sidebar.markdown("---")
 st.sidebar.header("📚 Methodology v3")
 
 with st.sidebar.expander("📊 Index Calculation"):
-    if pca_index:
-        st.markdown(f"""
-        **PCA-Weighted Composite Index**
-        
-        PC1 Explained Variance: **{pca_index['methodology']['explained_variance']:.1%}**
-        
-        **Dimensions:**
-        1. Complexity (ADL, tree depth)
-        2. Agency (visibility asymmetry)
-        3. Formality (legal terminology)
-        4. Discretion (corpus-derived) *NEW*
-        
-        **Interpretation:**
-        Higher score = more legalized = more platform-protective
-        """)
-    else:
-        st.markdown("PCA Index data not loaded.")
+    st.markdown("""
+    **Combined Policy Index**
+    
+    **Dimensions (Equal-Weighted):**
+    1. Complexity (ADL, tree depth)
+    2. Agency (visibility asymmetry)
+    3. Formality (legal terminology)
+    4. Discretion (corpus-derived)
+    
+    **Interpretation:**
+    Higher score = more legalized = more platform-protective
+    """)
 
 # TAB 9: CLAUSE-LEVEL DIFF ANALYSIS
 with tab9:
