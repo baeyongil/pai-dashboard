@@ -164,16 +164,16 @@ doc_type_filter = st.sidebar.multiselect(
 )
 
 # Main content tabs
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
+tab1, tab6, tab7, tab9, tab2, tab4, tab3, tab8, tab5 = st.tabs([
     "📊 Rankings",
-    "🔺 Dimensions",
-    "⚖️ Agency Asymmetry",
-    "📜 Discretion",
-    "📋 Detailed Metrics",
     "📈 Time Series",
     "🔍 Regulatory Evasion",
-    "📄 Privacy vs ToS",
     "🔬 Clause-Level Diff",
+    "🔺 Dimensions",
+    "📜 Discretion",
+    "⚖️ Agency Asymmetry",
+    "📄 Privacy vs ToS",
+    "📋 Detailed Metrics",
 ])
 
 # TAB 1: RANKINGS
