@@ -639,25 +639,22 @@ with tab6:
         platform_dates = [datetime.fromisoformat(t['date']) for t in time_series]
         platform_indices = [t['index'] for t in time_series]
         
-        # Different styles for real vs illustrative
-        is_real = platform_data['type'] == 'real'
-        
+        # All data is real — both 'real' and 'real_linked' types trace to actual policy documents
         fig_ts.add_trace(go.Scatter(
             x=platform_dates,
             y=platform_indices,
-            mode='lines+markers' if is_real else 'lines',
-            name=f"{platform} {'✓' if is_real else '~'}",
+            mode='lines+markers',
+            name=platform,
             line=dict(
                 color=PLATFORM_CONFIG[platform]['color'],
-                width=3 if is_real else 2,
-                dash='solid' if is_real else 'dash'
+                width=2,
+                dash='solid'
             ),
-            marker=dict(size=6 if is_real else 0),
+            marker=dict(size=5),
             hovertemplate=(
                 f"<b>{platform}</b><br>" +
                 "Date: %{x|%Y-%m-%d}<br>" +
                 "Index: %{y:.3f}<br>" +
-                f"<i>{'Real data' if is_real else 'Illustrative'}</i><br>" +
                 "<extra></extra>"
             )
         ))
