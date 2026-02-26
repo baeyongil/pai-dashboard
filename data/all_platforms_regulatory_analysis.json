@@ -1,0 +1,472 @@
+{
+  "Meta": {
+    "doc_counts": {
+      "pre_gdpr": 88,
+      "post_gdpr": 14,
+      "post_ccpa": 66
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.154,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.062,
+        "change_pct": -60.1
+      },
+      "reserve_right": {
+        "pre_gdpr": 0.208,
+        "post_gdpr": 0.035,
+        "post_ccpa": 0.025,
+        "change_pct": -87.9
+      },
+      "at_any_time": {
+        "pre_gdpr": 0.419,
+        "post_gdpr": 0.243,
+        "post_ccpa": 0.319,
+        "change_pct": -23.7
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.254,
+        "post_gdpr": 0.032,
+        "post_ccpa": 0.447,
+        "change_pct": 76.1
+      },
+      "without_liability": {
+        "pre_gdpr": 0.588,
+        "post_gdpr": 0.065,
+        "post_ccpa": 0.063,
+        "change_pct": -89.3
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.107,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.0,
+        "change_pct": -100.0
+      }
+    }
+  },
+  "YouTube": {
+    "doc_counts": {
+      "pre_gdpr": 22,
+      "post_gdpr": 10,
+      "post_ccpa": 51
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.541,
+        "post_gdpr": 0.436,
+        "post_ccpa": 0.009,
+        "change_pct": -98.4
+      },
+      "reserve_right": {
+        "pre_gdpr": 0.902,
+        "post_gdpr": 0.727,
+        "post_ccpa": 0.06,
+        "change_pct": -93.3
+      },
+      "at_any_time": {
+        "pre_gdpr": 1.262,
+        "post_gdpr": 1.063,
+        "post_ccpa": 0.157,
+        "change_pct": -87.5
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.126,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0.541,
+        "post_gdpr": 0.436,
+        "post_ccpa": 0.083,
+        "change_pct": -84.6
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.037,
+        "change_pct": 100
+      }
+    }
+  },
+  "WhatsApp": {
+    "doc_counts": {
+      "pre_gdpr": 26,
+      "post_gdpr": 0,
+      "post_ccpa": 54
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.161,
+        "post_gdpr": 0,
+        "post_ccpa": 0.021,
+        "change_pct": -86.7
+      },
+      "reserve_right": {
+        "pre_gdpr": 1.126,
+        "post_gdpr": 0,
+        "post_ccpa": 0.183,
+        "change_pct": -83.7
+      },
+      "at_any_time": {
+        "pre_gdpr": 0.965,
+        "post_gdpr": 0,
+        "post_ccpa": 0.264,
+        "change_pct": -72.6
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.161,
+        "post_gdpr": 0,
+        "post_ccpa": 0.009,
+        "change_pct": -94.4
+      },
+      "without_liability": {
+        "pre_gdpr": 0.643,
+        "post_gdpr": 0,
+        "post_ccpa": 0.212,
+        "change_pct": -67.1
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.188,
+        "change_pct": 100
+      }
+    }
+  },
+  "Reddit": {
+    "doc_counts": {
+      "pre_gdpr": 38,
+      "post_gdpr": 10,
+      "post_ccpa": 58
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.086,
+        "post_gdpr": 0.059,
+        "post_ccpa": 0.21,
+        "change_pct": 144.0
+      },
+      "reserve_right": {
+        "pre_gdpr": 0.637,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.258,
+        "change_pct": -59.5
+      },
+      "at_any_time": {
+        "pre_gdpr": 0.35,
+        "post_gdpr": 0.178,
+        "post_ccpa": 0.482,
+        "change_pct": 37.7
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.069,
+        "post_gdpr": 0.059,
+        "post_ccpa": 0.188,
+        "change_pct": 174.5
+      },
+      "without_liability": {
+        "pre_gdpr": 0.12,
+        "post_gdpr": 0.059,
+        "post_ccpa": 0.165,
+        "change_pct": 37.7
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.156,
+        "change_pct": 100
+      }
+    }
+  },
+  "LinkedIn": {
+    "doc_counts": {
+      "pre_gdpr": 30,
+      "post_gdpr": 0,
+      "post_ccpa": 42
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.269,
+        "post_gdpr": 0,
+        "post_ccpa": 0.0,
+        "change_pct": -100.0
+      },
+      "reserve_right": {
+        "pre_gdpr": 0.272,
+        "post_gdpr": 0,
+        "post_ccpa": 0.159,
+        "change_pct": -41.5
+      },
+      "at_any_time": {
+        "pre_gdpr": 0.838,
+        "post_gdpr": 0,
+        "post_ccpa": 0.602,
+        "change_pct": -28.2
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.232,
+        "post_gdpr": 0,
+        "post_ccpa": 0.089,
+        "change_pct": -61.7
+      },
+      "without_liability": {
+        "pre_gdpr": 0.383,
+        "post_gdpr": 0,
+        "post_ccpa": 0.423,
+        "change_pct": 10.6
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.025,
+        "post_gdpr": 0,
+        "post_ccpa": 0.0,
+        "change_pct": -100.0
+      }
+    }
+  },
+  "TikTok": {
+    "doc_counts": {
+      "pre_gdpr": 0,
+      "post_gdpr": 0,
+      "post_ccpa": 39
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.33,
+        "change_pct": 100
+      },
+      "reserve_right": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.337,
+        "change_pct": 100
+      },
+      "at_any_time": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.484,
+        "change_pct": 100
+      },
+      "may_terminate": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.15,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.55,
+        "change_pct": 100
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.177,
+        "change_pct": 100
+      }
+    }
+  },
+  "Twitter": {
+    "doc_counts": {
+      "pre_gdpr": 8,
+      "post_gdpr": 4,
+      "post_ccpa": 48
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0.276,
+        "post_gdpr": 0.179,
+        "post_ccpa": 0.196,
+        "change_pct": -29.1
+      },
+      "reserve_right": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.184,
+        "change_pct": 100
+      },
+      "at_any_time": {
+        "pre_gdpr": 0.69,
+        "post_gdpr": 0.895,
+        "post_ccpa": 0.362,
+        "change_pct": -47.6
+      },
+      "may_terminate": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.076,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.205,
+        "change_pct": 100
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0.0,
+        "post_gdpr": 0.0,
+        "post_ccpa": 0.0,
+        "change_pct": 0
+      }
+    }
+  },
+  "Instagram": {
+    "doc_counts": {
+      "pre_gdpr": 0,
+      "post_gdpr": 0,
+      "post_ccpa": 46
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.018,
+        "change_pct": 100
+      },
+      "reserve_right": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.083,
+        "change_pct": 100
+      },
+      "at_any_time": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.08,
+        "change_pct": 100
+      },
+      "may_terminate": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.015,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.0,
+        "change_pct": 0
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.007,
+        "change_pct": 100
+      }
+    }
+  },
+  "Pinterest": {
+    "doc_counts": {
+      "pre_gdpr": 0,
+      "post_gdpr": 0,
+      "post_ccpa": 209
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.058,
+        "change_pct": 100
+      },
+      "reserve_right": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.247,
+        "change_pct": 100
+      },
+      "at_any_time": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.227,
+        "change_pct": 100
+      },
+      "may_terminate": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.302,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.0,
+        "change_pct": 0
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.11,
+        "change_pct": 100
+      }
+    }
+  },
+  "Discord": {
+    "doc_counts": {
+      "pre_gdpr": 0,
+      "post_gdpr": 0,
+      "post_ccpa": 116
+    },
+    "patterns": {
+      "sole_discretion": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.107,
+        "change_pct": 100
+      },
+      "reserve_right": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.178,
+        "change_pct": 100
+      },
+      "at_any_time": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.193,
+        "change_pct": 100
+      },
+      "may_terminate": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.09,
+        "change_pct": 100
+      },
+      "without_liability": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.012,
+        "change_pct": 100
+      },
+      "for_any_reason": {
+        "pre_gdpr": 0,
+        "post_gdpr": 0,
+        "post_ccpa": 0.113,
+        "change_pct": 100
+      }
+    }
+  },
+  "_metadata": {
+    "last_updated": "2026-02-04T02:23:52.585412",
+    "total_platforms": 10,
+    "data_sources": {
+      "tier1_extracted": [
+        "Meta",
+        "YouTube",
+        "WhatsApp",
+        "Reddit",
+        "LinkedIn",
+        "TikTok",
+        "Twitter",
+        "Instagram",
+        "Pinterest",
+        "Discord"
+      ],
+      "metadata_estimated": []
+    },
+    "note": "All platforms have real text analysis from tier1_extracted.json"
+  }
+}

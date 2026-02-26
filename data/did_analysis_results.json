@@ -1,0 +1,541 @@
+{
+  "timestamp": "2026-02-04T19:31:49.857185",
+  "config": {
+    "name": "EU Revenue Exposure",
+    "description": "Platforms with high EU revenue/user share are more affected by GDPR",
+    "treated": {
+      "platforms": [
+        "Meta",
+        "YouTube",
+        "WhatsApp"
+      ],
+      "rationale": "High EU revenue exposure (>20%), direct GDPR enforcement targets"
+    },
+    "control": {
+      "platforms": [
+        "Reddit",
+        "Twitter"
+      ],
+      "rationale": "Lower EU revenue exposure (<15%), US-centric user base"
+    },
+    "excluded": {
+      "platforms": [
+        "TikTok",
+        "Instagram",
+        "Pinterest",
+        "Discord",
+        "LinkedIn"
+      ],
+      "rationale": "No pre-GDPR data or special corporate structure (Microsoft subsidiary)"
+    }
+  },
+  "interventions": {
+    "GDPR": {
+      "intervention_date": "2018-05-25T00:00:00+00:00",
+      "description": "EU General Data Protection Regulation effective date",
+      "observation_counts": {
+        "total": 59,
+        "treated_pre": 10,
+        "treated_post": 16,
+        "control_pre": 10,
+        "control_post": 23
+      },
+      "main_regression": {
+        "n_observations": 59,
+        "df": 55,
+        "r_squared": 0.1172900073707539,
+        "adj_r_squared": 0.06914218959097684,
+        "mse": 0.9954239680755929,
+        "coefficients": {
+          "intercept": {
+            "estimate": -0.08986999999999985,
+            "se": 0.31550340221233636,
+            "t_stat": -0.2848463736676811,
+            "p_value": 0.7768316802253641,
+            "ci_95": [
+              -0.7221529473136098,
+              0.54241294731361
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Baseline (Control group, Pre-treatment)"
+          },
+          "post": {
+            "estimate": 0.19823086956521732,
+            "se": 0.377917583300073,
+            "t_stat": 0.5245346560332406,
+            "p_value": 0.6020145443616922,
+            "ci_95": [
+              -0.5591328917605353,
+              0.9555946308909699
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Time effect (Change in control group post-treatment)"
+          },
+          "treated": {
+            "estimate": 0.50983,
+            "se": 0.44618919038353966,
+            "t_stat": 1.1426318946941663,
+            "p_value": 0.25814118784771756,
+            "ci_95": [
+              -0.3843531193481402,
+              1.4040131193481402
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Group effect (Treated vs Control at baseline)"
+          },
+          "did_effect": {
+            "estimate": 0.2302903804347827,
+            "se": 0.5518859434517712,
+            "t_stat": 0.4172789380980267,
+            "p_value": 0.678098767516043,
+            "ci_95": [
+              -0.875713765510348,
+              1.3362945263799133
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "CAUSAL EFFECT: Additional change in treated group due to treatment"
+          }
+        }
+      },
+      "parallel_trends": {
+        "n_pre_treated": 10,
+        "n_pre_control": 10,
+        "tests": {
+          "mean_comparison": {
+            "treated_mean": 0.41995999999999994,
+            "control_mean": -0.08987000000000003,
+            "difference": 0.50983,
+            "t_stat": 1.0614879892356717,
+            "p_value": 0.30250362986411317,
+            "interpretation": "If p > 0.10, groups have similar pre-treatment levels"
+          },
+          "trend_comparison": {
+            "treated_slope": 0.06584848484848482,
+            "control_slope": 0.07941757575757574,
+            "slope_difference": -0.01356909090909092,
+            "interpretation": "Similar slopes suggest parallel trends"
+          }
+        },
+        "parallel_trends_supported": "True",
+        "assessment": "PASS"
+      },
+      "event_study": {
+        "intervention_date": "2018-05-25T00:00:00+00:00",
+        "periods": [
+          {
+            "period": 4,
+            "treated_mean": 0.8522,
+            "control_mean": 0.2766,
+            "difference": 0.5755999999999999,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 12,
+            "treated_mean": -0.443,
+            "control_mean": 0.2424,
+            "difference": -0.6854,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 14,
+            "treated_mean": 1.1456000000000002,
+            "control_mean": -0.2799,
+            "difference": 1.4255000000000002,
+            "n_treated": 3,
+            "n_control": 1
+          },
+          {
+            "period": 24,
+            "treated_mean": 0.7993,
+            "control_mean": 0.2465,
+            "difference": 0.5528,
+            "n_treated": 2,
+            "n_control": 1
+          },
+          {
+            "period": 26,
+            "treated_mean": 1.6318,
+            "control_mean": 0.2307,
+            "difference": 1.4011,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 28,
+            "treated_mean": 1.15285,
+            "control_mean": 0.3322,
+            "difference": 0.8206499999999999,
+            "n_treated": 4,
+            "n_control": 1
+          }
+        ]
+      },
+      "robustness": {
+        "alternative_control": {
+          "control_group": [
+            "Reddit",
+            "Twitter",
+            "LinkedIn"
+          ],
+          "regression": {
+            "n_observations": 67,
+            "df": 63,
+            "r_squared": 0.1504808746241093,
+            "adj_r_squared": 0.11002758293954307,
+            "mse": 0.883847901409127,
+            "coefficients": {
+              "intercept": {
+                "estimate": -0.179325,
+                "se": 0.23503296330104512,
+                "t_stat": -0.7629780839307599,
+                "p_value": 0.4483240609433201,
+                "ci_95": [
+                  -0.6490008993932679,
+                  0.29035089939326786
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Baseline (Control group, Pre-treatment)"
+              },
+              "post": {
+                "estimate": 0.23999700000000015,
+                "se": 0.30098905278171745,
+                "t_stat": 0.797361225539489,
+                "p_value": 0.42823632310697546,
+                "ci_95": [
+                  -0.36148162702862097,
+                  0.8414756270286212
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Time effect (Change in control group post-treatment)"
+              },
+              "treated": {
+                "estimate": 0.5992849999999994,
+                "se": 0.3789792658958838,
+                "t_stat": 1.5813134224726682,
+                "p_value": 0.1188143292474182,
+                "ci_95": [
+                  -0.15804463181449313,
+                  1.3566146318144918
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Group effect (Treated vs Control at baseline)"
+              },
+              "did_effect": {
+                "estimate": 0.1885242500000002,
+                "se": 0.48396249221754617,
+                "t_stat": 0.38954310102869827,
+                "p_value": 0.6981881722645515,
+                "ci_95": [
+                  -0.7785976192577009,
+                  1.1556461192577012
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "CAUSAL EFFECT: Additional change in treated group due to treatment"
+              }
+            }
+          }
+        },
+        "placebo_test": {
+          "placebo_date": "2017-05-25T00:00:00+00:00",
+          "description": "Should show NO significant effect if parallel trends hold",
+          "regression": {
+            "error": "Matrix inversion failed: Singular matrix",
+            "n": 20
+          }
+        }
+      }
+    },
+    "CCPA": {
+      "intervention_date": "2020-01-01T00:00:00+00:00",
+      "description": "California Consumer Privacy Act effective date",
+      "observation_counts": {
+        "total": 59,
+        "treated_pre": 14,
+        "treated_post": 12,
+        "control_pre": 13,
+        "control_post": 20
+      },
+      "main_regression": {
+        "n_observations": 59,
+        "df": 55,
+        "r_squared": 0.13735278546838658,
+        "adj_r_squared": 0.09029930103938943,
+        "mse": 0.97279935710333,
+        "coefficients": {
+          "intercept": {
+            "estimate": -0.006892307692307519,
+            "se": 0.27355204217329326,
+            "t_stat": -0.025195599482826347,
+            "p_value": 0.9799901415020336,
+            "ci_95": [
+              -0.5551028507677883,
+              0.5413182353831733
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Baseline (Control group, Pre-treatment)"
+          },
+          "post": {
+            "estimate": 0.09105230769230761,
+            "se": 0.3513839604084764,
+            "t_stat": 0.25912482626259103,
+            "p_value": 0.7965063373791925,
+            "ci_95": [
+              -0.6131368850957792,
+              0.7952415004803945
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Time effect (Change in control group post-treatment)"
+          },
+          "treated": {
+            "estimate": 0.39874945054945016,
+            "se": 0.3798899684667954,
+            "t_stat": 1.049644590929237,
+            "p_value": 0.298471994601039,
+            "ci_95": [
+              -0.36256705898030933,
+              1.1600659600792096
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "Group effect (Treated vs Control at baseline)"
+          },
+          "did_effect": {
+            "estimate": 0.5411988827838827,
+            "se": 0.5234720327666164,
+            "t_stat": 1.033863986818126,
+            "p_value": 0.305724409972177,
+            "ci_95": [
+              -0.5078625136798196,
+              1.590260279247585
+            ],
+            "significant_05": false,
+            "significant_10": false,
+            "interpretation": "CAUSAL EFFECT: Additional change in treated group due to treatment"
+          }
+        }
+      },
+      "parallel_trends": {
+        "n_pre_treated": 14,
+        "n_pre_control": 13,
+        "tests": {
+          "mean_comparison": {
+            "treated_mean": 0.39185714285714285,
+            "control_mean": -0.006892307692307706,
+            "difference": 0.39874945054945055,
+            "t_stat": 1.0611502284076073,
+            "p_value": 0.29876598033865814,
+            "interpretation": "If p > 0.10, groups have similar pre-treatment levels"
+          },
+          "trend_comparison": {
+            "treated_slope": 0.014389450549450546,
+            "control_slope": 0.06562197802197801,
+            "slope_difference": -0.05123252747252747,
+            "interpretation": "Similar slopes suggest parallel trends"
+          }
+        },
+        "parallel_trends_supported": "True",
+        "assessment": "PASS"
+      },
+      "event_study": {
+        "intervention_date": "2020-01-01T00:00:00+00:00",
+        "periods": [
+          {
+            "period": -3,
+            "treated_mean": 0.8522,
+            "control_mean": 0.2766,
+            "difference": 0.5755999999999999,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 5,
+            "treated_mean": -0.443,
+            "control_mean": 0.2424,
+            "difference": -0.6854,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 7,
+            "treated_mean": 1.1456000000000002,
+            "control_mean": -0.2799,
+            "difference": 1.4255000000000002,
+            "n_treated": 3,
+            "n_control": 1
+          },
+          {
+            "period": 17,
+            "treated_mean": 0.7993,
+            "control_mean": 0.2465,
+            "difference": 0.5528,
+            "n_treated": 2,
+            "n_control": 1
+          },
+          {
+            "period": 19,
+            "treated_mean": 1.6318,
+            "control_mean": 0.2307,
+            "difference": 1.4011,
+            "n_treated": 1,
+            "n_control": 1
+          },
+          {
+            "period": 21,
+            "treated_mean": 1.15285,
+            "control_mean": 0.3322,
+            "difference": 0.8206499999999999,
+            "n_treated": 4,
+            "n_control": 1
+          }
+        ]
+      },
+      "robustness": {
+        "alternative_control": {
+          "control_group": [
+            "Reddit",
+            "Twitter",
+            "LinkedIn"
+          ],
+          "regression": {
+            "n_observations": 67,
+            "df": 63,
+            "r_squared": 0.16714860408100662,
+            "adj_r_squared": 0.1274890137991498,
+            "mse": 0.8665066347305042,
+            "coefficients": {
+              "intercept": {
+                "estimate": -0.10842631578947354,
+                "se": 0.21355470576467533,
+                "t_stat": -0.5077215011546171,
+                "p_value": 0.6134216511209791,
+                "ci_95": [
+                  -0.535181342365112,
+                  0.3183287107861649
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Baseline (Control group, Pre-treatment)"
+              },
+              "post": {
+                "estimate": 0.14059449760765536,
+                "se": 0.2915343505819854,
+                "t_stat": 0.4822570559077817,
+                "p_value": 0.6312946836058031,
+                "ci_95": [
+                  -0.44199041469778116,
+                  0.7231794099130919
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Time effect (Change in control group post-treatment)"
+              },
+              "treated": {
+                "estimate": 0.5002834586466165,
+                "se": 0.3278703149210308,
+                "t_stat": 1.5258577427697664,
+                "p_value": 0.1320502717683616,
+                "ci_95": [
+                  -0.15491308434912232,
+                  1.1554800016423554
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Group effect (Treated vs Control at baseline)"
+              },
+              "did_effect": {
+                "estimate": 0.49165669286853547,
+                "se": 0.46807530895036625,
+                "t_stat": 1.0503794655843932,
+                "p_value": 0.29755627132069273,
+                "ci_95": [
+                  -0.4437171739599028,
+                  1.4270305596969737
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "CAUSAL EFFECT: Additional change in treated group due to treatment"
+              }
+            }
+          }
+        },
+        "placebo_test": {
+          "placebo_date": "2019-01-01T00:00:00+00:00",
+          "description": "Should show NO significant effect if parallel trends hold",
+          "regression": {
+            "n_observations": 27,
+            "df": 23,
+            "r_squared": 0.053610920899975656,
+            "adj_r_squared": -0.06983113289567977,
+            "mse": 1.0232212329183132,
+            "coefficients": {
+              "intercept": {
+                "estimate": -0.057390909090909006,
+                "se": 0.3049919869168419,
+                "t_stat": -0.18817185877921777,
+                "p_value": 0.8523922919122247,
+                "ci_95": [
+                  -0.6883149039432584,
+                  0.5735330857614404
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Baseline (Control group, Pre-treatment)"
+              },
+              "post": {
+                "estimate": 0.32824090909090886,
+                "se": 0.7775800463892059,
+                "t_stat": 0.4221313427667521,
+                "p_value": 0.6768489933595752,
+                "ci_95": [
+                  -1.2803059715821126,
+                  1.9367877897639303
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Time effect (Change in control group post-treatment)"
+              },
+              "treated": {
+                "estimate": 0.410009090909091,
+                "se": 0.4313238043129153,
+                "t_stat": 0.9505830348552686,
+                "p_value": 0.35169897536454786,
+                "ci_95": [
+                  -0.48225217943771426,
+                  1.3022703612558963
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "Group effect (Treated vs Control at baseline)"
+              },
+              "did_effect": {
+                "estimate": -0.14512575757575777,
+                "se": 1.0191783871983486,
+                "t_stat": -0.14239485393199763,
+                "p_value": 0.8880081673139402,
+                "ci_95": [
+                  -2.2534568846282257,
+                  1.96320536947671
+                ],
+                "significant_05": false,
+                "significant_10": false,
+                "interpretation": "CAUSAL EFFECT: Additional change in treated group due to treatment"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

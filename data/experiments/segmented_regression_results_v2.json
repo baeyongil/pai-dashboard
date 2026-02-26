@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "cutoff": "2018-05-25",
+    "se_type": "HC3"
+  },
+  "platforms": {
+    "Meta": {
+      "n": 12,
+      "n_pre": 5,
+      "n_post": 7,
+      "mean_pre": 0.04956,
+      "mean_post": -0.150814,
+      "regression": {
+        "coefficients": {
+          "intercept": 1.482951,
+          "time_trend": -0.025645,
+          "level_change": 1.676657,
+          "slope_change": 0.024323
+        },
+        "se_hc3": {
+          "intercept": 1.925449,
+          "time_trend": 0.027518,
+          "level_change": 1.628621,
+          "slope_change": 0.027607
+        },
+        "t_statistics": {
+          "intercept": 0.7702,
+          "time_trend": -0.932,
+          "level_change": 1.0295,
+          "slope_change": 0.881
+        },
+        "p_values": {
+          "intercept": 0.4633,
+          "time_trend": 0.3786,
+          "level_change": 0.3334,
+          "slope_change": 0.404
+        },
+        "r_squared": 0.8524,
+        "adj_r_squared": 0.7681,
+        "aic": 4.42,
+        "bic": 6.36,
+        "n_observations": 12,
+        "n_pre": 5,
+        "n_post": 7,
+        "fitted_values": [
+          1.482951,
+          -0.04783,
+          -0.199476,
+          -0.199476,
+          -0.788368,
+          -0.120187,
+          -0.128137,
+          -0.136087,
+          -0.151944,
+          -0.159894,
+          -0.159894,
+          -0.199557
+        ],
+        "residuals": [
+          0.187449,
+          -0.22587,
+          -0.346224,
+          -0.092724,
+          0.477368,
+          0.014987,
+          -0.006163,
+          -0.001613,
+          0.151944,
+          -0.230006,
+          0.031294,
+          0.039557
+        ]
+      },
+      "cohens_d": -0.3428,
+      "hedges_g": -0.3165,
+      "cliffs_delta": 0.4286,
+      "welch_t": -0.488,
+      "welch_p": 0.6505
+    },
+    "Reddit": {
+      "n": 12,
+      "n_pre": 6,
+      "n_post": 6,
+      "mean_pre": 0.144317,
+      "mean_post": -0.427633,
+      "regression": {
+        "coefficients": {
+          "intercept": 0.217227,
+          "time_trend": -0.001729,
+          "level_change": -0.260557,
+          "slope_change": -0.001104
+        },
+        "se_hc3": {
+          "intercept": 0.030467,
+          "time_trend": 0.001321,
+          "level_change": 0.397839,
+          "slope_change": 0.00492
+        },
+        "t_statistics": {
+          "intercept": 7.13,
+          "time_trend": -1.3087,
+          "level_change": -0.6549,
+          "slope_change": -0.2244
+        },
+        "p_values": {
+          "intercept": 0.0001,
+          "time_trend": 0.227,
+          "level_change": 0.5309,
+          "slope_change": 0.8281
+        },
+        "r_squared": 0.9418,
+        "adj_r_squared": 0.9085,
+        "aic": -20.75,
+        "bic": -18.81,
+        "n_observations": 12,
+        "n_pre": 6,
+        "n_post": 6,
+        "fitted_values": [
+          0.217227,
+          0.206721,
+          0.17452,
+          0.17452,
+          0.062016,
+          0.030895,
+          -0.323097,
+          -0.357065,
+          -0.467714,
+          -0.471028,
+          -0.473448,
+          -0.473448
+        ],
+        "residuals": [
+          0.043373,
+          -0.003021,
+          -0.00752,
+          -0.02792,
+          -0.079016,
+          0.074105,
+          -0.122503,
+          0.160465,
+          -0.060986,
+          0.037728,
+          -0.049552,
+          0.034848
+        ]
+      },
+      "cohens_d": -5.2586,
+      "hedges_g": -4.8541,
+      "cliffs_delta": -1.0,
+      "effect_size_warning": "|d|=5.26 is extreme; likely driven by small pre-GDPR n=6. Hedges g=-4.8541 provides bias correction. Cliff's delta=-1.0000 is non-parametric.",
+      "welch_t": -9.1082,
+      "welch_p": 0.0
+    },
+    "LinkedIn": {
+      "n": 8,
+      "n_pre": 6,
+      "n_post": 2,
+      "mean_pre": 0.013967,
+      "mean_post": -0.1211,
+      "cohens_d": -0.6395,
+      "hedges_g": -0.5561,
+      "cliffs_delta": -0.1667,
+      "welch_t": -0.5727,
+      "welch_p": 0.6536
+    },
+    "YouTube": {
+      "n": 8,
+      "n_pre": 1,
+      "n_post": 7,
+      "mean_pre": 0.1716,
+      "mean_post": 0.107157,
+      "cohens_d": null,
+      "hedges_g": null,
+      "cliffs_delta": -0.4286
+    },
+    "WhatsApp": {
+      "n": 6,
+      "n_pre": 4,
+      "n_post": 2,
+      "mean_pre": 0.46705,
+      "mean_post": -0.09335,
+      "cohens_d": -5.3938,
+      "hedges_g": -4.315,
+      "cliffs_delta": -1.0,
+      "effect_size_warning": "|d|=5.39 is extreme; likely driven by small pre-GDPR n=4. Hedges g=-4.3150 provides bias correction. Cliff's delta=-1.0000 is non-parametric.",
+      "welch_t": -4.1369,
+      "welch_p": 0.1377
+    }
+  }
+}

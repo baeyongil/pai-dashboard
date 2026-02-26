@@ -1,0 +1,63 @@
+{
+  "methodology": {
+    "explained_variance": 0.5452,
+    "dimensions": [
+      "Complexity",
+      "Formality",
+      "Agency",
+      "Discretion"
+    ],
+    "loadings": {
+      "Complexity": 0.5734,
+      "Formality": 0.8065,
+      "Agency": -0.0514,
+      "Discretion": -0.135
+    }
+  },
+  "platforms": {
+    "WhatsApp": {
+      "pca_index": 0.721,
+      "rank": 1
+    },
+    "Instagram": {
+      "pca_index": 0.704,
+      "rank": 2
+    },
+    "Twitter": {
+      "pca_index": 0.454,
+      "rank": 3
+    },
+    "TikTok": {
+      "pca_index": 0.246,
+      "rank": 4
+    },
+    "YouTube": {
+      "pca_index": 0.092,
+      "rank": 5
+    },
+    "Reddit": {
+      "pca_index": -0.199,
+      "rank": 6
+    },
+    "Discord": {
+      "pca_index": -0.273,
+      "rank": 7
+    },
+    "LinkedIn": {
+      "pca_index": -0.313,
+      "rank": 8
+    },
+    "Pinterest": {
+      "pca_index": -0.381,
+      "rank": 9
+    },
+    "Meta": {
+      "pca_index": -0.402,
+      "rank": 10
+    },
+    "Google": {
+      "pca_index": -0.649,
+      "rank": 11
+    }
+  }
+}

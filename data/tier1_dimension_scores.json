@@ -1,0 +1,112 @@
+{
+  "Discord": {
+    "complexity_score": -0.122,
+    "agency_score": -0.1017,
+    "formality_score": 0.0073,
+    "raw_metrics": {
+      "platform_visibility": 0.4342,
+      "user_visibility": 0.5658,
+      "asymmetry_factor": 1.3
+    }
+  },
+  "Google": {
+    "complexity_score": -0.1924,
+    "agency_score": -0.0966,
+    "formality_score": -0.5271,
+    "raw_metrics": {
+      "platform_visibility": 0.4406,
+      "user_visibility": 0.5594,
+      "asymmetry_factor": 1.3
+    }
+  },
+  "Instagram": {
+    "complexity_score": 0.7117,
+    "agency_score": -0.146,
+    "formality_score": 0.4608,
+    "raw_metrics": {
+      "platform_visibility": 0.371,
+      "user_visibility": 0.629,
+      "asymmetry_factor": 1.7
+    }
+  },
+  "LinkedIn": {
+    "complexity_score": -0.1531,
+    "agency_score": -0.1155,
+    "formality_score": -0.1508,
+    "raw_metrics": {
+      "platform_visibility": 0.4159,
+      "user_visibility": 0.5841,
+      "asymmetry_factor": 1.4
+    }
+  },
+  "Meta": {
+    "complexity_score": -0.055,
+    "agency_score": 0.224,
+    "formality_score": -0.3209,
+    "raw_metrics": {
+      "platform_visibility": 0.6742,
+      "user_visibility": 0.3258,
+      "asymmetry_factor": 0.5
+    }
+  },
+  "Pinterest": {
+    "complexity_score": -0.0711,
+    "agency_score": -0.0771,
+    "formality_score": -0.2232,
+    "raw_metrics": {
+      "platform_visibility": 0.464,
+      "user_visibility": 0.536,
+      "asymmetry_factor": 1.2
+    }
+  },
+  "Reddit": {
+    "complexity_score": -0.1371,
+    "agency_score": -0.1443,
+    "formality_score": -0.0015,
+    "raw_metrics": {
+      "platform_visibility": 0.3737,
+      "user_visibility": 0.6263,
+      "asymmetry_factor": 1.7
+    }
+  },
+  "TikTok": {
+    "complexity_score": 0.1595,
+    "agency_score": -0.055,
+    "formality_score": 0.3477,
+    "raw_metrics": {
+      "platform_visibility": 0.4882,
+      "user_visibility": 0.5118,
+      "asymmetry_factor": 1.0
+    }
+  },
+  "Twitter": {
+    "complexity_score": -0.164,
+    "agency_score": -0.1728,
+    "formality_score": 0.8748,
+    "raw_metrics": {
+      "platform_visibility": 0.3256,
+      "user_visibility": 0.6744,
+      "asymmetry_factor": 2.1
+    }
+  },
+  "WhatsApp": {
+    "complexity_score": 0.7547,
+    "agency_score": -0.0718,
+    "formality_score": 0.4885,
+    "raw_metrics": {
+      "platform_visibility": 0.47,
+      "user_visibility": 0.53,
+      "asymmetry_factor": 1.1
+    }
+  },
+  "YouTube": {
+    "complexity_score": -0.156,
+    "agency_score": 0.4058,
+    "formality_score": 0.4099,
+    "raw_metrics": {
+      "platform_visibility": 0.7366,
+      "user_visibility": 0.2634,
+      "asymmetry_factor": 0.4
+    }
+  }
+}

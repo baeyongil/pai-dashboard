@@ -1,0 +1,672 @@
+{
+  "Discord": {
+    "events": {
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.035096,
+          "r_squared": 0.328519,
+          "p_value": 0.13748731649957355,
+          "std_err": 5.6082472437204845e-05,
+          "n_points": 8,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.038837,
+          "r_squared": 0.302954,
+          "p_value": 0.3363911166532591,
+          "std_err": 9.311808081912079e-05,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "slope_change": -0.003741,
+        "level_change": 0.119,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.015873,
+          "r_squared": 0.134376,
+          "p_value": 0.29746531996678055,
+          "std_err": 3.899773376035251e-05,
+          "n_points": 10,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.154438,
+          "r_squared": 0.991556,
+          "p_value": 0.05858366018025619,
+          "std_err": 3.902015562672402e-05,
+          "n_points": 3,
+          "is_significant": false
+        },
+        "slope_change": -0.138565,
+        "level_change": 0.151,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "Instagram": {
+    "events": {
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.048093,
+          "r_squared": 0.407692,
+          "p_value": 0.3614927543700702,
+          "std_err": 0.00011222350627535683,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.061003,
+          "r_squared": 0.525863,
+          "p_value": 0.005033197185186847,
+          "std_err": 4.7816817246783075e-05,
+          "n_points": 13,
+          "is_significant": true
+        },
+        "slope_change": -0.01291,
+        "level_change": 0.078,
+        "pre_significant": false,
+        "post_significant": true
+      },
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.061983,
+          "r_squared": 0.397208,
+          "p_value": 0.05078770161577487,
+          "std_err": 7.391200686800025e-05,
+          "n_points": 10,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.008397,
+          "r_squared": 0.750158,
+          "p_value": 0.011705493391793288,
+          "std_err": 5.933596550144095e-06,
+          "n_points": 7,
+          "is_significant": true
+        },
+        "slope_change": 0.053586,
+        "level_change": -0.015,
+        "pre_significant": false,
+        "post_significant": true
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.059392,
+          "r_squared": 0.510138,
+          "p_value": 0.009066062279110347,
+          "std_err": 5.038825133744645e-05,
+          "n_points": 12,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": -0.014627,
+          "r_squared": 0.838405,
+          "p_value": 0.029035503807526012,
+          "std_err": 1.0150716784760997e-05,
+          "n_points": 5,
+          "is_significant": true
+        },
+        "slope_change": 0.044765,
+        "level_change": 0.04,
+        "pre_significant": true,
+        "post_significant": true
+      }
+    }
+  },
+  "LinkedIn": {
+    "events": {
+      "GDPR Announced": {
+        "pre_trend": {
+          "slope_per_year": 0.033201,
+          "r_squared": 0.147157,
+          "p_value": 0.5238313656000853,
+          "std_err": 0.0001263417955340363,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.026255,
+          "r_squared": 0.514973,
+          "p_value": 0.4904667064955056,
+          "std_err": 6.975972158651284e-05,
+          "n_points": 3,
+          "is_significant": false
+        },
+        "slope_change": -0.059456,
+        "level_change": 0.011,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "Meta": {
+    "events": {
+      "GDPR Announced": {
+        "pre_trend": {
+          "slope_per_year": 0.071332,
+          "r_squared": 0.009194,
+          "p_value": 0.8781052105053404,
+          "std_err": 0.0011705419298864929,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.260264,
+          "r_squared": 0.225822,
+          "p_value": 0.28117765257388244,
+          "std_err": 0.000590032227981831,
+          "n_points": 7,
+          "is_significant": false
+        },
+        "slope_change": -0.331596,
+        "level_change": 0.931,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "GDPR Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.071332,
+          "r_squared": 0.009194,
+          "p_value": 0.8781052105053404,
+          "std_err": 0.0011705419298864929,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.260264,
+          "r_squared": 0.225822,
+          "p_value": 0.28117765257388244,
+          "std_err": 0.000590032227981831,
+          "n_points": 7,
+          "is_significant": false
+        },
+        "slope_change": -0.331596,
+        "level_change": 0.231,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Signed": {
+        "pre_trend": {
+          "slope_per_year": 0.071332,
+          "r_squared": 0.009194,
+          "p_value": 0.8781052105053404,
+          "std_err": 0.0011705419298864929,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.260264,
+          "r_squared": 0.225822,
+          "p_value": 0.28117765257388244,
+          "std_err": 0.000590032227981831,
+          "n_points": 7,
+          "is_significant": false
+        },
+        "slope_change": -0.331596,
+        "level_change": 0.2,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.040519,
+          "r_squared": 0.009784,
+          "p_value": 0.8329011008245653,
+          "std_err": 0.0004991131366421889,
+          "n_points": 7,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.381423,
+          "r_squared": 0.268985,
+          "p_value": 0.3705816084185677,
+          "std_err": 0.0009939304858708655,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "slope_change": -0.421942,
+        "level_change": 0.262,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "Pinterest": {
+    "events": {
+      "GDPR Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.121681,
+          "r_squared": 0.621308,
+          "p_value": 0.2117693301176628,
+          "std_err": 0.00018391105646237856,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.007538,
+          "r_squared": 0.065932,
+          "p_value": 0.3370554767219873,
+          "std_err": 2.0761746995206342e-05,
+          "n_points": 16,
+          "is_significant": false
+        },
+        "slope_change": 0.129219,
+        "level_change": -0.037,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Signed": {
+        "pre_trend": {
+          "slope_per_year": -0.121681,
+          "r_squared": 0.621308,
+          "p_value": 0.2117693301176628,
+          "std_err": 0.00018391105646237856,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.007538,
+          "r_squared": 0.065932,
+          "p_value": 0.3370554767219873,
+          "std_err": 2.0761746995206342e-05,
+          "n_points": 16,
+          "is_significant": false
+        },
+        "slope_change": 0.129219,
+        "level_change": -0.025,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.045843,
+          "r_squared": 0.136744,
+          "p_value": 0.36726043288792765,
+          "std_err": 0.00012874293329841985,
+          "n_points": 8,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.005623,
+          "r_squared": 0.045079,
+          "p_value": 0.5076564365887931,
+          "std_err": 2.2406825170351613e-05,
+          "n_points": 12,
+          "is_significant": false
+        },
+        "slope_change": 0.051466,
+        "level_change": 0.034,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.010176,
+          "r_squared": 0.05833,
+          "p_value": 0.4054981829621209,
+          "std_err": 3.231558823584298e-05,
+          "n_points": 14,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.042369,
+          "r_squared": 0.253509,
+          "p_value": 0.3085758233409576,
+          "std_err": 9.952813185552991e-05,
+          "n_points": 6,
+          "is_significant": false
+        },
+        "slope_change": 0.052546,
+        "level_change": -0.034,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.00827,
+          "r_squared": 0.053949,
+          "p_value": 0.3866888144773267,
+          "std_err": 2.5340455326640546e-05,
+          "n_points": 16,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.063929,
+          "r_squared": 0.217492,
+          "p_value": 0.5336391266398793,
+          "std_err": 0.0002347548565199266,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "slope_change": 0.072199,
+        "level_change": -0.009,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "Reddit": {
+    "events": {
+      "GDPR Announced": {
+        "pre_trend": {
+          "slope_per_year": 0.028919,
+          "r_squared": 0.950863,
+          "p_value": 0.004692760373721847,
+          "std_err": 1.0391465777171767e-05,
+          "n_points": 5,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": -0.019259,
+          "r_squared": 0.179261,
+          "p_value": 0.34387888462640565,
+          "std_err": 5.045683485246012e-05,
+          "n_points": 7,
+          "is_significant": false
+        },
+        "slope_change": -0.048178,
+        "level_change": 0.021,
+        "pre_significant": true,
+        "post_significant": false
+      },
+      "GDPR Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.033753,
+          "r_squared": 0.962385,
+          "p_value": 0.0005373910454693194,
+          "std_err": 9.134882000992164e-06,
+          "n_points": 6,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": 0.014241,
+          "r_squared": 0.07547,
+          "p_value": 0.5982902809269524,
+          "std_err": 6.823217468621372e-05,
+          "n_points": 6,
+          "is_significant": false
+        },
+        "slope_change": -0.019512,
+        "level_change": -0.321,
+        "pre_significant": true,
+        "post_significant": false
+      },
+      "CCPA Signed": {
+        "pre_trend": {
+          "slope_per_year": 0.033753,
+          "r_squared": 0.962385,
+          "p_value": 0.0005373910454693194,
+          "std_err": 9.134882000992164e-06,
+          "n_points": 6,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": 0.014241,
+          "r_squared": 0.07547,
+          "p_value": 0.5982902809269524,
+          "std_err": 6.823217468621372e-05,
+          "n_points": 6,
+          "is_significant": false
+        },
+        "slope_change": -0.019512,
+        "level_change": -0.323,
+        "pre_significant": true,
+        "post_significant": false
+      },
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.033753,
+          "r_squared": 0.962385,
+          "p_value": 0.0005373910454693194,
+          "std_err": 9.134882000992164e-06,
+          "n_points": 6,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": 0.014241,
+          "r_squared": 0.07547,
+          "p_value": 0.5982902809269524,
+          "std_err": 6.823217468621372e-05,
+          "n_points": 6,
+          "is_significant": false
+        },
+        "slope_change": -0.019512,
+        "level_change": -0.353,
+        "pre_significant": true,
+        "post_significant": false
+      },
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.008977,
+          "r_squared": 0.125767,
+          "p_value": 0.38870560603027265,
+          "std_err": 2.645311618364497e-05,
+          "n_points": 8,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.664552,
+          "r_squared": 0.418015,
+          "p_value": 0.3534589130489243,
+          "std_err": 0.0015180395846847872,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "slope_change": -0.673528,
+        "level_change": 1.316,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.008977,
+          "r_squared": 0.125767,
+          "p_value": 0.38870560603027265,
+          "std_err": 2.645311618364497e-05,
+          "n_points": 8,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.664552,
+          "r_squared": 0.418015,
+          "p_value": 0.3534589130489243,
+          "std_err": 0.0015180395846847872,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "slope_change": -0.673528,
+        "level_change": 0.556,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "Twitter": {
+    "events": {
+      "GDPR Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.01795,
+          "r_squared": 0.828848,
+          "p_value": 0.08958897014071508,
+          "std_err": 1.579110311473665e-05,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.008032,
+          "r_squared": 0.02522,
+          "p_value": 0.5426596202316007,
+          "std_err": 3.529851026258569e-05,
+          "n_points": 17,
+          "is_significant": false
+        },
+        "slope_change": 0.025982,
+        "level_change": -0.019,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Signed": {
+        "pre_trend": {
+          "slope_per_year": -0.01795,
+          "r_squared": 0.828848,
+          "p_value": 0.08958897014071508,
+          "std_err": 1.579110311473665e-05,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.008032,
+          "r_squared": 0.02522,
+          "p_value": 0.5426596202316007,
+          "std_err": 3.529851026258569e-05,
+          "n_points": 17,
+          "is_significant": false
+        },
+        "slope_change": 0.025982,
+        "level_change": -0.016,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.012127,
+          "r_squared": 0.840707,
+          "p_value": 0.0036545350509385264,
+          "std_err": 6.463372554504775e-06,
+          "n_points": 7,
+          "is_significant": true
+        },
+        "post_trend": {
+          "slope_per_year": 0.012722,
+          "r_squared": 0.02959,
+          "p_value": 0.5565070130402368,
+          "std_err": 5.75795424353268e-05,
+          "n_points": 14,
+          "is_significant": false
+        },
+        "slope_change": 0.024849,
+        "level_change": -0.015,
+        "pre_significant": true,
+        "post_significant": false
+      },
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.006322,
+          "r_squared": 0.033343,
+          "p_value": 0.5700200540546319,
+          "std_err": 2.94692948373767e-05,
+          "n_points": 12,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": 0.049082,
+          "r_squared": 0.07768,
+          "p_value": 0.4676959995532063,
+          "std_err": 0.0001750121839375434,
+          "n_points": 9,
+          "is_significant": false
+        },
+        "slope_change": 0.04276,
+        "level_change": -0.1,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.004052,
+          "r_squared": 0.013955,
+          "p_value": 0.6630303668975952,
+          "std_err": 2.4921900077660283e-05,
+          "n_points": 16,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.034376,
+          "r_squared": 0.012642,
+          "p_value": 0.8571458911271792,
+          "std_err": 0.0004802188971653002,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "slope_change": -0.030324,
+        "level_change": 0.086,
+        "pre_significant": false,
+        "post_significant": false
+      }
+    }
+  },
+  "YouTube": {
+    "events": {
+      "CCPA Effective": {
+        "pre_trend": {
+          "slope_per_year": -0.019668,
+          "r_squared": 0.216569,
+          "p_value": 0.6918428796456542,
+          "std_err": 0.0001024195565209071,
+          "n_points": 3,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -0.140514,
+          "r_squared": 0.046291,
+          "p_value": 0.7281879945501687,
+          "std_err": 0.0010081625429814492,
+          "n_points": 5,
+          "is_significant": false
+        },
+        "slope_change": -0.120845,
+        "level_change": 1.463,
+        "pre_significant": false,
+        "post_significant": false
+      },
+      "CPRA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.03823,
+          "r_squared": 0.181028,
+          "p_value": 0.5745257539115765,
+          "std_err": 0.00015742188240847114,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -2.165734,
+          "r_squared": 0.974818,
+          "p_value": 0.012671213284498384,
+          "std_err": 0.0006738790550634892,
+          "n_points": 4,
+          "is_significant": true
+        },
+        "slope_change": -2.203964,
+        "level_change": 4.816,
+        "pre_significant": false,
+        "post_significant": true
+      },
+      "DSA Effective": {
+        "pre_trend": {
+          "slope_per_year": 0.03823,
+          "r_squared": 0.181028,
+          "p_value": 0.5745257539115765,
+          "std_err": 0.00015742188240847114,
+          "n_points": 4,
+          "is_significant": false
+        },
+        "post_trend": {
+          "slope_per_year": -2.165734,
+          "r_squared": 0.974818,
+          "p_value": 0.012671213284498384,
+          "std_err": 0.0006738790550634892,
+          "n_points": 4,
+          "is_significant": true
+        },
+        "slope_change": -2.203964,
+        "level_change": 2.33,
+        "pre_significant": false,
+        "post_significant": true
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "methods": [
+      "Per-1k-word (baseline)",
+      "Per-sentence",
+      "TF-IDF weighted",
+      "Raw counts"
+    ],
+    "n_platforms": 11,
+    "platforms": [
+      "Discord",
+      "Google",
+      "Instagram",
+      "LinkedIn",
+      "Meta",
+      "Pinterest",
+      "Reddit",
+      "TikTok",
+      "Twitter",
+      "WhatsApp",
+      "YouTube"
+    ]
+  },
+  "results_by_method": {
+    "per_1k": {
+      "name": "Per-1k-word (baseline)",
+      "platform_means": {
+        "Meta": -0.048378,
+        "Twitter": 0.093451,
+        "Instagram": 0.217282,
+        "LinkedIn": -0.141359,
+        "TikTok": 0.114058,
+        "Pinterest": -0.058699,
+        "Reddit": -0.098532,
+        "YouTube": 0.122248,
+        "Google": -0.199955,
+        "WhatsApp": 0.258049,
+        "Discord": 0.075925
+      },
+      "ranking": [
+        "WhatsApp",
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Twitter",
+        "Discord",
+        "Meta",
+        "Pinterest",
+        "Reddit",
+        "LinkedIn",
+        "Google"
+      ],
+      "n_valid": 1704
+    },
+    "per_sentence": {
+      "name": "Per-sentence",
+      "platform_means": {
+        "Meta": -0.04261,
+        "Twitter": 0.019618,
+        "Instagram": 0.274317,
+        "LinkedIn": -0.150503,
+        "TikTok": 0.193159,
+        "Pinterest": -0.07044,
+        "Reddit": -0.114651,
+        "YouTube": 0.122608,
+        "Google": -0.204062,
+        "WhatsApp": 0.275462,
+        "Discord": 0.086817
+      },
+      "ranking": [
+        "WhatsApp",
+        "Instagram",
+        "TikTok",
+        "YouTube",
+        "Discord",
+        "Twitter",
+        "Meta",
+        "Pinterest",
+        "Reddit",
+        "LinkedIn",
+        "Google"
+      ],
+      "n_valid": 1704
+    },
+    "tfidf": {
+      "name": "TF-IDF weighted",
+      "platform_means": {
+        "Meta": -0.0555,
+        "Twitter": 0.096275,
+        "Instagram": 0.157172,
+        "LinkedIn": -0.156067,
+        "TikTok": 0.129272,
+        "Pinterest": -0.016122,
+        "Reddit": -0.127972,
+        "YouTube": 0.155155,
+        "Google": -0.197942,
+        "WhatsApp": 0.243816,
+        "Discord": 0.06098
+      },
+      "ranking": [
+        "WhatsApp",
+        "Instagram",
+        "YouTube",
+        "TikTok",
+        "Twitter",
+        "Discord",
+        "Pinterest",
+        "Meta",
+        "Reddit",
+        "LinkedIn",
+        "Google"
+      ],
+      "n_valid": 1704
+    },
+    "raw": {
+      "name": "Raw counts",
+      "platform_means": {
+        "Meta": 0.001569,
+        "Twitter": -0.166798,
+        "Instagram": 0.06206,
+        "LinkedIn": -0.167923,
+        "TikTok": 0.270991,
+        "Pinterest": 0.080292,
+        "Reddit": -0.164987,
+        "YouTube": 0.001129,
+        "Google": -0.06291,
+        "WhatsApp": 0.098527,
+        "Discord": 0.143947
+      },
+      "ranking": [
+        "TikTok",
+        "Discord",
+        "WhatsApp",
+        "Pinterest",
+        "Instagram",
+        "Meta",
+        "YouTube",
+        "Google",
+        "Reddit",
+        "Twitter",
+        "LinkedIn"
+      ],
+      "n_valid": 1704
+    }
+  },
+  "pairwise_correlations": {
+    "per_1k_vs_per_sentence": {
+      "rho": 0.9818,
+      "p_value": 0.0
+    },
+    "per_1k_vs_tfidf": {
+      "rho": 0.9909,
+      "p_value": 0.0
+    },
+    "per_1k_vs_raw": {
+      "rho": 0.5182,
+      "p_value": 0.1025
+    },
+    "per_sentence_vs_tfidf": {
+      "rho": 0.9727,
+      "p_value": 0.0
+    },
+    "per_sentence_vs_raw": {
+      "rho": 0.6455,
+      "p_value": 0.032
+    },
+    "tfidf_vs_raw": {
+      "rho": 0.5364,
+      "p_value": 0.089
+    }
+  },
+  "summary": {
+    "mean_spearman_rho": 0.7742,
+    "min_spearman_rho": 0.5182,
+    "stability_assessment": "MODERATELY STABLE: Rankings generally agree but some sensitivity exists"
+  }
+}

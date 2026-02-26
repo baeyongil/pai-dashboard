@@ -1,0 +1,291 @@
+{
+  "Meta": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 59,
+          "avg_discretion_ratio": 0.171,
+          "avg_power_index": 0.082
+        },
+        "post_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 1.792,
+          "avg_power_index": 0.364
+        },
+        "post_ccpa": {
+          "doc_count": 47,
+          "avg_discretion_ratio": 2.362,
+          "avg_power_index": 0.319
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": 1281.3
+    },
+    "tos": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 91,
+          "avg_discretion_ratio": 0.901,
+          "avg_power_index": 3.226
+        },
+        "post_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 0.485,
+          "avg_power_index": 1.336
+        },
+        "post_ccpa": {
+          "doc_count": 58,
+          "avg_discretion_ratio": 0.674,
+          "avg_power_index": 1.835
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -25.2
+    }
+  },
+  "YouTube": {
+    "tos": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 42,
+          "avg_discretion_ratio": 0.438,
+          "avg_power_index": 5.094
+        },
+        "post_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 0.547,
+          "avg_power_index": 6.111
+        },
+        "post_ccpa": {
+          "doc_count": 22,
+          "avg_discretion_ratio": 1.031,
+          "avg_power_index": 1.23
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": 135.4
+    }
+  },
+  "WhatsApp": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 61,
+          "avg_discretion_ratio": 0.655,
+          "avg_power_index": 3.092
+        },
+        "post_gdpr": {
+          "doc_count": 6,
+          "avg_discretion_ratio": 0.431,
+          "avg_power_index": 3.554
+        },
+        "post_ccpa": {
+          "doc_count": 44,
+          "avg_discretion_ratio": 0.391,
+          "avg_power_index": 0.91
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -40.3
+    },
+    "tos": {
+      "periods": {
+        "post_ccpa": {
+          "doc_count": 42,
+          "avg_discretion_ratio": 0.61,
+          "avg_power_index": 3.554
+        }
+      },
+      "pattern_changes": {}
+    }
+  },
+  "Reddit": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 78,
+          "avg_discretion_ratio": 3.363,
+          "avg_power_index": 2.138
+        },
+        "post_gdpr": {
+          "doc_count": 10,
+          "avg_discretion_ratio": 1.726,
+          "avg_power_index": 0.613
+        },
+        "post_ccpa": {
+          "doc_count": 25,
+          "avg_discretion_ratio": 1.259,
+          "avg_power_index": 1.24
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -62.6
+    }
+  },
+  "LinkedIn": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 34,
+          "avg_discretion_ratio": 1.799,
+          "avg_power_index": 1.889
+        },
+        "post_gdpr": {
+          "doc_count": 4,
+          "avg_discretion_ratio": 0.0,
+          "avg_power_index": 0.163
+        },
+        "post_ccpa": {
+          "doc_count": 19,
+          "avg_discretion_ratio": 1.015,
+          "avg_power_index": 0.73
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -43.6
+    }
+  },
+  "TikTok": {
+    "privacy": {
+      "periods": {
+        "post_gdpr": {
+          "doc_count": 2,
+          "avg_discretion_ratio": 0.51,
+          "avg_power_index": 1.581
+        },
+        "post_ccpa": {
+          "doc_count": 33,
+          "avg_discretion_ratio": 0.757,
+          "avg_power_index": 0.766
+        }
+      },
+      "pattern_changes": {}
+    },
+    "tos": {
+      "periods": {
+        "post_ccpa": {
+          "doc_count": 31,
+          "avg_discretion_ratio": 0.959,
+          "avg_power_index": 4.802
+        }
+      },
+      "pattern_changes": {}
+    }
+  },
+  "Twitter": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 8,
+          "avg_discretion_ratio": 1.458,
+          "avg_power_index": 1.645
+        },
+        "post_gdpr": {
+          "doc_count": 20,
+          "avg_discretion_ratio": 1.198,
+          "avg_power_index": 4.448
+        },
+        "post_ccpa": {
+          "doc_count": 70,
+          "avg_discretion_ratio": 0.967,
+          "avg_power_index": 2.512
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -33.7
+    },
+    "tos": {
+      "periods": {
+        "post_ccpa": {
+          "doc_count": 22,
+          "avg_discretion_ratio": 0.651,
+          "avg_power_index": 6.278
+        }
+      },
+      "pattern_changes": {}
+    }
+  },
+  "Instagram": {
+    "privacy": {
+      "periods": {
+        "post_ccpa": {
+          "doc_count": 7,
+          "avg_discretion_ratio": 0.571,
+          "avg_power_index": 0.083
+        }
+      },
+      "pattern_changes": {}
+    }
+  },
+  "Pinterest": {
+    "privacy": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 1.958,
+          "avg_power_index": 0.986
+        },
+        "post_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 1.283,
+          "avg_power_index": 0.91
+        },
+        "post_ccpa": {
+          "doc_count": 49,
+          "avg_discretion_ratio": 3.398,
+          "avg_power_index": 0.667
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": 73.5
+    },
+    "tos": {
+      "periods": {
+        "pre_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 0.611,
+          "avg_power_index": 6.303
+        },
+        "post_gdpr": {
+          "doc_count": 12,
+          "avg_discretion_ratio": 0.603,
+          "avg_power_index": 4.998
+        },
+        "post_ccpa": {
+          "doc_count": 47,
+          "avg_discretion_ratio": 0.512,
+          "avg_power_index": 5.058
+        }
+      },
+      "pattern_changes": {},
+      "change_pct": -16.2
+    }
+  },
+  "Discord": {
+    "privacy": {
+      "periods": {
+        "post_ccpa": {
+          "doc_count": 41,
+          "avg_discretion_ratio": 3.472,
+          "avg_power_index": 1.376
+        }
+      },
+      "pattern_changes": {}
+    },
+    "tos": {
+      "periods": {
+        "post_gdpr": {
+          "doc_count": 2,
+          "avg_discretion_ratio": 1.021,
+          "avg_power_index": 3.598
+        },
+        "post_ccpa": {
+          "doc_count": 37,
+          "avg_discretion_ratio": 0.951,
+          "avg_power_index": 4.07
+        }
+      },
+      "pattern_changes": {}
+    }
+  }
+}

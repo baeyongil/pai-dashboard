@@ -1,0 +1,1289 @@
+{
+  "metadata": {
+    "created": "2026-01-22T09:02:10.681709",
+    "description": "Real temporal data with linked metrics",
+    "real_platforms": [
+      "Meta",
+      "LinkedIn",
+      "YouTube",
+      "TikTok",
+      "Reddit",
+      "WhatsApp"
+    ],
+    "illustrative_platforms": []
+  },
+  "platforms": {
+    "Meta": {
+      "type": "real_linked",
+      "n_time_points": 12,
+      "date_range": {
+        "earliest": "2007-10-12T21:58:43+00:00",
+        "latest": "2024-04-01T07:41:45+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2007-10-12T21:58:43+00:00",
+          "doc_id": "68afd5cf6134d8817ff075d8",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 0.3949,
+          "asymmetry_factor": 14.276384236896995,
+          "adl": 3.898154531054425,
+          "tree_depth": 6.873333333333333,
+          "flesch_kincaid": 20.555931056018974,
+          "platform_visibility": 0.05654802392451745,
+          "user_visibility": 0.8073013173836551,
+          "match_type": "direct",
+          "index": 0.3949
+        },
+        {
+          "date": "2012-10-03T20:40:16+00:00",
+          "doc_id": "68afd5f26134d8817ff075ef",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": -0.28,
+          "asymmetry_factor": 11.97574907983174,
+          "adl": 3.369846387827704,
+          "tree_depth": 5.0,
+          "flesch_kincaid": 15.016389560615046,
+          "platform_visibility": 0.06683849170472354,
+          "user_visibility": 0.8004410055301844,
+          "match_type": "direct",
+          "index": -0.28
+        },
+        {
+          "date": "2013-04-01T03:58:13+00:00",
+          "doc_id": "68afc1bb6134d8817ff0650a",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 4.5773,
+          "asymmetry_factor": 41.85512990540535,
+          "adl": 5.151292383339372,
+          "tree_depth": 4.526315789473684,
+          "flesch_kincaid": 47.22436714975845,
+          "platform_visibility": 0.02,
+          "user_visibility": 0.8371025981081069,
+          "match_type": "direct",
+          "index": 4.5773
+        },
+        {
+          "date": "2013-04-01T09:18:57+00:00",
+          "doc_id": "68afd5f46134d8817ff075f2",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": -0.2295,
+          "asymmetry_factor": 12.155096509932187,
+          "adl": 3.361636694911777,
+          "tree_depth": 5.071065989847716,
+          "flesch_kincaid": 15.66019321523946,
+          "platform_visibility": 0.06590357257122165,
+          "user_visibility": 0.8010642849525189,
+          "match_type": "direct",
+          "index": -0.2295
+        },
+        {
+          "date": "2015-03-01T02:32:08+00:00",
+          "doc_id": "68afd6016134d8817ff075fe",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 0.2156,
+          "asymmetry_factor": 13.846954554796426,
+          "adl": 3.377972461733145,
+          "tree_depth": 5.167785234899329,
+          "flesch_kincaid": 20.740955900493784,
+          "platform_visibility": 0.05822116941776004,
+          "user_visibility": 0.8061858870548267,
+          "match_type": "direct",
+          "index": 0.2156
+        },
+        {
+          "date": "2019-04-01T01:25:58+00:00",
+          "doc_id": "68afc1cb6134d8817ff0652d",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 0.8522,
+          "asymmetry_factor": 16.623978856456755,
+          "adl": 3.647224925886827,
+          "tree_depth": 3.468421052631579,
+          "flesch_kincaid": 26.301700436189673,
+          "platform_visibility": 0.048870355873639894,
+          "user_visibility": 0.8124197627509068,
+          "match_type": "direct",
+          "index": 0.8522
+        },
+        {
+          "date": "2019-10-01T04:01:12+00:00",
+          "doc_id": "68afc1cd6134d8817ff06530",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 1.3793,
+          "asymmetry_factor": 19.348346702832398,
+          "adl": 3.9342071853362848,
+          "tree_depth": 4.345070422535211,
+          "flesch_kincaid": 30.01894333860383,
+          "platform_visibility": 0.042218308047083195,
+          "user_visibility": 0.8168544613019446,
+          "match_type": "direct",
+          "index": 1.3793
+        },
+        {
+          "date": "2020-04-01T00:05:28+00:00",
+          "doc_id": "68afc1cf6134d8817ff06533",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 1.4537,
+          "asymmetry_factor": 19.76368391281571,
+          "adl": 3.9802364004002135,
+          "tree_depth": 4.331010452961673,
+          "flesch_kincaid": 30.476052822768548,
+          "platform_visibility": 0.04136003426434638,
+          "user_visibility": 0.8174266438237692,
+          "match_type": "direct",
+          "index": 1.4537
+        },
+        {
+          "date": "2021-04-01T02:26:15+00:00",
+          "doc_id": "68afc1d46134d8817ff0653a",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": -0.443,
+          "asymmetry_factor": 11.546819886134566,
+          "adl": 3.1379979025239018,
+          "tree_depth": 5.158974358974359,
+          "flesch_kincaid": 14.031129731326448,
+          "platform_visibility": 0.0691858132685457,
+          "user_visibility": 0.7988761244876362,
+          "match_type": "direct",
+          "index": -0.443
+        },
+        {
+          "date": "2021-10-01T00:17:06+00:00",
+          "doc_id": "68afd61e6134d8817ff07622",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 1.6584,
+          "asymmetry_factor": 21.581804025984873,
+          "adl": 3.4740520787896707,
+          "tree_depth": 5.383838383838384,
+          "flesch_kincaid": 33.99477741935485,
+          "platform_visibility": 0.03798013857550647,
+          "user_visibility": 0.819679907616329,
+          "match_type": "direct",
+          "index": 1.6584
+        },
+        {
+          "date": "2021-10-01T00:28:51+00:00",
+          "doc_id": "68afc1d66134d8817ff0653c",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": 1.5641,
+          "asymmetry_factor": 20.86433440683762,
+          "adl": 3.5653600300829273,
+          "tree_depth": 5.24537037037037,
+          "flesch_kincaid": 32.92277542772541,
+          "platform_visibility": 0.03924573674560092,
+          "user_visibility": 0.8188361755029328,
+          "match_type": "direct",
+          "index": 1.5641
+        },
+        {
+          "date": "2024-04-01T07:41:45+00:00",
+          "doc_id": "68afd6296134d8817ff07631",
+          "doc_type": "unknown",
+          "platform": "Meta",
+          "legalization_index": -0.3907,
+          "asymmetry_factor": 11.729682333254393,
+          "adl": 3.1170729866302347,
+          "tree_depth": 5.566502463054187,
+          "flesch_kincaid": 14.763829830962937,
+          "platform_visibility": 0.06816523155369222,
+          "user_visibility": 0.7995565122975385,
+          "match_type": "direct",
+          "index": -0.3907
+        }
+      ]
+    },
+    "LinkedIn": {
+      "type": "real_linked",
+      "n_time_points": 8,
+      "date_range": {
+        "earliest": "2013-05-14T09:01:40+00:00",
+        "latest": "2024-04-06T18:03:50+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2013-05-14T09:01:40+00:00",
+          "doc_id": "68afc5276134d8817ff068fb",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.4014,
+          "asymmetry_factor": 11.564190132655026,
+          "adl": 3.3796463882190046,
+          "tree_depth": 5.310077519379845,
+          "flesch_kincaid": 13.492513583599905,
+          "platform_visibility": 0.06908755566877887,
+          "user_visibility": 0.7989416295541475,
+          "match_type": "direct",
+          "index": -0.4014
+        },
+        {
+          "date": "2014-05-29T08:01:02+00:00",
+          "doc_id": "68afc52b6134d8817ff06901",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.4333,
+          "asymmetry_factor": 11.467804206690255,
+          "adl": 3.36465156183871,
+          "tree_depth": 5.398692810457517,
+          "flesch_kincaid": 13.16415209050064,
+          "platform_visibility": 0.06963632850735388,
+          "user_visibility": 0.7985757809950974,
+          "match_type": "direct",
+          "index": -0.4333
+        },
+        {
+          "date": "2014-07-17T16:14:19+00:00",
+          "doc_id": "68afda2a6134d8817ff079c1",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.2128,
+          "asymmetry_factor": 12.138290265959709,
+          "adl": 3.5049265758500066,
+          "tree_depth": 5.758893280632411,
+          "flesch_kincaid": 15.24430378586057,
+          "platform_visibility": 0.06599006966177162,
+          "user_visibility": 0.8010066202254856,
+          "match_type": "direct",
+          "index": -0.2128
+        },
+        {
+          "date": "2015-11-11T05:09:08+00:00",
+          "doc_id": "68afda2f6134d8817ff079c7",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.3909,
+          "asymmetry_factor": 11.601698144702617,
+          "adl": 3.3734909979005194,
+          "tree_depth": 5.447368421052632,
+          "flesch_kincaid": 13.648716091268934,
+          "platform_visibility": 0.06887633462096966,
+          "user_visibility": 0.7990824435860203,
+          "match_type": "direct",
+          "index": -0.3909
+        },
+        {
+          "date": "2016-04-06T20:04:55+00:00",
+          "doc_id": "68afda356134d8817ff079c9",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.2396,
+          "asymmetry_factor": 11.970051220156117,
+          "adl": 3.650016340570444,
+          "tree_depth": 5.100591715976331,
+          "flesch_kincaid": 14.29587315657264,
+          "platform_visibility": 0.06686862898800189,
+          "user_visibility": 0.8004209140079988,
+          "match_type": "direct",
+          "index": -0.2396
+        },
+        {
+          "date": "2016-10-22T15:09:13+00:00",
+          "doc_id": "68afda396134d8817ff079cc",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.2925,
+          "asymmetry_factor": 11.662702089841222,
+          "adl": 3.9061979548796226,
+          "tree_depth": 4.954545454545454,
+          "flesch_kincaid": 12.54414217057931,
+          "platform_visibility": 0.06853554441333246,
+          "user_visibility": 0.7993096370577784,
+          "match_type": "direct",
+          "index": -0.2925
+        },
+        {
+          "date": "2024-04-01T07:45:47+00:00",
+          "doc_id": "68afda466134d8817ff079df",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.378,
+          "asymmetry_factor": 11.69269304047352,
+          "adl": 3.275918429410943,
+          "tree_depth": 5.372093023255814,
+          "flesch_kincaid": 14.230712214787342,
+          "platform_visibility": 0.06836923756752795,
+          "user_visibility": 0.7994205082883148,
+          "match_type": "direct",
+          "index": -0.378
+        },
+        {
+          "date": "2024-04-06T18:03:50+00:00",
+          "doc_id": "68afbc5a6134d8817ff05fb6",
+          "doc_type": "unknown",
+          "platform": "LinkedIn",
+          "legalization_index": -0.5975,
+          "asymmetry_factor": 11.122080002039175,
+          "adl": 2.9989107596920617,
+          "tree_depth": 4.5,
+          "flesch_kincaid": 12.717038229896666,
+          "platform_visibility": 0.07167852730630977,
+          "user_visibility": 0.7972143151291269,
+          "match_type": "direct",
+          "index": -0.5975
+        }
+      ]
+    },
+    "YouTube": {
+      "type": "real_linked",
+      "n_time_points": 8,
+      "date_range": {
+        "earliest": "2012-10-10T17:25:32+00:00",
+        "latest": "2025-04-01T08:13:19+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2012-10-10T17:25:32+00:00",
+          "doc_id": "68afc05b6134d8817ff063e2",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.3767,
+          "asymmetry_factor": 11.63497338532005,
+          "adl": 3.4003603159394555,
+          "tree_depth": 4.791666666666667,
+          "flesch_kincaid": 13.70574718938931,
+          "platform_visibility": 0.06869002803114309,
+          "user_visibility": 0.799206647979238,
+          "match_type": "direct",
+          "index": -0.3767
+        },
+        {
+          "date": "2018-10-28T06:00:08+00:00",
+          "doc_id": "68afc26e6134d8817ff065d7",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.3208,
+          "asymmetry_factor": 11.723684299514536,
+          "adl": 3.594807312696627,
+          "tree_depth": 4.905405405405405,
+          "flesch_kincaid": 13.54749531913048,
+          "platform_visibility": 0.06819822959869193,
+          "user_visibility": 0.7995345136008721,
+          "match_type": "direct",
+          "index": -0.3208
+        },
+        {
+          "date": "2019-11-06T18:03:19+00:00",
+          "doc_id": "68afde806134d8817ff07da1",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.6243,
+          "asymmetry_factor": 10.999534109829591,
+          "adl": 3.086732448527082,
+          "tree_depth": 4.885209713024283,
+          "flesch_kincaid": 11.995526301136945,
+          "platform_visibility": 0.07243146386631803,
+          "user_visibility": 0.7967123574224547,
+          "match_type": "direct",
+          "index": -0.6243
+        },
+        {
+          "date": "2021-12-03T12:29:27+00:00",
+          "doc_id": "68afbb6f6134d8817ff05ea9",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": 0.2143,
+          "asymmetry_factor": 13.965484463058315,
+          "adl": 3.1802944735004197,
+          "tree_depth": 3.727272727272727,
+          "flesch_kincaid": 21.54957034404782,
+          "platform_visibility": 0.057749540208301704,
+          "user_visibility": 0.8065003065277989,
+          "match_type": "direct",
+          "index": 0.2143
+        },
+        {
+          "date": "2024-04-05T15:10:33+00:00",
+          "doc_id": "68afcec86134d8817ff070a3",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": 1.9893,
+          "asymmetry_factor": 23.231969037372508,
+          "adl": 4.100581761609702,
+          "tree_depth": 5.5718849840255595,
+          "flesch_kincaid": 34.176767679041234,
+          "platform_visibility": 0.035357666875401775,
+          "user_visibility": 0.8214282220830655,
+          "match_type": "direct",
+          "index": 1.9893
+        },
+        {
+          "date": "2025-04-01T00:09:14+00:00",
+          "doc_id": "68afc2c16134d8817ff06638",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.0434,
+          "asymmetry_factor": 12.648871701758418,
+          "adl": 3.68725209097004,
+          "tree_depth": 5.705787781350482,
+          "flesch_kincaid": 16.47540662053621,
+          "platform_visibility": 0.06345969472805804,
+          "user_visibility": 0.8026935368479613,
+          "match_type": "direct",
+          "index": -0.0434
+        },
+        {
+          "date": "2025-04-01T04:03:56+00:00",
+          "doc_id": "68afe1d26134d8817ff08001",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.0163,
+          "asymmetry_factor": 12.93745499777078,
+          "adl": 3.3550236719018542,
+          "tree_depth": 6.054545454545455,
+          "flesch_kincaid": 18.203421757592924,
+          "platform_visibility": 0.062113528593978666,
+          "user_visibility": 0.8035909809373476,
+          "match_type": "direct",
+          "index": -0.0163
+        },
+        {
+          "date": "2025-04-01T08:13:19+00:00",
+          "doc_id": "68afbced6134d8817ff060a0",
+          "doc_type": "unknown",
+          "platform": "YouTube",
+          "legalization_index": -0.394,
+          "asymmetry_factor": 11.645637856008394,
+          "adl": 3.263529226133704,
+          "tree_depth": 5.554054054054054,
+          "flesch_kincaid": 14.087489451070308,
+          "platform_visibility": 0.06863053122539316,
+          "user_visibility": 0.7992463125164047,
+          "match_type": "direct",
+          "index": -0.394
+        }
+      ]
+    },
+    "TikTok": {
+      "type": "real_linked",
+      "n_time_points": 4,
+      "date_range": {
+        "earliest": "2024-04-01T00:21:42+00:00",
+        "latest": "2025-03-04T22:39:22.361000+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2024-04-01T00:21:42+00:00",
+          "doc_id": "68afbd006134d8817ff060c7",
+          "doc_type": "unknown",
+          "platform": "TikTok",
+          "legalization_index": -0.783,
+          "asymmetry_factor": 10.66219604603625,
+          "adl": 2.7834098299136416,
+          "tree_depth": 3.92,
+          "flesch_kincaid": 11.315978028052236,
+          "platform_visibility": 0.07458824609574549,
+          "user_visibility": 0.7952745026028364,
+          "match_type": "direct",
+          "index": -0.783
+        },
+        {
+          "date": "2024-04-01T00:21:47+00:00",
+          "doc_id": "68afe1906134d8817ff07fd7",
+          "doc_type": "unknown",
+          "platform": "TikTok",
+          "legalization_index": -0.0665,
+          "asymmetry_factor": 12.637671106543754,
+          "adl": 3.5533436703198054,
+          "tree_depth": 5.8915094339622645,
+          "flesch_kincaid": 16.7745608998874,
+          "platform_visibility": 0.06351311988646964,
+          "user_visibility": 0.8026579200756869,
+          "match_type": "direct",
+          "index": -0.0665
+        },
+        {
+          "date": "2024-10-01T18:51:35+00:00",
+          "doc_id": "68afbd016134d8817ff060c9",
+          "doc_type": "unknown",
+          "platform": "TikTok",
+          "legalization_index": 6.8148,
+          "asymmetry_factor": 42.68932778177313,
+          "adl": 12.949825222285666,
+          "tree_depth": 5.0285714285714285,
+          "flesch_kincaid": 44.411992579748386,
+          "platform_visibility": 0.02,
+          "user_visibility": 0.8537865556354626,
+          "match_type": "direct",
+          "index": 6.8148
+        },
+        {
+          "date": "2025-03-04T22:39:22.361000+00:00",
+          "doc_id": "67c7811c11455d9968eb4a74",
+          "doc_type": "unknown",
+          "platform": "TikTok",
+          "legalization_index": -0.0983,
+          "asymmetry_factor": 12.594898592092896,
+          "adl": 3.4190620437151633,
+          "tree_depth": 6.23,
+          "flesch_kincaid": 16.97369909426367,
+          "platform_visibility": 0.06371796869467264,
+          "user_visibility": 0.8025213542035516,
+          "match_type": "direct",
+          "index": -0.0983
+        }
+      ]
+    },
+    "Reddit": {
+      "type": "real_linked",
+      "n_time_points": 12,
+      "date_range": {
+        "earliest": "2008-10-06T12:37:05+00:00",
+        "latest": "2025-03-04T22:39:39.525000+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2008-10-06T12:37:05+00:00",
+          "doc_id": "68afc8e86134d8817ff06cc3",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.4907,
+          "asymmetry_factor": 11.405868625785793,
+          "adl": 3.110594882499962,
+          "tree_depth": 4.549450549450549,
+          "flesch_kincaid": 13.561124183006537,
+          "platform_visibility": 0.06999358291611535,
+          "user_visibility": 0.7983376113892565,
+          "match_type": "direct",
+          "index": -0.4907
+        },
+        {
+          "date": "2009-04-10T12:27:27+00:00",
+          "doc_id": "68afc8ea6134d8817ff06cc6",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.4402,
+          "asymmetry_factor": 11.577030036331116,
+          "adl": 3.0949718889112883,
+          "tree_depth": 4.526881720430108,
+          "flesch_kincaid": 14.25250101527385,
+          "platform_visibility": 0.0690151038936719,
+          "user_visibility": 0.7989899307375521,
+          "match_type": "direct",
+          "index": -0.4402
+        },
+        {
+          "date": "2010-10-28T12:56:55+00:00",
+          "doc_id": "68afc8f26134d8817ff06ccf",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.382,
+          "asymmetry_factor": 11.727540066546975,
+          "adl": 3.1792963121365614,
+          "tree_depth": 4.5353535353535355,
+          "flesch_kincaid": 14.600416874066703,
+          "platform_visibility": 0.06817701351838784,
+          "user_visibility": 0.7995486576544082,
+          "match_type": "direct",
+          "index": -0.382
+        },
+        {
+          "date": "2010-10-28T12:56:55+00:00",
+          "doc_id": "68afc8f26134d8817ff06cd0",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.3896,
+          "asymmetry_factor": 11.748647911840404,
+          "adl": 3.0864988449658233,
+          "tree_depth": 4.525,
+          "flesch_kincaid": 14.90968445209409,
+          "platform_visibility": 0.06806110265323703,
+          "user_visibility": 0.7996259315645087,
+          "match_type": "direct",
+          "index": -0.3896
+        },
+        {
+          "date": "2016-04-01T00:40:57+00:00",
+          "doc_id": "68afc9196134d8817ff06ce8",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.2542,
+          "asymmetry_factor": 11.82797569148145,
+          "adl": 3.8312237818461337,
+          "tree_depth": 4.928,
+          "flesch_kincaid": 13.335949511318177,
+          "platform_visibility": 0.06762898655109974,
+          "user_visibility": 0.7999140089659336,
+          "match_type": "direct",
+          "index": -0.2542
+        },
+        {
+          "date": "2017-10-01T03:28:29+00:00",
+          "doc_id": "68afc91f6134d8817ff06cef",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.1385,
+          "asymmetry_factor": 12.026403846628769,
+          "adl": 4.2149334677060395,
+          "tree_depth": 4.946308724832215,
+          "flesch_kincaid": 13.08149530176549,
+          "platform_visibility": 0.06657175654345412,
+          "user_visibility": 0.8006188289710306,
+          "match_type": "direct",
+          "index": -0.1385
+        },
+        {
+          "date": "2020-10-01T02:11:02+00:00",
+          "doc_id": "68afbcd86134d8817ff0606d",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.5387,
+          "asymmetry_factor": 11.277930104767043,
+          "adl": 3.058760201319235,
+          "tree_depth": 5.0,
+          "flesch_kincaid": 13.190910256410259,
+          "platform_visibility": 0.07074328386043749,
+          "user_visibility": 0.7978378107597084,
+          "match_type": "direct",
+          "index": -0.5387
+        },
+        {
+          "date": "2021-10-01T00:33:20+00:00",
+          "doc_id": "68afc9376134d8817ff06cfe",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.2799,
+          "asymmetry_factor": 11.903356835171222,
+          "adl": 3.51174198868467,
+          "tree_depth": 5.165745856353591,
+          "flesch_kincaid": 14.40503006535948,
+          "platform_visibility": 0.06722342244439328,
+          "user_visibility": 0.8001843850370712,
+          "match_type": "direct",
+          "index": -0.2799
+        },
+        {
+          "date": "2025-01-02T00:38:42+00:00",
+          "doc_id": "68afbce76134d8817ff06085",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.3434,
+          "asymmetry_factor": 11.497113578794625,
+          "adl": 3.903794390785551,
+          "tree_depth": 4.159090909090909,
+          "flesch_kincaid": 11.92815701185684,
+          "platform_visibility": 0.06946853551676893,
+          "user_visibility": 0.7986876429888208,
+          "match_type": "direct",
+          "index": -0.3434
+        },
+        {
+          "date": "2025-02-06T21:34:37.634000+00:00",
+          "doc_id": "67a52aefb7a250c7c976715e",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.2757,
+          "asymmetry_factor": 12.160736617123195,
+          "adl": 3.0426028040466675,
+          "tree_depth": 4.315068493150685,
+          "flesch_kincaid": 16.47709612683123,
+          "platform_visibility": 0.06587459529457816,
+          "user_visibility": 0.8010836031369479,
+          "match_type": "direct",
+          "index": -0.2757
+        },
+        {
+          "date": "2025-03-04T22:39:39.525000+00:00",
+          "doc_id": "67c7812c11455d9968eb4a85",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.4493,
+          "asymmetry_factor": 11.269708266959205,
+          "adl": 3.672019538089325,
+          "tree_depth": 4.175572519083969,
+          "flesch_kincaid": 11.625276350588752,
+          "platform_visibility": 0.07079201220628191,
+          "user_visibility": 0.7978053251958122,
+          "match_type": "direct",
+          "index": -0.4493
+        },
+        {
+          "date": "2025-03-04T22:39:39.525000+00:00",
+          "doc_id": "67c7812e11455d9968eb4a87",
+          "doc_type": "unknown",
+          "platform": "Reddit",
+          "legalization_index": -0.4338,
+          "asymmetry_factor": 11.621175265779419,
+          "adl": 3.048076942110488,
+          "tree_depth": 4.097560975609756,
+          "flesch_kincaid": 14.535033889468199,
+          "platform_visibility": 0.06876716063288338,
+          "user_visibility": 0.7991552262447444,
+          "match_type": "direct",
+          "index": -0.4338
+        }
+      ]
+    },
+    "WhatsApp": {
+      "type": "real_linked",
+      "n_time_points": 6,
+      "date_range": {
+        "earliest": "2011-09-23T07:01:21+00:00",
+        "latest": "2025-04-06T09:00:38+00:00"
+      },
+      "time_series": [
+        {
+          "date": "2011-09-23T07:01:21+00:00",
+          "doc_id": "68afcfc86134d8817ff071c3",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": -0.0346,
+          "asymmetry_factor": 12.768153779411332,
+          "adl": 3.53173436613738,
+          "tree_depth": 6.0602409638554215,
+          "flesch_kincaid": 17.23982209132078,
+          "platform_visibility": 0.06289626299000366,
+          "user_visibility": 0.8030691580066642,
+          "match_type": "direct",
+          "index": -0.0346
+        },
+        {
+          "date": "2012-03-16T02:07:07+00:00",
+          "doc_id": "68afcfca6134d8817ff071c6",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": -0.0093,
+          "asymmetry_factor": 12.855034477051516,
+          "adl": 3.5466221919010006,
+          "tree_depth": 6.011904761904762,
+          "flesch_kincaid": 17.472019870654297,
+          "platform_visibility": 0.06249213697438981,
+          "user_visibility": 0.8033385753504069,
+          "match_type": "direct",
+          "index": -0.0093
+        },
+        {
+          "date": "2012-09-15T19:55:55+00:00",
+          "doc_id": "68afcfcc6134d8817ff071c8",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": -0.0547,
+          "asymmetry_factor": 12.638686771901837,
+          "adl": 3.6304639018876097,
+          "tree_depth": 5.894230769230769,
+          "flesch_kincaid": 16.58499250746836,
+          "platform_visibility": 0.06350827160671893,
+          "user_visibility": 0.8026611522621875,
+          "match_type": "direct",
+          "index": -0.0547
+        },
+        {
+          "date": "2016-03-01T09:10:34+00:00",
+          "doc_id": "68afd0fb6134d8817ff071dc",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": -0.0034,
+          "asymmetry_factor": 12.80477546340317,
+          "adl": 3.6746418817507975,
+          "tree_depth": 5.995098039215686,
+          "flesch_kincaid": 16.996540953361656,
+          "platform_visibility": 0.06272528151339203,
+          "user_visibility": 0.8031831456577387,
+          "match_type": "direct",
+          "index": -0.0034
+        },
+        {
+          "date": "2024-10-15T05:22:50+00:00",
+          "doc_id": "68afe3026134d8817ff080f7",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": 1.6318,
+          "asymmetry_factor": 21.295862310207173,
+          "adl": 3.580718873230169,
+          "tree_depth": 5.17741935483871,
+          "flesch_kincaid": 33.398454833597455,
+          "platform_visibility": 0.038474621974990686,
+          "user_visibility": 0.8193502520166729,
+          "match_type": "direct",
+          "index": 1.6318
+        },
+        {
+          "date": "2025-04-06T09:00:38+00:00",
+          "doc_id": "68afbd446134d8817ff06127",
+          "doc_type": "unknown",
+          "platform": "WhatsApp",
+          "legalization_index": 5.0651,
+          "asymmetry_factor": 42.358719252850015,
+          "adl": 4.106449877353492,
+          "tree_depth": 5.0,
+          "flesch_kincaid": 59.90826036361645,
+          "platform_visibility": 0.02,
+          "user_visibility": 0.8471743850570003,
+          "match_type": "direct",
+          "index": 5.0651
+        }
+      ]
+    },
+    "Twitter": {
+      "type": "real",
+      "source": "tier1_extracted.json",
+      "date_range": "2015-2025",
+      "time_series": [
+        {
+          "date": "2015-08-15",
+          "index": 0.3183,
+          "legalization_index": 0.3183,
+          "doc_count": 2
+        },
+        {
+          "date": "2016-08-15",
+          "index": 0.307,
+          "legalization_index": 0.307,
+          "doc_count": 2
+        },
+        {
+          "date": "2016-11-15",
+          "index": 0.2865,
+          "legalization_index": 0.2865,
+          "doc_count": 2
+        },
+        {
+          "date": "2017-08-15",
+          "index": 0.2847,
+          "legalization_index": 0.2847,
+          "doc_count": 2
+        },
+        {
+          "date": "2018-08-15",
+          "index": 0.2674,
+          "legalization_index": 0.2674,
+          "doc_count": 2
+        },
+        {
+          "date": "2019-05-15",
+          "index": 0.2766,
+          "legalization_index": 0.2766,
+          "doc_count": 8
+        },
+        {
+          "date": "2019-08-15",
+          "index": 0.2651,
+          "legalization_index": 0.2651,
+          "doc_count": 10
+        },
+        {
+          "date": "2020-02-15",
+          "index": 0.2267,
+          "legalization_index": 0.2267,
+          "doc_count": 2
+        },
+        {
+          "date": "2020-08-15",
+          "index": 0.2557,
+          "legalization_index": 0.2557,
+          "doc_count": 6
+        },
+        {
+          "date": "2021-05-15",
+          "index": 0.2424,
+          "legalization_index": 0.2424,
+          "doc_count": 6
+        },
+        {
+          "date": "2022-02-15",
+          "index": 0.2337,
+          "legalization_index": 0.2337,
+          "doc_count": 2
+        },
+        {
+          "date": "2022-11-15",
+          "index": 0.5262,
+          "legalization_index": 0.5262,
+          "doc_count": 6
+        },
+        {
+          "date": "2023-02-15",
+          "index": 0.1462,
+          "legalization_index": 0.1462,
+          "doc_count": 2
+        },
+        {
+          "date": "2023-08-15",
+          "index": 0.4299,
+          "legalization_index": 0.4299,
+          "doc_count": 6
+        },
+        {
+          "date": "2023-11-15",
+          "index": 0.1969,
+          "legalization_index": 0.1969,
+          "doc_count": 7
+        },
+        {
+          "date": "2024-02-15",
+          "index": 0.1412,
+          "legalization_index": 0.1412,
+          "doc_count": 2
+        },
+        {
+          "date": "2024-05-15",
+          "index": 0.2465,
+          "legalization_index": 0.2465,
+          "doc_count": 11
+        },
+        {
+          "date": "2024-08-15",
+          "index": 0.5261,
+          "legalization_index": 0.5261,
+          "doc_count": 6
+        },
+        {
+          "date": "2024-11-15",
+          "index": 0.2307,
+          "legalization_index": 0.2307,
+          "doc_count": 10
+        },
+        {
+          "date": "2025-02-15",
+          "index": 0.2696,
+          "legalization_index": 0.2696,
+          "doc_count": 17
+        },
+        {
+          "date": "2025-05-15",
+          "index": 0.3322,
+          "legalization_index": 0.3322,
+          "doc_count": 23
+        }
+      ]
+    },
+    "Instagram": {
+      "type": "real",
+      "source": "tier1_extracted.json",
+      "date_range": "2018-2025",
+      "time_series": [
+        {
+          "date": "2018-05-15",
+          "index": 0.3356,
+          "legalization_index": 0.3356,
+          "doc_count": 4
+        },
+        {
+          "date": "2018-11-15",
+          "index": 0.2605,
+          "legalization_index": 0.2605,
+          "doc_count": 4
+        },
+        {
+          "date": "2019-05-15",
+          "index": 0.2179,
+          "legalization_index": 0.2179,
+          "doc_count": 2
+        },
+        {
+          "date": "2019-11-15",
+          "index": 0.2695,
+          "legalization_index": 0.2695,
+          "doc_count": 2
+        },
+        {
+          "date": "2020-05-15",
+          "index": 0.347,
+          "legalization_index": 0.347,
+          "doc_count": 4
+        },
+        {
+          "date": "2020-11-15",
+          "index": 0.3757,
+          "legalization_index": 0.3757,
+          "doc_count": 4
+        },
+        {
+          "date": "2021-05-15",
+          "index": 0.3598,
+          "legalization_index": 0.3598,
+          "doc_count": 4
+        },
+        {
+          "date": "2021-11-15",
+          "index": 0.0,
+          "legalization_index": 0.0,
+          "doc_count": 1
+        },
+        {
+          "date": "2022-05-15",
+          "index": 0.0049,
+          "legalization_index": 0.0049,
+          "doc_count": 3
+        },
+        {
+          "date": "2022-11-15",
+          "index": 0.0537,
+          "legalization_index": 0.0537,
+          "doc_count": 2
+        },
+        {
+          "date": "2023-05-15",
+          "index": 0.0526,
+          "legalization_index": 0.0526,
+          "doc_count": 2
+        },
+        {
+          "date": "2023-11-15",
+          "index": 0.0543,
+          "legalization_index": 0.0543,
+          "doc_count": 3
+        },
+        {
+          "date": "2024-05-15",
+          "index": 0.054,
+          "legalization_index": 0.054,
+          "doc_count": 3
+        },
+        {
+          "date": "2024-08-15",
+          "index": 0.0437,
+          "legalization_index": 0.0437,
+          "doc_count": 1
+        },
+        {
+          "date": "2024-11-15",
+          "index": 0.0457,
+          "legalization_index": 0.0457,
+          "doc_count": 3
+        },
+        {
+          "date": "2025-02-15",
+          "index": 0.0409,
+          "legalization_index": 0.0409,
+          "doc_count": 1
+        },
+        {
+          "date": "2025-05-15",
+          "index": 0.0371,
+          "legalization_index": 0.0371,
+          "doc_count": 3
+        }
+      ]
+    },
+    "Discord": {
+      "type": "real",
+      "source": "tier1_extracted.json",
+      "date_range": "2019-2025",
+      "time_series": [
+        {
+          "date": "2019-05-15",
+          "index": 0.3541,
+          "legalization_index": 0.3541,
+          "doc_count": 2
+        },
+        {
+          "date": "2020-05-15",
+          "index": 0.3533,
+          "legalization_index": 0.3533,
+          "doc_count": 12
+        },
+        {
+          "date": "2020-08-15",
+          "index": 0.2885,
+          "legalization_index": 0.2885,
+          "doc_count": 4
+        },
+        {
+          "date": "2020-11-15",
+          "index": 0.1601,
+          "legalization_index": 0.1601,
+          "doc_count": 6
+        },
+        {
+          "date": "2021-05-15",
+          "index": 0.2895,
+          "legalization_index": 0.2895,
+          "doc_count": 12
+        },
+        {
+          "date": "2021-11-15",
+          "index": 0.2061,
+          "legalization_index": 0.2061,
+          "doc_count": 10
+        },
+        {
+          "date": "2022-05-15",
+          "index": 0.2116,
+          "legalization_index": 0.2116,
+          "doc_count": 12
+        },
+        {
+          "date": "2022-11-15",
+          "index": 0.2611,
+          "legalization_index": 0.2611,
+          "doc_count": 10
+        },
+        {
+          "date": "2023-05-15",
+          "index": 0.2877,
+          "legalization_index": 0.2877,
+          "doc_count": 10
+        },
+        {
+          "date": "2023-11-15",
+          "index": 0.2607,
+          "legalization_index": 0.2607,
+          "doc_count": 12
+        },
+        {
+          "date": "2024-05-15",
+          "index": 0.3386,
+          "legalization_index": 0.3386,
+          "doc_count": 8
+        },
+        {
+          "date": "2024-11-15",
+          "index": 0.2731,
+          "legalization_index": 0.2731,
+          "doc_count": 7
+        },
+        {
+          "date": "2025-05-15",
+          "index": 0.1842,
+          "legalization_index": 0.1842,
+          "doc_count": 11
+        }
+      ]
+    },
+    "Pinterest": {
+      "type": "real",
+      "source": "tier1_extracted.json",
+      "date_range": "2017-2025",
+      "time_series": [
+        {
+          "date": "2017-05-15",
+          "index": 0.3499,
+          "legalization_index": 0.3499,
+          "doc_count": 8
+        },
+        {
+          "date": "2017-11-15",
+          "index": 0.2261,
+          "legalization_index": 0.2261,
+          "doc_count": 12
+        },
+        {
+          "date": "2018-02-15",
+          "index": 0.1991,
+          "legalization_index": 0.1991,
+          "doc_count": 8
+        },
+        {
+          "date": "2018-05-15",
+          "index": 0.2454,
+          "legalization_index": 0.2454,
+          "doc_count": 4
+        },
+        {
+          "date": "2018-08-15",
+          "index": 0.0036,
+          "legalization_index": 0.0036,
+          "doc_count": 4
+        },
+        {
+          "date": "2018-11-15",
+          "index": 0.2874,
+          "legalization_index": 0.2874,
+          "doc_count": 8
+        },
+        {
+          "date": "2019-05-15",
+          "index": 0.193,
+          "legalization_index": 0.193,
+          "doc_count": 12
+        },
+        {
+          "date": "2019-11-15",
+          "index": 0.1881,
+          "legalization_index": 0.1881,
+          "doc_count": 12
+        },
+        {
+          "date": "2020-05-15",
+          "index": 0.1911,
+          "legalization_index": 0.1911,
+          "doc_count": 12
+        },
+        {
+          "date": "2020-11-15",
+          "index": 0.1906,
+          "legalization_index": 0.1906,
+          "doc_count": 12
+        },
+        {
+          "date": "2021-05-15",
+          "index": 0.1905,
+          "legalization_index": 0.1905,
+          "doc_count": 12
+        },
+        {
+          "date": "2021-11-15",
+          "index": 0.2239,
+          "legalization_index": 0.2239,
+          "doc_count": 10
+        },
+        {
+          "date": "2022-05-15",
+          "index": 0.181,
+          "legalization_index": 0.181,
+          "doc_count": 12
+        },
+        {
+          "date": "2022-11-15",
+          "index": 0.1804,
+          "legalization_index": 0.1804,
+          "doc_count": 12
+        },
+        {
+          "date": "2023-05-15",
+          "index": 0.1105,
+          "legalization_index": 0.1105,
+          "doc_count": 10
+        },
+        {
+          "date": "2023-11-15",
+          "index": 0.2477,
+          "legalization_index": 0.2477,
+          "doc_count": 10
+        },
+        {
+          "date": "2024-05-15",
+          "index": 0.2086,
+          "legalization_index": 0.2086,
+          "doc_count": 9
+        },
+        {
+          "date": "2024-11-15",
+          "index": 0.161,
+          "legalization_index": 0.161,
+          "doc_count": 10
+        },
+        {
+          "date": "2025-02-15",
+          "index": 0.1818,
+          "legalization_index": 0.1818,
+          "doc_count": 9
+        },
+        {
+          "date": "2025-05-15",
+          "index": 0.2943,
+          "legalization_index": 0.2943,
+          "doc_count": 23
+        }
+      ]
+    }
+  },
+  "regulatory_events": {
+    "GDPR Announced": "2016-04-14",
+    "GDPR Effective": "2018-05-25",
+    "CCPA Signed": "2018-06-28",
+    "CCPA Effective": "2020-01-01",
+    "CPRA Effective": "2023-01-01",
+    "DSA Effective": "2024-02-17"
+  }
+}

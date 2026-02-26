@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "n_iterations": 1000,
+    "n_documents": 494,
+    "method": "pre-computed count matrix permutation v4",
+    "seed": 42,
+    "runtime_seconds": 2.0,
+    "permutation_scope": "5 of 7 dimensions permuted (lexicon-count only; complexity_score and agency_ratio held fixed)"
+  },
+  "real_statistics": {
+    "cross_platform_variance": 0.033586,
+    "platform_means": {
+      "Meta": -0.080441,
+      "Twitter": 0.268088,
+      "Instagram": 0.356426,
+      "LinkedIn": -0.140972,
+      "TikTok": 0.301271,
+      "Pinterest": 0.153995,
+      "Reddit": 0.16057,
+      "YouTube": 0.117513,
+      "Google": -0.142604,
+      "WhatsApp": 0.35922,
+      "Discord": -0.02657
+    },
+    "platform_rankings": {
+      "WhatsApp": 1,
+      "Instagram": 2,
+      "TikTok": 3,
+      "Twitter": 4,
+      "Reddit": 5,
+      "Pinterest": 6,
+      "YouTube": 7,
+      "Discord": 8,
+      "Meta": 9,
+      "LinkedIn": 10,
+      "Google": 11
+    },
+    "gdpr_did_effect": 0.20571
+  },
+  "null_summary": {
+    "variance": {
+      "mean": 676.273848,
+      "std": 5272.306733,
+      "p95": 587.66722
+    },
+    "kendall_tau": {
+      "mean": 0.044218,
+      "std": 0.203861
+    },
+    "gdpr_did": {
+      "mean": -0.465164,
+      "std": 10.565978
+    }
+  },
+  "p_values": {
+    "cross_platform_variance": 0.969,
+    "ranking_stability": 0.0,
+    "gdpr_effect": 0.786
+  },
+  "interpretation": "Cross-platform variance NOT significant vs random (p=0.9690). Rankings are lexicon-specific (mean tau=0.0442). GDPR effect NOT significant under permutation (p=0.7860)."
+}
