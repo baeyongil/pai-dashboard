@@ -75,6 +75,7 @@ PLATFORM_CONFIG = {
     "Instagram": {"color": "#E4405F", "confidence": "high", "emoji": "", "category": "social_media"},
     "Pinterest": {"color": "#BD081C", "confidence": "high", "emoji": "", "category": "social_media"},
     "Discord": {"color": "#5865F2", "confidence": "high", "emoji": "", "category": "social_media"},
+    "Google": {"color": "#4285F4", "confidence": "high", "emoji": "", "category": "social_media"},
 }
 
 # Header
