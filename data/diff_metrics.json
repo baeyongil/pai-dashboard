@@ -1,0 +1,1152 @@
+{
+  "_metadata": {
+    "generated_at": "2026-02-26T05:10:43.502651+00:00",
+    "script": "compute_diff_metrics.py",
+    "source": "/Users/YIB/Documents/GitHub/AMSL_Fall/ASML3/dashboard/data/clause_diffs.json",
+    "total_pairs_analyzed": 354,
+    "metric_definitions": {
+      "RRI_strict": "(enhancing + regulation_specific) / (enhancing + reducing + regulation_specific)",
+      "RRI_broad": "(enhancing + regulation_specific) / total_all_changes",
+      "GSR": "regulation_specific / total_changes",
+      "CE_words": "avg_words(added_clauses) / avg_words(existing_clauses)",
+      "CE_pai": "avg_pai_density(added_clauses) / avg_pai_density(existing_clauses)"
+    }
+  },
+  "platform_metrics": {
+    "Discord": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 11,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1126,
+          "change_type_distribution": {
+            "modified": 66,
+            "deleted": 503,
+            "added": 557
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 980,
+            "regulation_specific": 77,
+            "user_protection_reducing": 33,
+            "user_protection_enhancing": 36
+          },
+          "RRI_strict": 0.774,
+          "RRI_broad": 0.1004,
+          "GSR": 0.0684,
+          "CE_words": 0.9749,
+          "CE_pai": 0.8626,
+          "n_added_for_CE": 557,
+          "n_existing_for_CE": 569
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 11,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1126,
+          "change_type_distribution": {
+            "modified": 66,
+            "deleted": 503,
+            "added": 557
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 980,
+            "regulation_specific": 77,
+            "user_protection_reducing": 33,
+            "user_protection_enhancing": 36
+          },
+          "RRI_strict": 0.774,
+          "RRI_broad": 0.1004,
+          "GSR": 0.0684,
+          "CE_words": 0.9749,
+          "CE_pai": 0.8626,
+          "n_added_for_CE": 557,
+          "n_existing_for_CE": 569
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 11,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1901,
+          "change_type_distribution": {
+            "deleted": 900,
+            "added": 908,
+            "modified": 93
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1287,
+            "user_protection_enhancing": 299,
+            "user_protection_reducing": 296,
+            "regulation_specific": 19
+          },
+          "RRI_strict": 0.5179,
+          "RRI_broad": 0.1673,
+          "GSR": 0.01,
+          "CE_words": 0.9854,
+          "CE_pai": 0.9704,
+          "n_added_for_CE": 908,
+          "n_existing_for_CE": 993
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 11,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1901,
+          "change_type_distribution": {
+            "deleted": 900,
+            "added": 908,
+            "modified": 93
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1287,
+            "user_protection_enhancing": 299,
+            "user_protection_reducing": 296,
+            "regulation_specific": 19
+          },
+          "RRI_strict": 0.5179,
+          "RRI_broad": 0.1673,
+          "GSR": 0.01,
+          "CE_words": 0.9854,
+          "CE_pai": 0.9704,
+          "n_added_for_CE": 908,
+          "n_existing_for_CE": 993
+        }
+      }
+    },
+    "Google": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 35,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 5965,
+          "change_type_distribution": {
+            "modified": 131,
+            "added": 2992,
+            "deleted": 2842
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 5638,
+            "user_protection_reducing": 143,
+            "user_protection_enhancing": 138,
+            "regulation_specific": 46
+          },
+          "RRI_strict": 0.5627,
+          "RRI_broad": 0.0308,
+          "GSR": 0.0077,
+          "CE_words": 0.9688,
+          "CE_pai": 0.9635,
+          "n_added_for_CE": 2992,
+          "n_existing_for_CE": 2973
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1,
+          "change_type_distribution": {
+            "modified": 1
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1
+          },
+          "RRI_strict": 0.0,
+          "RRI_broad": 0.0,
+          "GSR": 0.0,
+          "CE_words": null,
+          "CE_pai": null,
+          "n_added_for_CE": 0,
+          "n_existing_for_CE": 1
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 34,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 5964,
+          "change_type_distribution": {
+            "modified": 130,
+            "added": 2992,
+            "deleted": 2842
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 5637,
+            "user_protection_reducing": 143,
+            "user_protection_enhancing": 138,
+            "regulation_specific": 46
+          },
+          "RRI_strict": 0.5627,
+          "RRI_broad": 0.0309,
+          "GSR": 0.0077,
+          "CE_words": 0.9687,
+          "CE_pai": 0.9632,
+          "n_added_for_CE": 2992,
+          "n_existing_for_CE": 2972
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 27,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 675,
+          "change_type_distribution": {
+            "modified": 12,
+            "added": 292,
+            "deleted": 371
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 549,
+            "user_protection_enhancing": 63,
+            "regulation_specific": 13,
+            "user_protection_reducing": 50
+          },
+          "RRI_strict": 0.6032,
+          "RRI_broad": 0.1126,
+          "GSR": 0.0193,
+          "CE_words": 1.5823,
+          "CE_pai": 1.227,
+          "n_added_for_CE": 292,
+          "n_existing_for_CE": 383
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 93,
+          "change_type_distribution": {
+            "deleted": 92,
+            "added": 1
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 77,
+            "user_protection_enhancing": 15,
+            "regulation_specific": 1
+          },
+          "RRI_strict": 1.0,
+          "RRI_broad": 0.172,
+          "GSR": 0.0108,
+          "CE_words": 0.9302,
+          "CE_pai": 0.0,
+          "n_added_for_CE": 1,
+          "n_existing_for_CE": 92
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 26,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 582,
+          "change_type_distribution": {
+            "modified": 12,
+            "added": 291,
+            "deleted": 279
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 472,
+            "user_protection_enhancing": 48,
+            "regulation_specific": 12,
+            "user_protection_reducing": 50
+          },
+          "RRI_strict": 0.5455,
+          "RRI_broad": 0.1031,
+          "GSR": 0.0206,
+          "CE_words": 1.399,
+          "CE_pai": 1.0943,
+          "n_added_for_CE": 291,
+          "n_existing_for_CE": 291
+        }
+      }
+    },
+    "LinkedIn": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 13,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1043,
+          "change_type_distribution": {
+            "modified": 215,
+            "deleted": 452,
+            "added": 376
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 877,
+            "regulation_specific": 25,
+            "user_protection_enhancing": 80,
+            "user_protection_reducing": 61
+          },
+          "RRI_strict": 0.6325,
+          "RRI_broad": 0.1007,
+          "GSR": 0.024,
+          "CE_words": 1.2439,
+          "CE_pai": 1.2866,
+          "n_added_for_CE": 376,
+          "n_existing_for_CE": 667
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 3,
+          "change_type_distribution": {
+            "modified": 1,
+            "deleted": 1,
+            "added": 1
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 3
+          },
+          "RRI_strict": 0.0,
+          "RRI_broad": 0.0,
+          "GSR": 0.0,
+          "CE_words": 1.4725,
+          "CE_pai": null,
+          "n_added_for_CE": 1,
+          "n_existing_for_CE": 2
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 12,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1040,
+          "change_type_distribution": {
+            "modified": 214,
+            "deleted": 451,
+            "added": 375
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 874,
+            "regulation_specific": 25,
+            "user_protection_enhancing": 80,
+            "user_protection_reducing": 61
+          },
+          "RRI_strict": 0.6325,
+          "RRI_broad": 0.101,
+          "GSR": 0.024,
+          "CE_words": 1.2433,
+          "CE_pai": 1.2862,
+          "n_added_for_CE": 375,
+          "n_existing_for_CE": 665
+        }
+      }
+    },
+    "Meta": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 27,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 3226,
+          "change_type_distribution": {
+            "modified": 107,
+            "deleted": 1341,
+            "added": 1778
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 2960,
+            "regulation_specific": 134,
+            "user_protection_reducing": 66,
+            "user_protection_enhancing": 66
+          },
+          "RRI_strict": 0.7519,
+          "RRI_broad": 0.062,
+          "GSR": 0.0415,
+          "CE_words": 1.0483,
+          "CE_pai": 0.7686,
+          "n_added_for_CE": 1778,
+          "n_existing_for_CE": 1448
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 251,
+          "change_type_distribution": {
+            "modified": 35,
+            "deleted": 81,
+            "added": 135
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 232,
+            "regulation_specific": 8,
+            "user_protection_enhancing": 4,
+            "user_protection_reducing": 7
+          },
+          "RRI_strict": 0.6316,
+          "RRI_broad": 0.0478,
+          "GSR": 0.0319,
+          "CE_words": 1.1328,
+          "CE_pai": 2.363,
+          "n_added_for_CE": 135,
+          "n_existing_for_CE": 116
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 26,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 2975,
+          "change_type_distribution": {
+            "modified": 72,
+            "deleted": 1260,
+            "added": 1643
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 2728,
+            "regulation_specific": 126,
+            "user_protection_reducing": 59,
+            "user_protection_enhancing": 62
+          },
+          "RRI_strict": 0.7611,
+          "RRI_broad": 0.0632,
+          "GSR": 0.0424,
+          "CE_words": 1.0414,
+          "CE_pai": 0.6963,
+          "n_added_for_CE": 1643,
+          "n_existing_for_CE": 1332
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 41,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 4622,
+          "change_type_distribution": {
+            "modified": 333,
+            "deleted": 2009,
+            "added": 2280
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 3554,
+            "user_protection_enhancing": 457,
+            "user_protection_reducing": 476,
+            "regulation_specific": 135
+          },
+          "RRI_strict": 0.5543,
+          "RRI_broad": 0.1281,
+          "GSR": 0.0292,
+          "CE_words": 1.0198,
+          "CE_pai": 0.9506,
+          "n_added_for_CE": 2280,
+          "n_existing_for_CE": 2342
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 269,
+          "change_type_distribution": {
+            "modified": 20,
+            "deleted": 120,
+            "added": 129
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 191,
+            "user_protection_enhancing": 57,
+            "regulation_specific": 5,
+            "user_protection_reducing": 16
+          },
+          "RRI_strict": 0.7949,
+          "RRI_broad": 0.2305,
+          "GSR": 0.0186,
+          "CE_words": 1.1381,
+          "CE_pai": 0.2946,
+          "n_added_for_CE": 129,
+          "n_existing_for_CE": 140
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 40,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 4353,
+          "change_type_distribution": {
+            "modified": 313,
+            "deleted": 1889,
+            "added": 2151
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 3363,
+            "user_protection_enhancing": 400,
+            "user_protection_reducing": 460,
+            "regulation_specific": 130
+          },
+          "RRI_strict": 0.5354,
+          "RRI_broad": 0.1218,
+          "GSR": 0.0299,
+          "CE_words": 1.0124,
+          "CE_pai": 1.019,
+          "n_added_for_CE": 2151,
+          "n_existing_for_CE": 2202
+        }
+      }
+    },
+    "Pinterest": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 18,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1418,
+          "change_type_distribution": {
+            "modified": 366,
+            "added": 707,
+            "deleted": 345
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1061,
+            "user_protection_reducing": 49,
+            "user_protection_enhancing": 36,
+            "regulation_specific": 272
+          },
+          "RRI_strict": 0.8627,
+          "RRI_broad": 0.2172,
+          "GSR": 0.1918,
+          "CE_words": 0.9177,
+          "CE_pai": 1.0816,
+          "n_added_for_CE": 707,
+          "n_existing_for_CE": 711
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 172,
+          "change_type_distribution": {
+            "modified": 46,
+            "deleted": 26,
+            "added": 100
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 148,
+            "user_protection_reducing": 6,
+            "user_protection_enhancing": 5,
+            "regulation_specific": 13
+          },
+          "RRI_strict": 0.75,
+          "RRI_broad": 0.1047,
+          "GSR": 0.0756,
+          "CE_words": 0.9595,
+          "CE_pai": 1.2343,
+          "n_added_for_CE": 100,
+          "n_existing_for_CE": 72
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 17,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1246,
+          "change_type_distribution": {
+            "modified": 320,
+            "added": 607,
+            "deleted": 319
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 913,
+            "regulation_specific": 259,
+            "user_protection_enhancing": 31,
+            "user_protection_reducing": 43
+          },
+          "RRI_strict": 0.8709,
+          "RRI_broad": 0.2327,
+          "GSR": 0.2079,
+          "CE_words": 0.9359,
+          "CE_pai": 1.1012,
+          "n_added_for_CE": 607,
+          "n_existing_for_CE": 639
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 19,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1481,
+          "change_type_distribution": {
+            "modified": 209,
+            "deleted": 507,
+            "added": 765
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1009,
+            "user_protection_reducing": 215,
+            "user_protection_enhancing": 155,
+            "regulation_specific": 102
+          },
+          "RRI_strict": 0.5445,
+          "RRI_broad": 0.1735,
+          "GSR": 0.0689,
+          "CE_words": 0.8917,
+          "CE_pai": 0.8865,
+          "n_added_for_CE": 765,
+          "n_existing_for_CE": 716
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 89,
+          "change_type_distribution": {
+            "modified": 33,
+            "deleted": 9,
+            "added": 47
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 59,
+            "user_protection_reducing": 11,
+            "user_protection_enhancing": 9,
+            "regulation_specific": 10
+          },
+          "RRI_strict": 0.6333,
+          "RRI_broad": 0.2135,
+          "GSR": 0.1124,
+          "CE_words": 0.832,
+          "CE_pai": 0.4189,
+          "n_added_for_CE": 47,
+          "n_existing_for_CE": 42
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 18,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1392,
+          "change_type_distribution": {
+            "modified": 176,
+            "deleted": 498,
+            "added": 718
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 950,
+            "regulation_specific": 92,
+            "user_protection_enhancing": 146,
+            "user_protection_reducing": 204
+          },
+          "RRI_strict": 0.5385,
+          "RRI_broad": 0.171,
+          "GSR": 0.0661,
+          "CE_words": 0.8952,
+          "CE_pai": 0.9231,
+          "n_added_for_CE": 718,
+          "n_existing_for_CE": 674
+        }
+      }
+    },
+    "Reddit": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 34,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 2116,
+          "change_type_distribution": {
+            "modified": 246,
+            "deleted": 845,
+            "added": 1025
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1756,
+            "user_protection_enhancing": 135,
+            "user_protection_reducing": 143,
+            "regulation_specific": 82
+          },
+          "RRI_strict": 0.6028,
+          "RRI_broad": 0.1026,
+          "GSR": 0.0388,
+          "CE_words": 0.9225,
+          "CE_pai": 0.9429,
+          "n_added_for_CE": 1025,
+          "n_existing_for_CE": 1091
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 4,
+          "change_type_distribution": {
+            "modified": 2,
+            "deleted": 1,
+            "added": 1
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 4
+          },
+          "RRI_strict": 0.0,
+          "RRI_broad": 0.0,
+          "GSR": 0.0,
+          "CE_words": 0.4873,
+          "CE_pai": 0.0,
+          "n_added_for_CE": 1,
+          "n_existing_for_CE": 3
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 33,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 2112,
+          "change_type_distribution": {
+            "modified": 244,
+            "deleted": 844,
+            "added": 1024
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1752,
+            "user_protection_enhancing": 135,
+            "user_protection_reducing": 143,
+            "regulation_specific": 82
+          },
+          "RRI_strict": 0.6028,
+          "RRI_broad": 0.1027,
+          "GSR": 0.0388,
+          "CE_words": 0.9227,
+          "CE_pai": 0.9444,
+          "n_added_for_CE": 1024,
+          "n_existing_for_CE": 1088
+        }
+      }
+    },
+    "TikTok": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 15,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 2717,
+          "change_type_distribution": {
+            "modified": 80,
+            "deleted": 1236,
+            "added": 1401
+          },
+          "classification_distribution": {
+            "regulation_specific": 113,
+            "neutral_cosmetic": 2105,
+            "user_protection_reducing": 260,
+            "user_protection_enhancing": 239
+          },
+          "RRI_strict": 0.5752,
+          "RRI_broad": 0.1296,
+          "GSR": 0.0416,
+          "CE_words": 0.7758,
+          "CE_pai": 0.7438,
+          "n_added_for_CE": 1401,
+          "n_existing_for_CE": 1316
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 15,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 2717,
+          "change_type_distribution": {
+            "modified": 80,
+            "deleted": 1236,
+            "added": 1401
+          },
+          "classification_distribution": {
+            "regulation_specific": 113,
+            "neutral_cosmetic": 2105,
+            "user_protection_reducing": 260,
+            "user_protection_enhancing": 239
+          },
+          "RRI_strict": 0.5752,
+          "RRI_broad": 0.1296,
+          "GSR": 0.0416,
+          "CE_words": 0.7758,
+          "CE_pai": 0.7438,
+          "n_added_for_CE": 1401,
+          "n_existing_for_CE": 1316
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 9,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1975,
+          "change_type_distribution": {
+            "deleted": 950,
+            "added": 968,
+            "modified": 57
+          },
+          "classification_distribution": {
+            "user_protection_enhancing": 313,
+            "neutral_cosmetic": 1065,
+            "user_protection_reducing": 339,
+            "regulation_specific": 258
+          },
+          "RRI_strict": 0.6275,
+          "RRI_broad": 0.2891,
+          "GSR": 0.1306,
+          "CE_words": 0.8306,
+          "CE_pai": 0.729,
+          "n_added_for_CE": 968,
+          "n_existing_for_CE": 1007
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 9,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1975,
+          "change_type_distribution": {
+            "deleted": 950,
+            "added": 968,
+            "modified": 57
+          },
+          "classification_distribution": {
+            "user_protection_enhancing": 313,
+            "neutral_cosmetic": 1065,
+            "user_protection_reducing": 339,
+            "regulation_specific": 258
+          },
+          "RRI_strict": 0.6275,
+          "RRI_broad": 0.2891,
+          "GSR": 0.1306,
+          "CE_words": 0.8306,
+          "CE_pai": 0.729,
+          "n_added_for_CE": 968,
+          "n_existing_for_CE": 1007
+        }
+      }
+    },
+    "Twitter": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 23,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1581,
+          "change_type_distribution": {
+            "modified": 76,
+            "deleted": 802,
+            "added": 703
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 982,
+            "regulation_specific": 94,
+            "user_protection_reducing": 248,
+            "user_protection_enhancing": 257
+          },
+          "RRI_strict": 0.586,
+          "RRI_broad": 0.222,
+          "GSR": 0.0595,
+          "CE_words": 1.2502,
+          "CE_pai": 1.2601,
+          "n_added_for_CE": 703,
+          "n_existing_for_CE": 878
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 4,
+          "change_type_distribution": {
+            "deleted": 2,
+            "added": 2
+          },
+          "classification_distribution": {
+            "regulation_specific": 3,
+            "neutral_cosmetic": 1
+          },
+          "RRI_strict": 1.0,
+          "RRI_broad": 0.75,
+          "GSR": 0.75,
+          "CE_words": 1.3499,
+          "CE_pai": 2.3571,
+          "n_added_for_CE": 2,
+          "n_existing_for_CE": 2
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 22,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1577,
+          "change_type_distribution": {
+            "modified": 76,
+            "deleted": 800,
+            "added": 701
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 981,
+            "regulation_specific": 91,
+            "user_protection_reducing": 248,
+            "user_protection_enhancing": 257
+          },
+          "RRI_strict": 0.5839,
+          "RRI_broad": 0.2207,
+          "GSR": 0.0577,
+          "CE_words": 1.2459,
+          "CE_pai": 1.2341,
+          "n_added_for_CE": 701,
+          "n_existing_for_CE": 876
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 6,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 988,
+          "change_type_distribution": {
+            "deleted": 456,
+            "added": 530,
+            "modified": 2
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 599,
+            "user_protection_enhancing": 182,
+            "user_protection_reducing": 207
+          },
+          "RRI_strict": 0.4679,
+          "RRI_broad": 0.1842,
+          "GSR": 0.0,
+          "CE_words": 0.9281,
+          "CE_pai": 0.9185,
+          "n_added_for_CE": 530,
+          "n_existing_for_CE": 458
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 6,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 988,
+          "change_type_distribution": {
+            "deleted": 456,
+            "added": 530,
+            "modified": 2
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 599,
+            "user_protection_enhancing": 182,
+            "user_protection_reducing": 207
+          },
+          "RRI_strict": 0.4679,
+          "RRI_broad": 0.1842,
+          "GSR": 0.0,
+          "CE_words": 0.9281,
+          "CE_pai": 0.9185,
+          "n_added_for_CE": 530,
+          "n_existing_for_CE": 458
+        }
+      }
+    },
+    "WhatsApp": {
+      "privacy": {
+        "overall": {
+          "total_version_pairs": 35,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 2249,
+          "change_type_distribution": {
+            "modified": 43,
+            "deleted": 1109,
+            "added": 1097
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1637,
+            "user_protection_enhancing": 291,
+            "regulation_specific": 41,
+            "user_protection_reducing": 280
+          },
+          "RRI_strict": 0.5425,
+          "RRI_broad": 0.1476,
+          "GSR": 0.0182,
+          "CE_words": 0.9366,
+          "CE_pai": 0.8324,
+          "n_added_for_CE": 1097,
+          "n_existing_for_CE": 1152
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 10,
+          "change_type_distribution": {
+            "modified": 1,
+            "deleted": 4,
+            "added": 5
+          },
+          "classification_distribution": {
+            "user_protection_enhancing": 4,
+            "neutral_cosmetic": 3,
+            "user_protection_reducing": 3
+          },
+          "RRI_strict": 0.5714,
+          "RRI_broad": 0.4,
+          "GSR": 0.0,
+          "CE_words": 0.7188,
+          "CE_pai": 0.6486,
+          "n_added_for_CE": 5,
+          "n_existing_for_CE": 5
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 34,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 2239,
+          "change_type_distribution": {
+            "modified": 42,
+            "deleted": 1105,
+            "added": 1092
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1634,
+            "user_protection_enhancing": 287,
+            "regulation_specific": 41,
+            "user_protection_reducing": 277
+          },
+          "RRI_strict": 0.5421,
+          "RRI_broad": 0.1465,
+          "GSR": 0.0183,
+          "CE_words": 0.9436,
+          "CE_pai": 0.8439,
+          "n_added_for_CE": 1092,
+          "n_existing_for_CE": 1147
+        }
+      },
+      "tos": {
+        "overall": {
+          "total_version_pairs": 12,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1080,
+          "change_type_distribution": {
+            "modified": 119,
+            "deleted": 501,
+            "added": 460
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 823,
+            "regulation_specific": 57,
+            "user_protection_reducing": 92,
+            "user_protection_enhancing": 108
+          },
+          "RRI_strict": 0.642,
+          "RRI_broad": 0.1528,
+          "GSR": 0.0528,
+          "CE_words": 0.9355,
+          "CE_pai": 0.8076,
+          "n_added_for_CE": 460,
+          "n_existing_for_CE": 620
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 12,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1080,
+          "change_type_distribution": {
+            "modified": 119,
+            "deleted": 501,
+            "added": 460
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 823,
+            "regulation_specific": 57,
+            "user_protection_reducing": 92,
+            "user_protection_enhancing": 108
+          },
+          "RRI_strict": 0.642,
+          "RRI_broad": 0.1528,
+          "GSR": 0.0528,
+          "CE_words": 0.9355,
+          "CE_pai": 0.8076,
+          "n_added_for_CE": 460,
+          "n_existing_for_CE": 620
+        }
+      }
+    },
+    "YouTube": {
+      "tos": {
+        "overall": {
+          "total_version_pairs": 18,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 1572,
+          "change_type_distribution": {
+            "deleted": 789,
+            "added": 690,
+            "modified": 93
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1214,
+            "user_protection_enhancing": 202,
+            "user_protection_reducing": 152,
+            "regulation_specific": 4
+          },
+          "RRI_strict": 0.5754,
+          "RRI_broad": 0.131,
+          "GSR": 0.0025,
+          "CE_words": 0.9828,
+          "CE_pai": 0.8722,
+          "n_added_for_CE": 690,
+          "n_existing_for_CE": 882
+        },
+        "gdpr_period": {
+          "total_version_pairs": 1,
+          "gdpr_transition_pairs": 1,
+          "total_changes": 7,
+          "change_type_distribution": {
+            "modified": 1,
+            "deleted": 2,
+            "added": 4
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 6,
+            "user_protection_reducing": 1
+          },
+          "RRI_strict": 0.0,
+          "RRI_broad": 0.0,
+          "GSR": 0.0,
+          "CE_words": 0.638,
+          "CE_pai": null,
+          "n_added_for_CE": 4,
+          "n_existing_for_CE": 3
+        },
+        "non_gdpr_period": {
+          "total_version_pairs": 17,
+          "gdpr_transition_pairs": 0,
+          "total_changes": 1565,
+          "change_type_distribution": {
+            "deleted": 787,
+            "added": 686,
+            "modified": 92
+          },
+          "classification_distribution": {
+            "neutral_cosmetic": 1208,
+            "user_protection_enhancing": 202,
+            "user_protection_reducing": 151,
+            "regulation_specific": 4
+          },
+          "RRI_strict": 0.577,
+          "RRI_broad": 0.1316,
+          "GSR": 0.0026,
+          "CE_words": 0.9844,
+          "CE_pai": 0.8706,
+          "n_added_for_CE": 686,
+          "n_existing_for_CE": 879
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "total_version_pairs": 354,
+    "gdpr_transition_pairs": 11,
+    "total_changes": 35735,
+    "change_type_distribution": {
+      "modified": 2248,
+      "deleted": 15958,
+      "added": 17529
+    },
+    "classification_distribution": {
+      "neutral_cosmetic": 28096,
+      "regulation_specific": 1472,
+      "user_protection_reducing": 3110,
+      "user_protection_enhancing": 3057
+    },
+    "RRI_strict": 0.5929,
+    "RRI_broad": 0.1267,
+    "GSR": 0.0412,
+    "CE_words": 0.9788,
+    "CE_pai": 0.8883,
+    "n_added_for_CE": 17529,
+    "n_existing_for_CE": 18206
+  },
+  "convergent_validity": {
+    "available": true,
+    "method": "Spearman rank correlation: RRI_strict vs enhancing_ratio",
+    "n_platforms": 10,
+    "platforms": [
+      "Discord",
+      "Google",
+      "LinkedIn",
+      "Meta",
+      "Pinterest",
+      "Reddit",
+      "TikTok",
+      "Twitter",
+      "WhatsApp",
+      "YouTube"
+    ],
+    "rri_strict_values": [
+      0.5671,
+      0.574,
+      0.6325,
+      0.5937,
+      0.6815,
+      0.6028,
+      0.6064,
+      0.5395,
+      0.5719,
+      0.5754
+    ],
+    "enhancing_ratio_values": [
+      0.1107,
+      0.0303,
+      0.0767,
+      0.0666,
+      0.0659,
+      0.0638,
+      0.1176,
+      0.1709,
+      0.1199,
+      0.1285
+    ],
+    "spearman_rho": -0.4667,
+    "p_value": 0.173939,
+    "note": "High rho indicates PAI-based classification is internally consistent across platforms."
+  }
+}
