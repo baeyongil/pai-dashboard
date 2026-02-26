@@ -1,0 +1,1773 @@
+{
+  "metadata": {
+    "pattern_descriptions": {
+      "sole_discretion": "Platform claims unilateral decision-making power",
+      "reserve_right": "Platform reserves future action capabilities",
+      "at_any_time": "Removes temporal constraints on platform actions",
+      "may_terminate": "Platform can end service/access unilaterally",
+      "without_liability": "Disclaims platform responsibility for actions",
+      "for_any_reason": "Removes need to justify platform actions",
+      "without_notice": "Removes notification requirements"
+    },
+    "classification_criteria": {
+      "genuine_compliance": "PAI decreased >30% AND most patterns decreased",
+      "defensive_increase": "PAI increased >50%",
+      "substitution_strategy": "Mixed pattern changes (some up, some down)",
+      "moderate_compliance": "PAI decreased but <30%",
+      "moderate_increase": "PAI increased but <50%"
+    }
+  },
+  "platforms": {
+    "Meta": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 59,
+          "post_gdpr": 12,
+          "post_ccpa": 47
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.006,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.001,
+            "change_pct": -90.2,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.008,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": -100.0,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.031,
+            "post_gdpr": 0.226,
+            "post_ccpa": 0.289,
+            "change_pct": 826.5,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.002,
+            "post_gdpr": 0.001,
+            "post_ccpa": 0.005,
+            "change_pct": 134.0,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.014,
+            "post_gdpr": 0.003,
+            "post_ccpa": 0.002,
+            "change_pct": -88.1,
+            "trend": "decreased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.001,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": -76.7,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.001,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": -100.0,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "This is entirely at your discretion and we will not provide your information to these marketers without your consent"
+            ],
+            "reserve_right": [
+              "&nbsp; We reserve the right to add special protections for minors (such as to provide them with an age-appropriate experience) and place restrictio..."
+            ],
+            "at_any_time": [
+              "We may contact you with service-related announcements from time to time",
+              "You may change or remove your profile information at any time by going to your profile page and clicking &ldquo;Edit My Profile"
+            ],
+            "may_terminate": [],
+            "without_liability": [
+              "We are not responsible for the privacy practices of other sites, and we encourage you to read their privacy statements",
+              "We are not responsible for third party circumvention of any privacy settings or security measures on Facebook"
+            ]
+          },
+          "post_ccpa": {
+            "at_any_time": [
+              "For example, when you search for something on Facebook, you can access and delete that query from within your search history at any time, but the l...",
+              "To delete your account at any time, please visit the Facebook Settings and Instagram Settings"
+            ],
+            "may_terminate": [
+              "If we determine that you have clearly, seriously or repeatedly breached our Terms or Policies, including in particular our Community Standards, we ..."
+            ],
+            "without_liability": [
+              "We do not control or direct what people and others do or say, and we are not responsible for their actions or conduct (whether online or offline) o..."
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 0.395,
+          "post_ccpa_pai": 0.417,
+          "pai_change_pct": 5.6,
+          "pre_gdpr_td": 1.064,
+          "post_ccpa_td": 1.532,
+          "td_change_pct": 44.1,
+          "classification": "moderate_deterioration"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 0.39,
+              "after": 0.42,
+              "change": "+5.6%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.06,
+              "after": 1.53,
+              "change": "+44.1%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 91,
+          "post_gdpr": 12,
+          "post_ccpa": 58
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.286,
+            "post_gdpr": 0.021,
+            "post_ccpa": 0.157,
+            "change_pct": -45.0,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.355,
+            "post_gdpr": 0.012,
+            "post_ccpa": 0.024,
+            "change_pct": -93.3,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.855,
+            "post_gdpr": 0.401,
+            "post_ccpa": 0.592,
+            "change_pct": -30.8,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.118,
+            "post_gdpr": 0.052,
+            "post_ccpa": 0.102,
+            "change_pct": -12.9,
+            "trend": "stable"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.763,
+            "post_gdpr": 0.135,
+            "post_ccpa": 0.179,
+            "change_pct": -76.6,
+            "trend": "decreased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.261,
+            "post_gdpr": 0.006,
+            "post_ccpa": 0.059,
+            "change_pct": -77.4,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.131,
+            "post_gdpr": 0.017,
+            "post_ccpa": 0.012,
+            "change_pct": -90.9,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "We reserve the right, at our sole discretion, to change, modify, add, or delete portions of these Terms of Use at any time without further notice"
+            ],
+            "reserve_right": [
+              "We reserve the right, at our sole discretion, to change, modify, add, or delete portions of these Terms of Use at any time without further notice",
+              "Facebook reserves the right, but has no obligation, to monitor disputes between you and other Members"
+            ],
+            "at_any_time": [
+              "We reserve the right, at our sole discretion, to change, modify, add, or delete portions of these Terms of Use at any time without further notice",
+              "Facebook may terminate your membership for any reason, at any time"
+            ],
+            "may_terminate": [
+              "Facebook may terminate your membership for any reason, at any time",
+              "You may remove your Member Content from the site at any time"
+            ],
+            "without_liability": [
+              "Facebook is not responsible for the content, accuracy or opinions express in such web sites, and such web sites are not investigated, monitored or ...",
+              "DisclaimersFacebook is not responsible for any incorrect or inaccurate Content posted on the Web site or in connection with the Service, whether ca..."
+            ],
+            "for_any_reason": [
+              "Facebook may terminate your membership for any reason, at any time"
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "We may approve or deny your request to integrate Facebook Payments at our sole discretion",
+              "We may also revoke your eligibility to continue utilizing Facebook Payments at any time at our sole discretion"
+            ],
+            "reserve_right": [
+              "We reserve the right to test when we believe it will be beneficial for advertiser performance",
+              "We reserve the right to charge your payment credential or take any other legal action to collect the funds to the full extent allowed by applicable..."
+            ],
+            "at_any_time": [
+              "You can also go to your settings at any time to review the privacy choices you have about how we use your data",
+              "You can download a copy of your data at any time before deleting your account"
+            ],
+            "may_terminate": [
+              "If we determine that you have clearly, seriously or repeatedly breached our Terms or Policies, including in particular our Community Standards, we ...",
+              "We may also may suspend, remove, or disable access to any product or service you offer at any time without notice, and we will have no liability fo..."
+            ],
+            "without_liability": [
+              "We do not control or direct what people and others do or say, and we are not responsible for their actions or conduct (whether online or offline) o...",
+              "We may also may suspend, remove, or disable access to any product or service you offer at any time without notice, and we will have no liability fo..."
+            ],
+            "for_any_reason": [
+              "We may reject or remove any ad for any reason",
+              "If you receive and accept a P2P transfer you are liable to us for not only the payment but also any third-party fees that may result from a later i..."
+            ],
+            "without_notice": [
+              "We may also may suspend, remove, or disable access to any product or service you offer at any time without notice, and we will have no liability fo...",
+              "We may revise these Terms at any time without prior notice as we deem necessary to the full extent permitted by law"
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 5.729,
+          "post_ccpa_pai": 1.612,
+          "pai_change_pct": -71.9,
+          "pre_gdpr_td": 1.639,
+          "post_ccpa_td": 1.344,
+          "td_change_pct": -18.0,
+          "classification": "genuine_simplification"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 5.73,
+              "after": 1.61,
+              "change": "-71.9%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.64,
+              "after": 1.34,
+              "change": "-18.0%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      }
+    },
+    "YouTube": {
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 42,
+          "post_gdpr": 12,
+          "post_ccpa": 22
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.481,
+            "post_gdpr": 0.576,
+            "post_ccpa": 0.105,
+            "change_pct": -78.2,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.754,
+            "post_gdpr": 0.969,
+            "post_ccpa": 0.156,
+            "change_pct": -79.4,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.945,
+            "post_gdpr": 1.177,
+            "post_ccpa": 0.33,
+            "change_pct": -65.0,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.003,
+            "post_gdpr": 0.002,
+            "post_ccpa": 0.385,
+            "change_pct": 11244.7,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.302,
+            "post_gdpr": 0.386,
+            "post_ccpa": 0.002,
+            "change_pct": -99.3,
+            "trend": "decreased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.004,
+            "post_gdpr": 0.005,
+            "post_ccpa": 0.083,
+            "change_pct": 2218.6,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.408,
+            "post_gdpr": 0.514,
+            "post_ccpa": 0.128,
+            "change_pct": -68.5,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "YouTube may, in its sole discretion, modify or revise these Terms of Service and policies at any time, and you agree to be bound by such modificati...",
+              "YouTube may at any time, without prior notice and in its sole discretion, remove such Content and/or terminate a user's account for submitting such..."
+            ],
+            "reserve_right": [
+              "YouTube reserves the right to revoke these exceptions either generally or in specific cases",
+              "YouTube reserves the right to discontinue any aspect of the Service at any time"
+            ],
+            "at_any_time": [
+              "YouTube may, in its sole discretion, modify or revise these Terms of Service and policies at any time, and you agree to be bound by such modificati...",
+              "If you use the YouTube Uploader, you agree that it may automatically download and install updates from time to time from YouTube"
+            ],
+            "may_terminate": [
+              "If you violate any of the terms and conditions of the Pay Content Terms, your rights under this Section 4 will immediately terminate and YouTube ma..."
+            ],
+            "without_liability": [
+              "You understand that when using the Service, you will be exposed to Content from a variety of sources, and that YouTube is not responsible for the a...",
+              "You agree to use the Service at your own risk and YouTube will have no liability to you for any content that you find offensive"
+            ],
+            "without_notice": [
+              "YouTube reserves the right to remove Content without prior notice",
+              "YouTube may at any time, without prior notice and in its sole discretion, remove such Content and/or terminate a user's account for submitting such..."
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "Removal of Content By YouTube If we reasonably believe that any Content is in breach of this Agreement or may cause harm to YouTube, our users, or ...",
+              "Terminations by YouTube for Service Changes YouTube may terminate your access, or your Google account\u2019s access to all or part of the Service if You..."
+            ],
+            "reserve_right": [
+              "We reserve the right to approve or deny refund requests after 7 working days at our sole discretion, except where the Paid Service is defective",
+              "If you receive a refund for any reason, YouTube reserves the right to terminate your access to the relevant Paid Service purchased"
+            ],
+            "at_any_time": [
+              "Applicable TermsYour use of the Service is subject to these terms, the YouTube Community Guidelines and the Policy, Safety and Copyright Policies w...",
+              "Removing Your Content You may remove your Content from the Service at any time"
+            ],
+            "may_terminate": [
+              "Account Suspension and TerminationThis section explains how you and YouTube may terminate this relationship",
+              "Removing Your Content You may remove your Content from the Service at any time"
+            ],
+            "without_liability": [
+              "YouTube will have no liability to you for any such unavailability",
+              "You agree to use the Paid Services at your own risk and, subject to applicable laws, YouTube will have no liability to you for any content that you..."
+            ],
+            "for_any_reason": [
+              "SeveranceIf it turns out that a particular term of this Agreement is not enforceable for any reason, this will not affect any other terms",
+              "SeveranceIf it turns out that a particular term of this Agreement is not enforceable for any reason, this will not affect any other terms"
+            ],
+            "without_notice": [
+              "However, you understand and agree that there will be times when we make such changes without notice, such as where we feel we need to take action t...",
+              "YouTube will provide reasonable advance notice of any material modifications to this Agreement and the opportunity to review them, except that modi..."
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 3.241,
+          "post_ccpa_pai": 0.803,
+          "pai_change_pct": -75.2,
+          "pre_gdpr_td": 2.118,
+          "post_ccpa_td": 1.069,
+          "td_change_pct": -49.6,
+          "classification": "genuine_simplification"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 3.24,
+              "after": 0.8,
+              "change": "-75.2%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 2.12,
+              "after": 1.07,
+              "change": "-49.6%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      }
+    },
+    "WhatsApp": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 61,
+          "post_gdpr": 6,
+          "post_ccpa": 44
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.119,
+            "post_gdpr": 0.226,
+            "post_ccpa": 0.061,
+            "change_pct": -48.9,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.801,
+            "post_gdpr": 0.131,
+            "post_ccpa": 0.028,
+            "change_pct": -96.5,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.476,
+            "post_gdpr": 0.787,
+            "post_ccpa": 0.306,
+            "change_pct": -35.8,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.162,
+            "post_gdpr": 0.325,
+            "post_ccpa": 0.057,
+            "change_pct": -64.7,
+            "trend": "decreased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.234,
+            "post_gdpr": 0.403,
+            "post_ccpa": 0.054,
+            "change_pct": -76.9,
+            "trend": "decreased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.04,
+            "post_gdpr": 0.293,
+            "post_ccpa": 0.028,
+            "change_pct": -29.5,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.191,
+            "post_gdpr": 0.096,
+            "post_ccpa": 0.013,
+            "change_pct": -93.0,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "WhatsApp may remove such User Status Submissions and/or terminate a User's access for uploading such material in violation of these Terms of Servic..."
+            ],
+            "reserve_right": [
+              "WhatsApp reserves the right to revoke these exceptions either generally or in specific cases",
+              "WhatsApp reserves the right to remove Content and User Status Submissions without prior notice"
+            ],
+            "at_any_time": [
+              "WhatsApp may remove such User Status Submissions and/or terminate a User's access for uploading such material in violation of these Terms of Servic...",
+              "WhatsApp reserves the right to discontinue any aspect of the WhatsApp Service at any time"
+            ],
+            "may_terminate": [
+              "WhatsApp may remove such User Status Submissions and/or terminate a User's access for uploading such material in violation of these Terms of Servic..."
+            ],
+            "without_liability": [
+              "You understand that when using the WhatsApp Service you will be exposed to User Status Submissions from a variety of sources, and that WhatsApp is ..."
+            ],
+            "without_notice": [
+              "WhatsApp reserves the right to remove Content and User Status Submissions without prior notice",
+              "WhatsApp may remove such User Status Submissions and/or terminate a User's access for uploading such material in violation of these Terms of Servic..."
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "Without prejudice to the foregoing, you agree that, in our sole discretion, we may elect to resolve any Dispute we have with you in any competent c...",
+              "ICICI Bank may, however, in its absolute discretion commence any legal action or proceedings arising out of these Terms in any other court, tribuna..."
+            ],
+            "reserve_right": [
+              "We reserve the right to limit our Services in any country",
+              "We reserve the right to limit our Services in any country"
+            ],
+            "at_any_time": [
+              "We may discontinue some or all of our Services, including certain features and the support for certain devices and platforms, at any time",
+              "Please review our Terms from time to time"
+            ],
+            "may_terminate": [
+              "We may terminate your WhatsApp account if you repeatedly infringe the intellectual property rights of others",
+              "We may discontinue some or all of our Services, including certain features and the support for certain devices and platforms, at any time"
+            ],
+            "without_liability": [
+              "WE DO NOT CONTROL, AND ARE NOT RESPONSIBLE FOR, CONTROLLING HOW OR WHEN OUR USERS USE OUR SERVICES OR THE FEATURES, SERVICES, AND INTERFACES OUR SE...",
+              "WE ARE NOT RESPONSIBLE FOR AND ARE NOT OBLIGATED TO CONTROL THE ACTIONS OR INFORMATION (INCLUDING CONTENT) OF OUR USERS OR OTHER THIRD PARTIES"
+            ],
+            "for_any_reason": [
+              "We may modify, suspend, or terminate your access to or use of our Services anytime for any reason, such as if you violate the letter or spirit of o...",
+              "c) For any loss or damage incurred or suffered by User for any error, defect, failure or interruption of the service or consequences arising out of..."
+            ],
+            "without_notice": [
+              "ICICI Bank may suspend or terminate the UPI Facility without prior notice if the User has breached any of these Terms",
+              "The Facility/Service shall be made available only to the User satisfying the eligibility criteria and shall be provided at the sole discretion of H..."
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 5.216,
+          "post_ccpa_pai": 0.567,
+          "pai_change_pct": -89.1,
+          "pre_gdpr_td": 2.209,
+          "post_ccpa_td": 5.819,
+          "td_change_pct": 163.4,
+          "classification": "compliance_with_complexity"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 5.22,
+              "after": 0.57,
+              "change": "-89.1%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 2.21,
+              "after": 5.82,
+              "change": "+163.4%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 0,
+          "post_ccpa": 42
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.011,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.315,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.544,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.155,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.231,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.311,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.002,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "reserve_right": [
+              "We reserve the right to designate in the future that certain of our Services are governed by separate terms (where, as applicable, you may separate...",
+              "We reserve the right to limit our Services in any country"
+            ],
+            "at_any_time": [
+              "You also consent to our sending you notifications via WhatsApp from time to time, as necessary to provide our Services to you",
+              "We may discontinue some or all of our Services, including certain features and the support for certain devices and platforms, at any time after a n..."
+            ],
+            "may_terminate": [
+              "We may discontinue some or all of our Services, including certain features and the support for certain devices and platforms, at any time after a n..."
+            ],
+            "without_liability": [
+              "WE DO NOT CONTROL AND ARE NOT RESPONSIBLE FOR, CONTROLLING HOW OR WHEN OUR USERS USE OUR SERVICES OR THE FEATURES, SERVICES, AND INTERFACES OUR SER...",
+              "WE ARE NOT RESPONSIBLE FOR AND ARE NOT OBLIGATED TO CONTROL THE ACTIONS OR INFORMATION (INCLUDING CONTENT) OF OUR USERS OR OTHER THIRD PARTIES"
+            ],
+            "for_any_reason": [
+              "Although we hope you remain a WhatsApp user, you can terminate your relationship with WhatsApp anytime for any reason by deleting your account"
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      }
+    },
+    "Reddit": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 78,
+          "post_gdpr": 10,
+          "post_ccpa": 25
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.048,
+            "post_gdpr": 0.072,
+            "post_ccpa": 0.151,
+            "change_pct": 217.0,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.563,
+            "post_gdpr": 0.015,
+            "post_ccpa": 0.001,
+            "change_pct": -99.9,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.65,
+            "post_gdpr": 0.555,
+            "post_ccpa": 0.713,
+            "change_pct": 9.8,
+            "trend": "stable"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.049,
+            "post_gdpr": 0.134,
+            "post_ccpa": 0.178,
+            "change_pct": 261.0,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.061,
+            "post_gdpr": 0.1,
+            "post_ccpa": 0.072,
+            "change_pct": 17.4,
+            "trend": "stable"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.007,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": -100.0,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.021,
+            "post_gdpr": 0.003,
+            "post_ccpa": 0.0,
+            "change_pct": -100.0,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "reserve_right": [
+              "While your personally identifying information is used only as outlined above, we reserve the right to use, transfer, sell, and share aggregated, an...",
+              "While your personally identifying information is protected as outlined above, we reserve the right to use, transfer, sell, and share aggregated, an..."
+            ],
+            "at_any_time": [
+              "This Privacy Policy may be modified from time to time; the date of the most recent revisions will appear on this page, so check back often",
+              "If at any time the Website were to collect personally identifying information, such as your actual name, address, or telephone number, it would onl..."
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "If we make a change to this policy that, in our sole discretion, is material, we will provide you with additional notice (such as adding a statemen..."
+            ],
+            "at_any_time": [
+              "Deleting Your Account You may delete your account information at any time from the user preferences page",
+              "You can deactivate these messages at any time by changing the notification settings on your mobile device"
+            ],
+            "may_terminate": [
+              "Deleting Your Account You may delete your account information at any time from the user preferences page"
+            ],
+            "without_liability": []
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 2.795,
+          "post_ccpa_pai": 0.92,
+          "pai_change_pct": -67.1,
+          "pre_gdpr_td": 1.599,
+          "post_ccpa_td": 1.317,
+          "td_change_pct": -17.6,
+          "classification": "genuine_simplification"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 2.79,
+              "after": 0.92,
+              "change": "-67.1%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.6,
+              "after": 1.32,
+              "change": "-17.6%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      }
+    },
+    "LinkedIn": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 34,
+          "post_gdpr": 4,
+          "post_ccpa": 19
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.186,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.073,
+            "change_pct": -60.8,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.048,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.025,
+            "change_pct": -46.8,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 1.056,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.286,
+            "change_pct": -72.9,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.032,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.007,
+            "change_pct": -78.9,
+            "trend": "decreased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.14,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.033,
+            "change_pct": -76.1,
+            "trend": "decreased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.032,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": -100.0,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.02,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.007,
+            "change_pct": -65.8,
+            "trend": "decreased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "Any violation of these guidelines or those detailed in our User Agreement or elsewhere may lead to the restriction, suspension, or termination of y...",
+              "As a consequence of your violation of any of the aforementioned agreements, LinkedIn may, at its sole discretion, prohibit you from any further par..."
+            ],
+            "reserve_right": [
+              "Removal of Advertisements by LinkedIn: LinkedIn reserves the right to remove any advertisement at any time, with cause due to a violation of LinkedIn",
+              "LinkedIn further reserves the right to withhold, remove or discard any content available as part of your account, with or without notice if deemed ..."
+            ],
+            "at_any_time": [
+              "We may modify this Privacy Policy from time to time, and if we make material changes to it, we will provide notice through our website, apps, or ot...",
+              "You can remove your address book and any other synced information at any time"
+            ],
+            "may_terminate": [
+              "LinkedIn may terminate this invoicing ability unilaterally at its discretion",
+              "Mutual rights of termination You may terminate this Agreement, for any or no reason, at any time, with notice to LinkedIn pursuant to Section 9"
+            ],
+            "without_liability": [
+              "LinkedIn is not responsible for the information you choose to submit in these forums",
+              "LinkedIn does not verify the accuracy of member-generated content on the site and, as such, is not liable for any advertisement that was shown to m..."
+            ],
+            "for_any_reason": [
+              "LinkedIn has the editorial discretion to reject or cease serving any advertisement for any reason at any time, regardless of whether or not such ad...",
+              "LinkedIn shall also have the right to remove any advertisement at any time without cause as LinkedIn determines in its sole discretion"
+            ],
+            "without_notice": [
+              "LinkedIn further reserves the right to withhold, remove or discard any content available as part of your account, with or without notice if deemed ...",
+              "LinkedIn may terminate this Agreement and your account for any reason or no reason, at any time, with or without notice"
+            ]
+          },
+          "post_ccpa": {}
+        },
+        "summary": {
+          "pre_gdpr_pai": 1.043,
+          "post_ccpa_pai": 0.94,
+          "pai_change_pct": -9.9,
+          "pre_gdpr_td": 1.444,
+          "post_ccpa_td": 1.339,
+          "td_change_pct": -7.3,
+          "classification": "moderate_improvement"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 1.04,
+              "after": 0.94,
+              "change": "-9.9%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.44,
+              "after": 1.34,
+              "change": "-7.3%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      }
+    },
+    "TikTok": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 2,
+          "post_ccpa": 33
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.287,
+            "post_ccpa": 0.069,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.256,
+            "post_ccpa": 0.116,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.303,
+            "post_ccpa": 0.372,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.064,
+            "post_ccpa": 0.087,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.24,
+            "post_ccpa": 0.426,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.112,
+            "post_ccpa": 0.015,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.12,
+            "post_ccpa": 0.013,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "sole_discretion": [
+              "\",\"bestir_rules_GE2\":\"We reserve the right to refuse an Entry from any person, at our sole and absolute discretion",
+              "\",\"bestir_rules_IN4\":\"We reserve the right to refuse an entry from any person, at our sole and absolute discretion"
+            ],
+            "reserve_right": [
+              "\",\"bestir_rules_GE2\":\"We reserve the right to refuse an Entry from any person, at our sole and absolute discretion",
+              "We reserve the right to disqualify you at any time, if you have contravened any of these Terms or if you will or could bring us or our partners int..."
+            ],
+            "at_any_time": [
+              "We reserve the right to disqualify you at any time, if you have contravened any of these Terms or if you will or could bring us or our partners int...",
+              "We reserve the right to disqualify you at any time, if, in our absolute discretion, we believe that you have contravened any of these Terms or if y..."
+            ],
+            "may_terminate": [
+              "Should you choose to do so, you may delete your entire account in Settings",
+              "Should you choose to do so, you may delete your entire account in Settings"
+            ],
+            "without_liability": [
+              "We are not responsible for unsuccessful attempts to notify a potential winner",
+              "\",\"bestir_rules_IN17\":\"We, to the fullest extent permitted by law, assume no liability whatsoever in relation to any direct or indirect damage, los..."
+            ],
+            "for_any_reason": [
+              "All Coins of a user will expire automatically upon termination of the user\u2019s account for any reason",
+              "&nbsp;Gifts cannot be converted into or exchanged for Coins or cash, or be refunded or reimbursed by us for any reason"
+            ],
+            "without_notice": [
+              "&nbsp;Where we have a valid reason ( such as where we reasonably believe you have violated this Policy, you are in breach of any applicable law or ...",
+              "\\u0026nbsp;Where we have a valid reason ( such as where we reasonably believe you have violated this Policy, you are in breach of any applicable la..."
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 0,
+          "post_ccpa": 31
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.624,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.638,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.63,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.154,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.691,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.32,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.403,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "sole_discretion": [
+              "We reserve the right, at any time and without prior notice, to remove or disable access to content at our discretion for any reason or no reason",
+              "We, or authorised third parties, reserve the right to cut, crop, edit or refuse to publish, your content at our or their sole discretion"
+            ],
+            "reserve_right": [
+              "We reserve the right, at any time and without prior notice, to remove or disable access to content at our discretion for any reason or no reason",
+              "We, or authorised third parties, reserve the right to cut, crop, edit or refuse to publish, your content at our or their sole discretion"
+            ],
+            "at_any_time": [
+              "Changes to the TermsWe amend these Terms from time to time, for instance when we update the functionality of our Services, when we combine multiple...",
+              "In addition to the above, your access to and use of the Services must, at all times, be compliant with our Community Guidelines"
+            ],
+            "may_terminate": [
+              "Some of the reasons we may remove or disable access to content may include finding the content objectionable, in violation of these Terms or our Co...",
+              "You acknowledge and agree that TikTok may terminate this license at any time for any reason or no reason"
+            ],
+            "without_liability": [
+              "As noted above, these features may not be available to all users of the Services, and we have no liability to you for limiting your right to certai...",
+              "We accept no liability in respect of any content submitted by users and published by us or by authorised third parties"
+            ],
+            "for_any_reason": [
+              "We reserve the right, at any time and without prior notice, to remove or disable access to content at our discretion for any reason or no reason",
+              "You acknowledge and agree that TikTok may terminate this license at any time for any reason or no reason"
+            ],
+            "without_notice": [
+              "We reserve the right, at any time and without prior notice, to remove or disable access to content at our discretion for any reason or no reason",
+              "WE MAY CHANGE, SUSPEND, WITHDRAW OR RESTRICT THE AVAILABILITY OF ALL OR ANY PART OF OUR PLATFORM FOR BUSINESS AND OPERATIONAL REASONS AT ANY TIME W..."
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      }
+    },
+    "Twitter": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 8,
+          "post_gdpr": 20,
+          "post_ccpa": 70
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.276,
+            "post_gdpr": 0.571,
+            "post_ccpa": 0.28,
+            "change_pct": 1.4,
+            "trend": "stable"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.679,
+            "post_ccpa": 0.367,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.966,
+            "post_gdpr": 1.143,
+            "post_ccpa": 0.824,
+            "change_pct": -14.7,
+            "trend": "stable"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.393,
+            "post_ccpa": 0.238,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.429,
+            "post_ccpa": 0.218,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.715,
+            "post_ccpa": 0.367,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.25,
+            "post_ccpa": 0.147,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "If we make a change to this policy that, in our sole discretion, is material, we will notify you via an @Twitter update or email to the email addre..."
+            ],
+            "at_any_time": [
+              "You can delete your imported address book contacts at any time",
+              "To facilitate future purchases, we store your Payment Information, excluding CVV code, and shipping address, which you can remove from your account..."
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "\u00c2 If we make a change to this policy that, in our sole discretion, is material, we will notify you within Twitter"
+            ],
+            "at_any_time": [
+              "We give you transparency into that information, and you can modify or correct it at any time",
+              "You can contact us at any time"
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 1.089,
+          "post_ccpa_pai": 2.202,
+          "pai_change_pct": 102.3,
+          "pre_gdpr_td": 1.756,
+          "post_ccpa_td": 2.161,
+          "td_change_pct": 23.1,
+          "classification": "defensive_increase"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 1.09,
+              "after": 2.2,
+              "change": "+102.3%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.76,
+              "after": 2.16,
+              "change": "+23.1%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 0,
+          "post_ccpa": 22
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.485,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.762,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 1.35,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.233,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.181,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.011,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.005,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "sole_discretion": [
+              "As such, the Services may change from time to time, at our discretion",
+              "We also retain the right to create limits on use and storage at our sole discretion at any time"
+            ],
+            "reserve_right": [
+              "We reserve the right to remove Content that violates the User Agreement, including for example, copyright or trademark violations or other intellec...",
+              "We also retain the right to create limits on use and storage at our sole discretion at any time"
+            ],
+            "at_any_time": [
+              "As such, the Services may change from time to time, at our discretion",
+              "We also retain the right to create limits on use and storage at our sole discretion at any time"
+            ],
+            "may_terminate": [
+              "Twitter may suspend or terminate your access to Paid Service(s) or cease providing you with all or part of the Paid Services (without any liability...",
+              "We may suspend accounts that violate the Twitter Rules"
+            ],
+            "without_liability": [
+              "We may also remove or refuse to distribute any Content on the Services, limit distribution or visibility of any Content on the service, suspend or ...",
+              "We may also remove or refuse to distribute any Content on the Services, limit distribution or visibility of any Content on the service, suspend or ..."
+            ],
+            "for_any_reason": [
+              "If you are a consumer in a EU Member State or the UK, you agree you have fourteen (14) days after your purchase to withdraw from your contract for ...",
+              "A Creator may choose, in the Creator\u2019s discretion, to block people who have purchased Subscriptions from accessing the Creator\u2019s Subscriptions acco..."
+            ],
+            "without_notice": [
+              "We may stop (permanently or temporarily) providing the Paid Services or any features within the Paid Services to you or to users generally with or ...",
+              "Twitter makes no representations as to the number or type of Twitter Blue Labs Features that will be available to Twitter Blue subscribers at any g..."
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      }
+    },
+    "Instagram": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 0,
+          "post_ccpa": 7
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.083,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {}
+        },
+        "summary": {},
+        "before_after": {}
+      }
+    },
+    "Pinterest": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 12,
+          "post_gdpr": 12,
+          "post_ccpa": 49
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.003,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.005,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.977,
+            "post_gdpr": 0.707,
+            "post_ccpa": 0.73,
+            "change_pct": -25.3,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.005,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.191,
+            "post_ccpa": 0.026,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.0,
+            "post_ccpa": 0.0,
+            "change_pct": 0,
+            "trend": "stable"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "at_any_time": [
+              "For example, you can: Access and change information in your profile page at any time, choose whether your profile page is available to search engin...",
+              "Close your account at any time"
+            ]
+          },
+          "post_ccpa": {
+            "at_any_time": [
+              "For example, you can: Edit information in your profile at any time, decide whether your profile is available to search engines, or choose whether o...",
+              "Close your account at any time"
+            ],
+            "without_liability": [
+              "Where we share information we receive under Privacy Shield with third parties, we're responsible for making sure those third parties also comply wi..."
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 1.471,
+          "post_ccpa_pai": 0.588,
+          "pai_change_pct": -60.0,
+          "pre_gdpr_td": 1.064,
+          "post_ccpa_td": 1.213,
+          "td_change_pct": 13.9,
+          "classification": "genuine_compliance"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 1.47,
+              "after": 0.59,
+              "change": "-60.0%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.06,
+              "after": 1.21,
+              "change": "+13.9%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 12,
+          "post_gdpr": 12,
+          "post_ccpa": 47
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0.54,
+            "post_gdpr": 0.244,
+            "post_ccpa": 0.213,
+            "change_pct": -60.5,
+            "trend": "decreased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0.86,
+            "post_gdpr": 0.72,
+            "post_ccpa": 0.615,
+            "change_pct": -28.4,
+            "trend": "decreased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0.66,
+            "post_gdpr": 0.253,
+            "post_ccpa": 0.371,
+            "change_pct": -43.8,
+            "trend": "decreased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0.339,
+            "post_gdpr": 0.487,
+            "post_ccpa": 0.352,
+            "change_pct": 4.0,
+            "trend": "stable"
+          },
+          "without_liability": {
+            "pre_gdpr": 1.08,
+            "post_gdpr": 0.882,
+            "post_ccpa": 0.921,
+            "change_pct": -14.7,
+            "trend": "stable"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0.873,
+            "post_gdpr": 0.4,
+            "post_ccpa": 0.238,
+            "change_pct": -72.8,
+            "trend": "decreased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0.0,
+            "post_gdpr": 0.241,
+            "post_ccpa": 0.147,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "pre_gdpr": {
+            "sole_discretion": [
+              "If a revision, in our sole discretion, is material we will notify you",
+              "If a revision, in our sole discretion, is material we will notify you"
+            ],
+            "reserve_right": [
+              "We reserve the right to remove or modify User Content for any reason, including User Content that we believe violates these Terms or our policies",
+              "More simply put We reserve the right to refuse service to anyone"
+            ],
+            "at_any_time": [
+              "Termination Pinterest may terminate or suspend this license at any time, with or without cause or notice to you",
+              "We may revise these Terms from time to time and the most current version will always be posted on our website"
+            ],
+            "may_terminate": [
+              "Termination Pinterest may terminate or suspend this license at any time, with or without cause or notice to you",
+              "Pinterest may terminate or suspend this license at any time, with or without cause or notice to you"
+            ],
+            "without_liability": [
+              "If you access any third party website, service, or content from Pinterest, you do so at your own risk and you agree that Pinterest will have no lia...",
+              "Most of that stuff is awesome but we're not responsible when it's not"
+            ],
+            "for_any_reason": [
+              "We reserve the right to remove or modify User Content for any reason, including User Content that we believe violates these Terms or our policies",
+              "Termination Pinterest may terminate or suspend this license at any time, with or without cause or notice to you"
+            ]
+          },
+          "post_ccpa": {
+            "sole_discretion": [
+              "If a revision, in our discretion, is material, we\u2019ll notify you",
+              "It\u2019s our policy\u2014in appropriate circumstances and at our discretion\u2014to disable or terminate the accounts of people who repeatedly infringe or are re..."
+            ],
+            "reserve_right": [
+              "We reserve the right to remove or modify User Content, or change the way it\u2019s used in Pinterest, for any reason",
+              "We reserve the right to refuse service to anyone, but we will provide appropriate notice"
+            ],
+            "at_any_time": [
+              "We may revise these Terms from time to time and the most current version will always be posted on our website",
+              "For example, you can: Edit information in your profile at any time, decide whether your profile is available to search engines, or choose whether o..."
+            ],
+            "may_terminate": [
+              "We may terminate or suspend your access immediately and without notice if we have a good reason, including any violation of our Community Guidelines",
+              "We may remove or limit the distribution of such content and the accounts that save it"
+            ],
+            "without_liability": [
+              "If you access any third party website, service, or content from Pinterest, you do so at your own risk and you agree that Pinterest has no liability...",
+              "Most of that stuff is awesome, but we're not responsible when it's not"
+            ],
+            "for_any_reason": [
+              "We reserve the right to remove or modify User Content, or change the way it\u2019s used in Pinterest, for any reason",
+              "We reserve the right to remove or modify User Content, or change the way it is used in the Service, for any reason, including User Content that we ..."
+            ],
+            "without_notice": [
+              "We may terminate or suspend your access immediately and without notice if we have a good reason, including any violation of our Community Guidelines",
+              "We may terminate or suspend your access immediately and without notice if we have a good reason, including any violation of these Terms or our Comm..."
+            ]
+          }
+        },
+        "summary": {
+          "pre_gdpr_pai": 3.869,
+          "post_ccpa_pai": 2.022,
+          "pai_change_pct": -47.7,
+          "pre_gdpr_td": 1.952,
+          "post_ccpa_td": 1.701,
+          "td_change_pct": -12.9,
+          "classification": "genuine_simplification"
+        },
+        "before_after": {
+          "metrics": [
+            {
+              "name": "Power Asymmetry Index (PAI)",
+              "before": 3.87,
+              "after": 2.02,
+              "change": "-47.7%",
+              "interpretation": "Measures WHAT: Power balance (Higher = Worse)"
+            },
+            {
+              "name": "Term Density",
+              "before": 1.95,
+              "after": 1.7,
+              "change": "-12.9%",
+              "interpretation": "Measures HOW: Language density/complexity"
+            }
+          ],
+          "note": "PAI = power balance (what), Term Density = language complexity (how)"
+        }
+      }
+    },
+    "Discord": {
+      "privacy": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 0,
+          "post_ccpa": 41
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.004,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.09,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.367,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.024,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.002,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.004,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0,
+            "post_ccpa": 0.087,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "sole_discretion": [
+              "We may in our discretion update or correct information in our possession that you have previously submitted via the Services\\n\\n # Contacting Us\\n\\...",
+              "We reserve the right to reject any username or to terminate your username or prevent use of a username in our sole discretion, and without any liab..."
+            ],
+            "reserve_right": [
+              "CHANGES TO THIS PRIVACY POLICYWe reserve the right to update or modify this Privacy Policy at any time and from time to time without prior notice",
+              "\\n\\n # Changes to this Privacy Policy\\n\\n We reserve the right to update or modify this Privacy Policy at any time and from time to time without pr..."
+            ],
+            "at_any_time": [
+              "In addition, if at any time you wish not to receive any future marketing communications or you wish to have your name deleted from our mailing list...",
+              "CHANGES TO THIS PRIVACY POLICYWe reserve the right to update or modify this Privacy Policy at any time and from time to time without prior notice"
+            ],
+            "may_terminate": [
+              "\\n\\n # TERMINATION\\n\\n You may terminate your Account at any time and for any reason by deleting your account through the User Settings page in the...",
+              "The Company may terminate your Account and your access to the Service (or, at the Company\\'s sole option, applicable portions of the Service) at an..."
+            ],
+            "without_liability": [
+              "All of Your Content is your sole responsibility and the Company is not responsible for any material that you upload, post, or otherwise make available",
+              "The Company is not responsible for information that you choose to share on the Communication Channels, or for the actions of other users"
+            ],
+            "for_any_reason": [
+              "The Company reserves the right to refuse any user access to the Services without notice for any reason, including but not limited to a violation of...",
+              "The Company reserves the right to remove and permanently delete Your Content from the Service with or without notice for any reason or no reason"
+            ],
+            "without_notice": [
+              "CHANGES TO THIS PRIVACY POLICYWe reserve the right to update or modify this Privacy Policy at any time and from time to time without prior notice",
+              "\\n\\n # Changes to this Privacy Policy\\n\\n We reserve the right to update or modify this Privacy Policy at any time and from time to time without pr..."
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      },
+      "tos": {
+        "doc_counts": {
+          "pre_gdpr": 0,
+          "post_gdpr": 2,
+          "post_ccpa": 37
+        },
+        "patterns": {
+          "sole_discretion": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.491,
+            "post_ccpa": 0.344,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "reserve_right": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.56,
+            "post_ccpa": 0.398,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "at_any_time": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.496,
+            "post_ccpa": 0.318,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "may_terminate": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.138,
+            "post_ccpa": 0.091,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_liability": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.346,
+            "post_ccpa": 0.488,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "for_any_reason": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.485,
+            "post_ccpa": 0.294,
+            "change_pct": 100,
+            "trend": "increased"
+          },
+          "without_notice": {
+            "pre_gdpr": 0,
+            "post_gdpr": 0.353,
+            "post_ccpa": 0.214,
+            "change_pct": 100,
+            "trend": "increased"
+          }
+        },
+        "pattern_examples": {
+          "post_ccpa": {
+            "sole_discretion": [
+              "We reserve the right to reject any username or to terminate your username or prevent use of a username in our sole discretion, and without any liab...",
+              "Unless the copyright owner files an action seeking a court order against the content provider, member or user, the removed content may be replaced,..."
+            ],
+            "reserve_right": [
+              "The Company reserves the right to update these Terms, which we may do for reasons that include, but are not limited to, complying with changes to t...",
+              "The Company reserves the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice"
+            ],
+            "at_any_time": [
+              "You will ensure that your e-mail address is kept accurate and up-to-date at all times",
+              "The Company may also terminate or suspend your access to any Communication Channels at any time, without notice, for any reason"
+            ],
+            "may_terminate": [
+              "TERMINATION You may terminate your Account at any time and for any reason by deleting your account through the User Settings page in the application",
+              "The Company may terminate your Account and your access to the Service (or, at the Company&#x27;s sole option, applicable portions of the Service) a..."
+            ],
+            "without_liability": [
+              "All of Your Content is your sole responsibility and the Company is not responsible for any material that you upload, post, or otherwise make available",
+              "The Company is not responsible for information that you choose to share on the Communication Channels, or for the actions of other users"
+            ],
+            "for_any_reason": [
+              "The Company reserves the right to refuse any user access to the Services without notice for any reason, including but not limited to a violation of...",
+              "The Company reserves the right to remove and permanently delete Your Content from the Service with or without notice for any reason or no reason"
+            ],
+            "without_notice": [
+              "The Company reserves the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice",
+              "The Company reserves the right to refuse any user access to the Services without notice for any reason, including but not limited to a violation of..."
+            ]
+          }
+        },
+        "summary": {},
+        "before_after": {}
+      }
+    }
+  }
+}

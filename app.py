@@ -9,6 +9,10 @@ import json
 from pathlib import Path
 import pandas as pd
 
+current_file = Path(__file__).resolve()
+dashboard_dir = current_file.parent
+data_dir = dashboard_dir / 'data'
+
 # Page config
 st.set_page_config(
     page_title="Platform Policy Explorer",
@@ -22,7 +26,6 @@ st.set_page_config(
 def load_data():
     # Get absolute path to data directory
     # dashboard/app.py -> ASML3/dashboard, so data is at ASML3/dashboard/data
-    current_file = Path(__file__).resolve()
     dashboard_dir = current_file.parent  # ASML3/dashboard
     data_dir = dashboard_dir / 'data'    # ASML3/dashboard/data
     
@@ -32,6 +35,10 @@ def load_data():
     discretion_path = data_dir / 'tier1_discretion_scores.json'
     pca_path = data_dir / 'tier1_pca_index.json'
     its_path = data_dir / 'tier1_its_analysis.json'
+    discretion_by_type_path = data_dir / 'discretion_scores_by_type.json'
+    temporal_by_type_path = data_dir / 'temporal_data_by_type.json'
+    evasion_by_type_path = data_dir / 'regulatory_evasion_by_type.json'
+    dimension_by_type_path = data_dir / 'dimension_scores_by_type.json'
     
     with open(viz_path) as f:
         viz_data = json.load(f)
@@ -58,10 +65,56 @@ def load_data():
             its_analysis = json.load(f)
     except FileNotFoundError:
         its_analysis = {}
-        
-    return viz_data, platform_scores, hybrid_temporal, discretion_scores, pca_index, its_analysis
 
-viz_data, platform_scores, hybrid_temporal, discretion_scores, pca_index, its_analysis = load_data()
+    try:
+        with open(discretion_by_type_path) as f:
+            discretion_scores_by_type = json.load(f)
+    except FileNotFoundError:
+        discretion_scores_by_type = {}
+
+    try:
+        with open(temporal_by_type_path) as f:
+            temporal_data_by_type = json.load(f)
+    except FileNotFoundError:
+        temporal_data_by_type = {}
+
+    try:
+        with open(evasion_by_type_path) as f:
+            regulatory_evasion_by_type = json.load(f)
+    except FileNotFoundError:
+        regulatory_evasion_by_type = {}
+
+    try:
+        with open(dimension_by_type_path) as f:
+            dimension_scores_by_type = json.load(f)
+    except FileNotFoundError:
+        dimension_scores_by_type = {}
+        
+    return (
+        viz_data,
+        platform_scores,
+        hybrid_temporal,
+        discretion_scores,
+        pca_index,
+        its_analysis,
+        discretion_scores_by_type,
+        temporal_data_by_type,
+        regulatory_evasion_by_type,
+        dimension_scores_by_type,
+    )
+
+(
+    viz_data,
+    platform_scores,
+    hybrid_temporal,
+    discretion_scores,
+    pca_index,
+    its_analysis,
+    discretion_scores_by_type,
+    temporal_data_by_type,
+    regulatory_evasion_by_type,
+    dimension_scores_by_type,
+) = load_data()
 
 # Platform colors and metadata (10 platforms with real text analysis)
 PLATFORM_CONFIG = {
@@ -92,6 +145,13 @@ selected_platforms = st.sidebar.multiselect(
 )
 
 show_confidence = st.sidebar.checkbox("Show Confidence Indicators", value=True)
+
+doc_type_filter = st.sidebar.multiselect(
+    "Document Types",
+    options=['privacy', 'tos'],
+    default=['privacy', 'tos'],
+    format_func=lambda x: "Privacy Policy" if x == 'privacy' else "Terms of Service"
+)
 
 # Main content tabs
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
@@ -159,6 +219,88 @@ with tab1:
         )
         
         st.plotly_chart(fig, use_container_width=True)
+
+        st.markdown("---")
+        st.subheader("📋 Rankings by Document Type")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.markdown("**🔒 Privacy Policy Rankings**")
+            privacy_rows = []
+            for platform in selected_platforms:
+                platform_data = discretion_scores_by_type.get(platform, {})
+                if 'privacy' not in platform_data or 'privacy' not in doc_type_filter:
+                    continue
+                d = platform_data['privacy']
+                privacy_rows.append({
+                    'Platform': platform,
+                    'PAI': round(d.get('avg_power_asymmetry_index', 0), 2),
+                    'Term Density': round(d.get('avg_term_density', 0), 2),
+                    'Docs': d.get('document_count', 0),
+                })
+
+            if privacy_rows:
+                df_priv = pd.DataFrame(privacy_rows).sort_values('PAI', ascending=False)
+                st.dataframe(df_priv, use_container_width=True, hide_index=True)
+            else:
+                st.info("No Privacy Policy ranking data for current filters.")
+
+        with col2:
+            st.markdown("**📜 Terms of Service Rankings**")
+            tos_rows = []
+            for platform in selected_platforms:
+                platform_data = discretion_scores_by_type.get(platform, {})
+                if 'tos' not in platform_data or 'tos' not in doc_type_filter:
+                    continue
+                d = platform_data['tos']
+                tos_rows.append({
+                    'Platform': platform,
+                    'PAI': round(d.get('avg_power_asymmetry_index', 0), 2),
+                    'Term Density': round(d.get('avg_term_density', 0), 2),
+                    'Docs': d.get('document_count', 0),
+                })
+
+            if tos_rows:
+                df_tos = pd.DataFrame(tos_rows).sort_values('PAI', ascending=False)
+                st.dataframe(df_tos, use_container_width=True, hide_index=True)
+            else:
+                st.info("No Terms of Service ranking data for current filters.")
+
+        compare_rows = []
+        for platform in selected_platforms:
+            platform_data = discretion_scores_by_type.get(platform, {})
+            if not platform_data:
+                continue
+            if 'privacy' in doc_type_filter:
+                compare_rows.append({
+                    'Platform': platform,
+                    'Document Type': 'Privacy Policy',
+                    'PAI': platform_data.get('privacy', {}).get('avg_power_asymmetry_index', 0),
+                })
+            if 'tos' in doc_type_filter:
+                compare_rows.append({
+                    'Platform': platform,
+                    'Document Type': 'Terms of Service',
+                    'PAI': platform_data.get('tos', {}).get('avg_power_asymmetry_index', 0),
+                })
+
+        if compare_rows:
+            df_compare_doc_type = pd.DataFrame(compare_rows)
+            fig_compare = px.bar(
+                df_compare_doc_type,
+                x='Platform',
+                y='PAI',
+                color='Document Type',
+                barmode='group',
+                color_discrete_map={
+                    'Privacy Policy': '#2E8B57',
+                    'Terms of Service': '#8B4513',
+                },
+                title='Privacy Policy vs Terms of Service Power Asymmetry Index'
+            )
+            fig_compare.update_layout(yaxis_title='Power Asymmetry Index', height=420)
+            st.plotly_chart(fig_compare, use_container_width=True)
         
         # NEW: Show PCA loadings
         with st.expander("📐 How dimensions contribute to the index"):
@@ -308,6 +450,83 @@ with tab2:
     )
     
     st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+    st.subheader("📊 Dimensions by Document Type")
+    doc_categories = ['Discretion', 'Disclaimer', 'Obligation', 'Empowerment (inv.)']
+    col_doc1, col_doc2 = st.columns(2)
+
+    with col_doc1:
+        st.markdown("**🔒 Privacy Policy Dimensions**")
+        if 'privacy' in doc_type_filter:
+            fig_radar_priv = go.Figure()
+            privacy_emp = [
+                dimension_scores_by_type.get(p, {}).get('privacy', {}).get('empowerment', 0)
+                for p in selected_platforms
+                if 'privacy' in dimension_scores_by_type.get(p, {})
+            ]
+            max_emp = max(privacy_emp) if privacy_emp else 1
+
+            for platform in selected_platforms:
+                d = dimension_scores_by_type.get(platform, {}).get('privacy')
+                if not d:
+                    continue
+                emp_inverted = max_emp - d['empowerment'] + 0.1
+                values = [d['discretion'], d['disclaimer'], d['obligation'], emp_inverted]
+                values_closed = values + [values[0]]
+
+                fig_radar_priv.add_trace(go.Scatterpolar(
+                    r=values_closed,
+                    theta=doc_categories + [doc_categories[0]],
+                    fill='toself',
+                    name=platform,
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'])
+                ))
+
+            fig_radar_priv.update_layout(
+                polar=dict(radialaxis=dict(visible=True, range=[0, None])),
+                showlegend=True,
+                height=500
+            )
+            st.plotly_chart(fig_radar_priv, use_container_width=True)
+        else:
+            st.info("Privacy Policy is not selected in Document Types filter.")
+
+    with col_doc2:
+        st.markdown("**📜 Terms of Service Dimensions**")
+        if 'tos' in doc_type_filter:
+            fig_radar_tos = go.Figure()
+            tos_emp = [
+                dimension_scores_by_type.get(p, {}).get('tos', {}).get('empowerment', 0)
+                for p in selected_platforms
+                if 'tos' in dimension_scores_by_type.get(p, {})
+            ]
+            max_emp = max(tos_emp) if tos_emp else 1
+
+            for platform in selected_platforms:
+                d = dimension_scores_by_type.get(platform, {}).get('tos')
+                if not d:
+                    continue
+                emp_inverted = max_emp - d['empowerment'] + 0.1
+                values = [d['discretion'], d['disclaimer'], d['obligation'], emp_inverted]
+                values_closed = values + [values[0]]
+
+                fig_radar_tos.add_trace(go.Scatterpolar(
+                    r=values_closed,
+                    theta=doc_categories + [doc_categories[0]],
+                    fill='toself',
+                    name=platform,
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'])
+                ))
+
+            fig_radar_tos.update_layout(
+                polar=dict(radialaxis=dict(visible=True, range=[0, None])),
+                showlegend=True,
+                height=500
+            )
+            st.plotly_chart(fig_radar_tos, use_container_width=True)
+        else:
+            st.info("Terms of Service is not selected in Document Types filter.")
     
     # Updated explanation
     col1, col2 = st.columns(2)
@@ -428,6 +647,60 @@ with tab4:
         )
         
         st.plotly_chart(fig_disc, use_container_width=True)
+
+        st.markdown("---")
+        st.subheader("📊 Discretion by Document Type")
+        col_priv, col_tos = st.columns(2)
+
+        with col_priv:
+            st.markdown("**🔒 Privacy Policy Discretion Metrics**")
+            if 'privacy' in doc_type_filter:
+                privacy_metrics = []
+                for platform in selected_platforms:
+                    d = discretion_scores_by_type.get(platform, {}).get('privacy')
+                    if not d:
+                        continue
+                    privacy_metrics.append({
+                        'Platform': platform,
+                        'Discretion/1k': f"{d.get('avg_discretion_per_1k', 0):.2f}",
+                        'Disclaimer/1k': f"{d.get('avg_disclaimer_per_1k', 0):.2f}",
+                        'Obligation/1k': f"{d.get('avg_obligation_per_1k', 0):.2f}",
+                        'Discretion Ratio': f"{d.get('avg_discretion_ratio', 0):.2f}",
+                        'PAI': f"{d.get('avg_power_asymmetry_index', 0):.2f}",
+                        'Docs': d.get('document_count', 0),
+                    })
+
+                if privacy_metrics:
+                    st.dataframe(pd.DataFrame(privacy_metrics), use_container_width=True, hide_index=True)
+                else:
+                    st.info("No Privacy Policy discretion metrics for current filters.")
+            else:
+                st.info("Privacy Policy is not selected in Document Types filter.")
+
+        with col_tos:
+            st.markdown("**📜 Terms of Service Discretion Metrics**")
+            if 'tos' in doc_type_filter:
+                tos_metrics = []
+                for platform in selected_platforms:
+                    d = discretion_scores_by_type.get(platform, {}).get('tos')
+                    if not d:
+                        continue
+                    tos_metrics.append({
+                        'Platform': platform,
+                        'Discretion/1k': f"{d.get('avg_discretion_per_1k', 0):.2f}",
+                        'Disclaimer/1k': f"{d.get('avg_disclaimer_per_1k', 0):.2f}",
+                        'Obligation/1k': f"{d.get('avg_obligation_per_1k', 0):.2f}",
+                        'Discretion Ratio': f"{d.get('avg_discretion_ratio', 0):.2f}",
+                        'PAI': f"{d.get('avg_power_asymmetry_index', 0):.2f}",
+                        'Docs': d.get('document_count', 0),
+                    })
+
+                if tos_metrics:
+                    st.dataframe(pd.DataFrame(tos_metrics), use_container_width=True, hide_index=True)
+                else:
+                    st.info("No Terms of Service discretion metrics for current filters.")
+            else:
+                st.info("Terms of Service is not selected in Document Types filter.")
         
         # Detailed metrics table
         st.subheader("Detailed Discretion Metrics")
@@ -566,17 +839,7 @@ with tab5:
 with tab6:
     st.subheader("Policy Evolution Over Time")
     
-    # Load hybrid temporal data
     from datetime import datetime
-
-    current_file = Path(__file__).resolve()
-    dashboard_dir = current_file.parent
-    data_dir = dashboard_dir / 'data'
-
-    hybrid_path = data_dir / 'tier1_hybrid_temporal.json'
-    
-    with open(hybrid_path) as f:
-        hybrid_temporal = json.load(f)
     
     st.success("""
     📊 **All Platforms Have Real Temporal Data** (Verified 2026-01-22)
@@ -595,13 +858,23 @@ with tab6:
     
     st.markdown("---")
     
-    # Platform filter for time series - only show platforms with temporal data
-    temporal_platforms = list(hybrid_temporal.get('platforms', {}).keys())
+    temporal_platforms = list(temporal_data_by_type.get('platforms', {}).keys())
+    if not temporal_platforms:
+        temporal_platforms = list(hybrid_temporal.get('platforms', {}).keys())
     ts_platform_filter = st.multiselect(
         "Select platforms to display",
         options=temporal_platforms,
         default=temporal_platforms,
         key='ts_filter'
+    )
+
+    metric_choice = st.selectbox(
+        "Select Metric to Display",
+        ['power_asymmetry_index', 'term_density'],
+        format_func=lambda x: 'Power Asymmetry Index — "WHAT" (Higher = Worse)'
+        if x == 'power_asymmetry_index'
+        else 'Term Density — "HOW" (Complexity + Formality + Agency)',
+        key='ts_metric'
     )
 
     # Policy Index Definition
@@ -626,125 +899,77 @@ with tab6:
         - **Increase over time** → "Legalization" trend (policies becoming more protective)
         """)
 
-    # Create time series chart
-    fig_ts = go.Figure()
+    col_priv_ts, col_tos_ts = st.columns(2)
 
-    for platform in ts_platform_filter:
-        if platform not in hybrid_temporal['platforms']:
-            continue
-        platform_data = hybrid_temporal['platforms'][platform]
-        time_series = platform_data['time_series']
-        
-        # Extract dates and indices
-        platform_dates = [datetime.fromisoformat(t['date']) for t in time_series]
-        platform_indices = [t['index'] for t in time_series]
-        
-        # All data is real — both 'real' and 'real_linked' types trace to actual policy documents
-        fig_ts.add_trace(go.Scatter(
-            x=platform_dates,
-            y=platform_indices,
-            mode='lines+markers',
-            name=platform,
-            line=dict(
-                color=PLATFORM_CONFIG[platform]['color'],
-                width=2,
-                dash='solid'
-            ),
-            marker=dict(size=5),
-            hovertemplate=(
-                f"<b>{platform}</b><br>" +
-                "Date: %{x|%Y-%m-%d}<br>" +
-                "Index: %{y:.3f}<br>" +
-                "<extra></extra>"
+    with col_priv_ts:
+        if 'privacy' in doc_type_filter:
+            st.subheader("🔒 Privacy Policy Evolution")
+            fig_priv = go.Figure()
+
+            for platform in ts_platform_filter:
+                ts = temporal_data_by_type.get('platforms', {}).get(platform, {}).get('privacy', {}).get('time_series', [])
+                if not ts:
+                    continue
+                years = [t['year'] for t in ts]
+                values = [t.get(metric_choice, 0) for t in ts]
+                fig_priv.add_trace(go.Scatter(
+                    x=years,
+                    y=values,
+                    mode='lines+markers',
+                    name=platform,
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'], width=2),
+                    marker=dict(size=6),
+                ))
+
+            fig_priv.add_vline(x=2016, line_dash='dot', line_color='blue')
+            fig_priv.add_vline(x=2018, line_dash='solid', line_color='red')
+            fig_priv.add_vline(x=2020, line_dash='solid', line_color='green')
+            display_name = 'Power Asymmetry Index (WHAT)' if metric_choice == 'power_asymmetry_index' else 'Term Density (HOW)'
+            fig_priv.update_layout(
+                title=f"Privacy Policy: {display_name}",
+                xaxis_title='Year',
+                yaxis_title=display_name,
+                height=460,
+                hovermode='x unified'
             )
-        ))
-    
-    # Add regulatory event markers with Announced vs Effective distinction
-    # Define styling for different event types
-    event_styles = {
-        'Announced': {'color': 'rgba(100, 100, 200, 0.5)', 'dash': 'dot', 'width': 1.5},
-        'Signed': {'color': 'rgba(100, 100, 200, 0.5)', 'dash': 'dot', 'width': 1.5},
-        'Effective': {'color': 'rgba(200, 50, 50, 0.7)', 'dash': 'solid', 'width': 2},
-    }
+            st.plotly_chart(fig_priv, use_container_width=True)
+        else:
+            st.info("Privacy Policy is not selected in Document Types filter.")
 
-    for event_name, event_date in hybrid_temporal['regulatory_events'].items():
-        event_dt = datetime.fromisoformat(event_date)
+    with col_tos_ts:
+        if 'tos' in doc_type_filter:
+            st.subheader("📜 Terms of Service Evolution")
+            fig_tos = go.Figure()
 
-        # Determine event type (Announced/Signed vs Effective)
-        event_type = 'Effective'  # default
-        for key in event_styles.keys():
-            if key in event_name:
-                event_type = key
-                break
+            for platform in ts_platform_filter:
+                ts = temporal_data_by_type.get('platforms', {}).get(platform, {}).get('tos', {}).get('time_series', [])
+                if not ts:
+                    continue
+                years = [t['year'] for t in ts]
+                values = [t.get(metric_choice, 0) for t in ts]
+                fig_tos.add_trace(go.Scatter(
+                    x=years,
+                    y=values,
+                    mode='lines+markers',
+                    name=platform,
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'], width=2),
+                    marker=dict(size=6),
+                ))
 
-        style = event_styles[event_type]
-
-        # Use add_shape for the line (more robust than add_vline for datetimes)
-        fig_ts.add_shape(
-            type="line",
-            x0=event_dt,
-            y0=0,
-            x1=event_dt,
-            y1=1,
-            xref="x",
-            yref="paper",
-            line=dict(
-                color=style['color'],
-                width=style['width'],
-                dash=style['dash']
+            fig_tos.add_vline(x=2016, line_dash='dot', line_color='blue')
+            fig_tos.add_vline(x=2018, line_dash='solid', line_color='red')
+            fig_tos.add_vline(x=2020, line_dash='solid', line_color='green')
+            display_name = 'Power Asymmetry Index (WHAT)' if metric_choice == 'power_asymmetry_index' else 'Term Density (HOW)'
+            fig_tos.update_layout(
+                title=f"Terms of Service: {display_name}",
+                xaxis_title='Year',
+                yaxis_title=display_name,
+                height=460,
+                hovermode='x unified'
             )
-        )
-
-        # Create label with type indicator
-        regulation = event_name.split()[0]  # GDPR, CCPA, etc.
-        type_short = "📢" if event_type in ['Announced', 'Signed'] else "⚡"
-        label = f"{regulation} {type_short}"
-
-        # Use add_annotation for the text
-        fig_ts.add_annotation(
-            x=event_dt,
-            y=1.02,
-            xref="x",
-            yref="paper",
-            text=label,
-            showarrow=False,
-            font=dict(size=9, color='rgba(50,50,50,0.8)'),
-            textangle=-90,
-            xanchor="center",
-            yanchor="bottom"
-        )
-
-    # Add legend explanation for regulatory lines
-    fig_ts.add_annotation(
-        x=0.99,
-        y=0.02,
-        xref="paper",
-        yref="paper",
-        text="📢 = Announced/Signed | ⚡ = Effective",
-        showarrow=False,
-        font=dict(size=10),
-        bgcolor="rgba(255,255,255,0.8)",
-        xanchor="right"
-    )
-    
-    fig_ts.update_layout(
-        title="Platform Policy Index Evolution (2006-2025)",
-        xaxis_title="Date",
-        yaxis_title="Policy Index",
-        height=600,
-        hovermode='x unified',
-        legend=dict(
-            orientation="v",
-            yanchor="top",
-            y=0.99,
-            xanchor="left",
-            x=0.01,
-            bgcolor="rgba(255, 255, 255, 0.8)"
-        ),
-        plot_bgcolor='rgba(240, 240, 240, 0.3)'
-    )
-    
-    st.plotly_chart(fig_ts, use_container_width=True)
+            st.plotly_chart(fig_tos, use_container_width=True)
+        else:
+            st.info("Terms of Service is not selected in Document Types filter.")
 
     # NEW: Discretion Ratio Time Series (Lexicon-based)
     st.markdown("---")
@@ -770,108 +995,87 @@ with tab6:
         - **Increase over time** → Platform gaining more discretionary power
         """)
 
-    # Load discretion scores and build temporal discretion data
-    discretion_path = data_dir / 'tier1_discretion_scores.json'
-    try:
-        with open(discretion_path) as f:
-            disc_scores = json.load(f)
+    col_priv_disc, col_tos_disc = st.columns(2)
 
-        # Build doc_id to discretion mapping
-        doc_disc_map = {}
-        for platform, pdata in disc_scores.items():
-            if 'documents' in pdata:
-                for doc in pdata['documents']:
-                    doc_id = doc.get('doc_id')
-                    if doc_id:
-                        doc_disc_map[doc_id] = {
-                            'discretion_ratio': doc.get('discretion_ratio', 0),
-                            'platform_power_index': doc.get('platform_power_index', 0),
-                        }
+    with col_priv_disc:
+        if 'privacy' in doc_type_filter:
+            st.subheader("🔒 Privacy Policy Discretion Ratio")
+            fig_priv_disc = go.Figure()
 
-        # Create Discretion Ratio time series chart
-        fig_disc_ts = go.Figure()
-
-        for platform in ts_platform_filter:
-            if platform not in hybrid_temporal['platforms']:
-                continue
-            platform_data = hybrid_temporal['platforms'][platform]
-            time_series = platform_data['time_series']
-
-            # Extract dates and discretion ratios
-            dates = []
-            disc_ratios = []
-            for t in time_series:
-                try:
-                    dt = datetime.fromisoformat(t['date'])
-                    doc_id = t.get('doc_id')
-                    disc_data = doc_disc_map.get(doc_id, {})
-                    ratio = disc_data.get('discretion_ratio', 0)
-
-                    # Use platform average if no doc-level data
-                    if ratio == 0:
-                        ratio = disc_scores.get(platform, {}).get('avg_discretion_ratio', 1.5)
-
-                    dates.append(dt)
-                    disc_ratios.append(ratio)
-                except:
+            for platform in ts_platform_filter:
+                ts = temporal_data_by_type.get('platforms', {}).get(platform, {}).get('privacy', {}).get('time_series', [])
+                if not ts:
                     continue
-
-            if dates and disc_ratios:
-                color = PLATFORM_CONFIG.get(platform, {}).get('color', '#888888')
-                fig_disc_ts.add_trace(go.Scatter(
-                    x=dates,
-                    y=disc_ratios,
+                years = [t['year'] for t in ts]
+                values = [t.get('discretion_ratio', 0) for t in ts]
+                fig_priv_disc.add_trace(go.Scatter(
+                    x=years,
+                    y=values,
                     mode='lines+markers',
                     name=platform,
-                    line=dict(color=color, width=2),
-                    marker=dict(size=6, color=color),
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'], width=2),
+                    marker=dict(size=6),
                 ))
 
-        # Add regulatory event lines
-        for event_name, event_date in hybrid_temporal['regulatory_events'].items():
-            event_dt = datetime.fromisoformat(event_date)
-            event_type = 'Effective'
-            for key in ['Announced', 'Signed', 'Effective']:
-                if key in event_name:
-                    event_type = key
-                    break
-
-            line_style = 'dot' if event_type in ['Announced', 'Signed'] else 'solid'
-            line_color = 'rgba(100,100,200,0.5)' if event_type in ['Announced', 'Signed'] else 'rgba(200,50,50,0.7)'
-
-            fig_disc_ts.add_shape(
-                type="line", x0=event_dt, y0=0, x1=event_dt, y1=1,
-                xref="x", yref="paper",
-                line=dict(color=line_color, width=1.5, dash=line_style)
+            fig_priv_disc.add_vline(x=2016, line_dash='dot', line_color='blue')
+            fig_priv_disc.add_vline(x=2018, line_dash='solid', line_color='red')
+            fig_priv_disc.add_vline(x=2020, line_dash='solid', line_color='green')
+            fig_priv_disc.update_layout(
+                title='Privacy Policy: Discretion Ratio',
+                xaxis_title='Year',
+                yaxis_title='Discretion Ratio',
+                height=460,
+                hovermode='x unified'
             )
+            st.plotly_chart(fig_priv_disc, use_container_width=True)
+        else:
+            st.info("Privacy Policy is not selected in Document Types filter.")
 
-        fig_disc_ts.update_layout(
-            title="Discretion Ratio Evolution (Lexicon-Based Analysis)",
-            xaxis_title="Date",
-            yaxis_title="Discretion Ratio",
-            height=500,
-            hovermode='x unified',
-            legend=dict(orientation="v", yanchor="top", y=0.99, xanchor="left", x=0.01),
-            plot_bgcolor='rgba(240, 240, 240, 0.3)',
-            yaxis=dict(range=[0, 5])
-        )
+    with col_tos_disc:
+        if 'tos' in doc_type_filter:
+            st.subheader("📜 Terms of Service Discretion Ratio")
+            fig_tos_disc = go.Figure()
 
-        st.plotly_chart(fig_disc_ts, use_container_width=True)
+            for platform in ts_platform_filter:
+                ts = temporal_data_by_type.get('platforms', {}).get(platform, {}).get('tos', {}).get('time_series', [])
+                if not ts:
+                    continue
+                years = [t['year'] for t in ts]
+                values = [t.get('discretion_ratio', 0) for t in ts]
+                fig_tos_disc.add_trace(go.Scatter(
+                    x=years,
+                    y=values,
+                    mode='lines+markers',
+                    name=platform,
+                    line=dict(color=PLATFORM_CONFIG[platform]['color'], width=2),
+                    marker=dict(size=6),
+                ))
 
-        # Summary comparison
-        st.info("""
-        **📊 Two Complementary Perspectives:**
+            fig_tos_disc.add_vline(x=2016, line_dash='dot', line_color='blue')
+            fig_tos_disc.add_vline(x=2018, line_dash='solid', line_color='red')
+            fig_tos_disc.add_vline(x=2020, line_dash='solid', line_color='green')
+            fig_tos_disc.update_layout(
+                title='Terms of Service: Discretion Ratio',
+                xaxis_title='Year',
+                yaxis_title='Discretion Ratio',
+                height=460,
+                hovermode='x unified'
+            )
+            st.plotly_chart(fig_tos_disc, use_container_width=True)
+        else:
+            st.info("Terms of Service is not selected in Document Types filter.")
 
-        | Metric | Measures | Source |
-        |--------|----------|--------|
-        | **Policy Index** | Document structure complexity | Syntax analysis (ADL, tree depth) |
-        | **Discretion Ratio** | Power language balance | Lexicon analysis (72 discretion terms) |
+    st.info("""
+    **📊 Two Complementary Perspectives:**
 
-        Both metrics increasing = Platform policies becoming more **complex** AND more **power-asymmetric**.
-        """)
+    | Metric | Measures | Source |
+    |--------|----------|--------|
+    | **Power Asymmetry Index** | Power balance in language | By-type temporal aggregate |
+    | **Term Density** | Complexity + formality + agency style | By-type temporal aggregate |
+    | **Discretion Ratio** | Discretion + disclaimer vs obligation | By-type temporal aggregate |
 
-    except FileNotFoundError:
-        st.warning("Discretion scores data not available. Please run the analysis script.")
+    Both metrics increasing = Platform policies becoming more **complex** AND more **power-asymmetric**.
+    """)
 
     # NEW: ITS Analysis Results Section
     st.markdown("---")
@@ -987,12 +1191,10 @@ with tab6:
     
     with col2:
         st.markdown("""
-        **Illustrative Patterns:**
-        - Calibrated to 2024 measured index
-        - GDPR/CCPA jumps modeled
-        - Platform-specific growth rates
-        - Conservative assumptions
-        - Labeled clearly as estimated
+        **All Data Sources:**
+        - TransparencyDB real policy documents
+        - Period-aggregated metrics (weighted by document count)
+        - Both Privacy Policy and Terms of Service analyzed separately
         """)
     
     st.info("""
@@ -1013,6 +1215,66 @@ with tab7:
     **Research Question**: Did platforms genuinely comply with GDPR/CCPA, or did they adapt their language
     while preserving power asymmetry?
     """)
+
+    if regulatory_evasion_by_type.get('platforms'):
+        st.markdown("---")
+        st.subheader("📊 PP vs ToS Classification Matrix")
+
+        classification_colors = {
+            'genuine_simplification': '#2E8B57',
+            'compliance_with_complexity': '#F1C40F',
+            'streamlined_power_grab': '#E67E22',
+            'defensive_legalization': '#C0392B',
+            'no_clear_pattern': '#7F8C8D',
+        }
+
+        compare_rows = []
+        for platform in selected_platforms:
+            pdata = regulatory_evasion_by_type.get('platforms', {}).get(platform, {})
+            if not pdata:
+                continue
+            for doc_type in ['privacy', 'tos']:
+                if doc_type not in doc_type_filter:
+                    continue
+                summary = pdata.get(doc_type, {}).get('summary', {})
+                compare_rows.append({
+                    'Platform': platform,
+                    'Document Type': 'Privacy Policy' if doc_type == 'privacy' else 'Terms of Service',
+                    'PAI Change %': summary.get('pai_change_pct', 0),
+                    'Classification': summary.get('classification', 'no_clear_pattern'),
+                })
+
+        if compare_rows:
+            df_class = pd.DataFrame(compare_rows)
+            fig_class = go.Figure()
+
+            for doc_label in ['Privacy Policy', 'Terms of Service']:
+                doc_df = df_class[df_class['Document Type'] == doc_label]
+                if doc_df.empty:
+                    continue
+                fig_class.add_trace(go.Bar(
+                    name=doc_label,
+                    x=doc_df['Platform'],
+                    y=doc_df['PAI Change %'],
+                    marker_color=[classification_colors.get(c, '#7F8C8D') for c in doc_df['Classification']],
+                    text=[f"{c.replace('_', ' ').title()}<br>{v:+.1f}%" for c, v in zip(doc_df['Classification'], doc_df['PAI Change %'])],
+                    textposition='outside',
+                ))
+
+            fig_class.update_layout(
+                barmode='group',
+                title='Power Asymmetry Change by Document Type (Pre-GDPR → Post-CCPA)',
+                yaxis_title='PAI Change (%)',
+                xaxis_title='Platform',
+                height=520,
+                yaxis=dict(zeroline=True, zerolinewidth=2, zerolinecolor='black'),
+            )
+            fig_class.add_hline(y=0, line_dash='solid', line_color='black', line_width=2)
+            st.plotly_chart(fig_class, use_container_width=True)
+        else:
+            st.info("No by-type regulatory evasion classification data for current filters.")
+
+        st.caption("Color indicates classification category; bars show PAI change separately for Privacy Policy and Terms of Service.")
 
     # Load regulatory evasion data
     evasion_path = data_dir / 'all_platforms_regulatory_analysis.json'
@@ -1081,9 +1343,6 @@ with tab7:
 
             # Create grouped bar chart
             fig_evasion = go.Figure()
-
-            platforms = df_key['Platform'].unique()
-            patterns = df_key['Pattern'].unique()
 
             colors = {'Pre-GDPR': '#3498db', 'Post-CCPA': '#e74c3c'}
 
@@ -1534,13 +1793,13 @@ with tab10:
     on dimensional analysis, normalization, post-hoc rationalization, and null hypothesis testing.
     """)
 
-    experiments_dir = data_dir / 'experiments'
+    experiments_dir = dashboard_dir.parent / 'experiments'
 
     # --- Section 1: Permutation Test ---
     st.markdown("---")
     st.subheader("🎲 Permutation Test: Lexicon vs Random N-grams")
 
-    perm_path = experiments_dir / 'permutation_results.json'
+    perm_path = experiments_dir / '2026-02-16_permutation_test' / 'permutation_results.json'
     try:
         with open(perm_path) as f:
             perm_data = json.load(f)
@@ -1602,7 +1861,7 @@ with tab10:
     st.markdown("---")
     st.subheader("📐 Normalization Sensitivity Analysis")
 
-    norm_path = experiments_dir / 'sensitivity_results.json'
+    norm_path = experiments_dir / '2026-02-16_normalization' / 'sensitivity_results.json'
     try:
         with open(norm_path) as f:
             norm_data = json.load(f)
@@ -1664,7 +1923,7 @@ with tab10:
     st.markdown("---")
     st.subheader("📊 Bootstrap Rank Confidence Intervals")
 
-    boot_path = experiments_dir / 'bootstrap_rank_results.json'
+    boot_path = experiments_dir / '2026-02-16_bootstrap' / 'bootstrap_rank_results.json'
     try:
         with open(boot_path) as f:
             boot_data = json.load(f)
@@ -1732,7 +1991,7 @@ with tab10:
     st.markdown("---")
     st.subheader("📈 Segmented Regression (ITS v2)")
 
-    seg_path = experiments_dir / 'segmented_regression_results_v2.json'
+    seg_path = experiments_dir / '2026-02-16_its' / 'segmented_regression_results_v2.json'
     try:
         with open(seg_path) as f:
             seg_data = json.load(f)
@@ -1788,7 +2047,7 @@ with tab10:
     st.markdown("---")
     st.subheader("⚖️ Difference-in-Differences v3 (Lexicon-Based)")
 
-    did3_path = experiments_dir / 'did_results_v3.json'
+    did3_path = experiments_dir / '2026-02-16_did_analysis' / 'did_results_v3.json'
     try:
         with open(did3_path) as f:
             did3_data = json.load(f)
